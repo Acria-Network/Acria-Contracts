@@ -1,0 +1,1324 @@
+{
+  "contractName": "Client",
+  "abi": [
+    {
+      "constant": false,
+      "inputs": [
+        {
+          "internalType": "uint256",
+          "name": "_value",
+          "type": "uint256"
+        }
+      ],
+      "name": "value_callback_process",
+      "outputs": [],
+      "payable": false,
+      "stateMutability": "nonpayable",
+      "type": "function"
+    },
+    {
+      "constant": false,
+      "inputs": [
+        {
+          "internalType": "uint256",
+          "name": "_value",
+          "type": "uint256"
+        }
+      ],
+      "name": "value_callback",
+      "outputs": [],
+      "payable": false,
+      "stateMutability": "nonpayable",
+      "type": "function"
+    }
+  ],
+  "metadata": "{\"compiler\":{\"version\":\"0.5.16+commit.9c3226ce\"},\"language\":\"Solidity\",\"output\":{\"abi\":[{\"constant\":false,\"inputs\":[{\"internalType\":\"uint256\",\"name\":\"_value\",\"type\":\"uint256\"}],\"name\":\"value_callback\",\"outputs\":[],\"payable\":false,\"stateMutability\":\"nonpayable\",\"type\":\"function\"},{\"constant\":false,\"inputs\":[{\"internalType\":\"uint256\",\"name\":\"_value\",\"type\":\"uint256\"}],\"name\":\"value_callback_process\",\"outputs\":[],\"payable\":false,\"stateMutability\":\"nonpayable\",\"type\":\"function\"}],\"devdoc\":{\"methods\":{}},\"userdoc\":{\"methods\":{}}},\"settings\":{\"compilationTarget\":{\"/home/a/Documents/acria_contracts/contracts/clientContract/client.sol\":\"Client\"},\"evmVersion\":\"istanbul\",\"libraries\":{},\"optimizer\":{\"enabled\":false,\"runs\":200},\"remappings\":[]},\"sources\":{\"/home/a/Documents/acria_contracts/contracts/AcriaMain.sol\":{\"keccak256\":\"0x6fcf5073cffbc9643e5a36d42ba13a9bfc2c64057d9c73b713f0400bb5bc404e\",\"urls\":[\"bzz-raw://00de7f3a377f409faf2bb04c7fb5052301bf27e7276eecca432a067af38ef3d7\",\"dweb:/ipfs/QmQsj7oYry6DSp6JdHWF2TfFjCYr6MrQT8FoPBdhDTxmdL\"]},\"/home/a/Documents/acria_contracts/contracts/AcriaNode.sol\":{\"keccak256\":\"0x5173425538dd20591a7820ae9d21692066b892d7d44f4ef3e6ee6f62eaa7fc8f\",\"urls\":[\"bzz-raw://197e5ecfaf83e1fe827579d3147026b6514e7e6bbb1200b252d4742180dba0a7\",\"dweb:/ipfs/QmakYfHf83GzkdnX1iWJdzVGRPpswCJZjX5n2yAKNWh3D7\"]},\"/home/a/Documents/acria_contracts/contracts/clientContract/client.sol\":{\"keccak256\":\"0x0013428ec3ff188815e762612a04e9eb839ec654fcdbc62d22ae0c692e998216\",\"urls\":[\"bzz-raw://95f2599778580823a0798c77e3276f21e2e0bb18c679efee1541c049a3009b25\",\"dweb:/ipfs/QmUHTL4XDPtbbf69c36F3oeFGx3ousBnjA1bqQA8vbyjVv\"]}},\"version\":1}",
+  "bytecode": "0x",
+  "deployedBytecode": "0x",
+  "sourceMap": "",
+  "deployedSourceMap": "",
+  "source": "pragma solidity >=0.4.22 <0.9.0;\n\nimport \"../AcriaMain.sol\";\n\ncontract Client {\n  address acria_contract = 0x25339522Df3d615ed729F6c0380B94E93B4eAE64;\n  \n  function value_callback_process(uint256 _value) public;\n  \n  function value_callback(uint256 _value) public {  \n     AcriaMain acria_main = AcriaMain(acria_contract); \n      \n      address sender = address(msg.sender);\n     if(acria_main.is_node(sender)){\n     \tuint256 value = _value;\n     \t\n     \tthis.value_callback_process(value);\n     }\n  }\n}\n",
+  "sourcePath": "/home/a/Documents/acria_contracts/contracts/clientContract/client.sol",
+  "ast": {
+    "absolutePath": "/home/a/Documents/acria_contracts/contracts/clientContract/client.sol",
+    "exportedSymbols": {
+      "Client": [
+        589
+      ]
+    },
+    "id": 590,
+    "nodeType": "SourceUnit",
+    "nodes": [
+      {
+        "id": 544,
+        "literals": [
+          "solidity",
+          ">=",
+          "0.4",
+          ".22",
+          "<",
+          "0.9",
+          ".0"
+        ],
+        "nodeType": "PragmaDirective",
+        "src": "0:32:2"
+      },
+      {
+        "absolutePath": "/home/a/Documents/acria_contracts/contracts/AcriaMain.sol",
+        "file": "../AcriaMain.sol",
+        "id": 545,
+        "nodeType": "ImportDirective",
+        "scope": 590,
+        "sourceUnit": 141,
+        "src": "34:26:2",
+        "symbolAliases": [],
+        "unitAlias": ""
+      },
+      {
+        "baseContracts": [],
+        "contractDependencies": [],
+        "contractKind": "contract",
+        "documentation": null,
+        "fullyImplemented": false,
+        "id": 589,
+        "linearizedBaseContracts": [
+          589
+        ],
+        "name": "Client",
+        "nodeType": "ContractDefinition",
+        "nodes": [
+          {
+            "constant": false,
+            "id": 548,
+            "name": "acria_contract",
+            "nodeType": "VariableDeclaration",
+            "scope": 589,
+            "src": "82:67:2",
+            "stateVariable": true,
+            "storageLocation": "default",
+            "typeDescriptions": {
+              "typeIdentifier": "t_address",
+              "typeString": "address"
+            },
+            "typeName": {
+              "id": 546,
+              "name": "address",
+              "nodeType": "ElementaryTypeName",
+              "src": "82:7:2",
+              "stateMutability": "nonpayable",
+              "typeDescriptions": {
+                "typeIdentifier": "t_address",
+                "typeString": "address"
+              }
+            },
+            "value": {
+              "argumentTypes": null,
+              "hexValue": "307832353333393532324466336436313565643732394636633033383042393445393342346541453634",
+              "id": 547,
+              "isConstant": false,
+              "isLValue": false,
+              "isPure": true,
+              "kind": "number",
+              "lValueRequested": false,
+              "nodeType": "Literal",
+              "src": "107:42:2",
+              "subdenomination": null,
+              "typeDescriptions": {
+                "typeIdentifier": "t_address_payable",
+                "typeString": "address payable"
+              },
+              "value": "0x25339522Df3d615ed729F6c0380B94E93B4eAE64"
+            },
+            "visibility": "internal"
+          },
+          {
+            "body": null,
+            "documentation": null,
+            "id": 553,
+            "implemented": false,
+            "kind": "function",
+            "modifiers": [],
+            "name": "value_callback_process",
+            "nodeType": "FunctionDefinition",
+            "parameters": {
+              "id": 551,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 550,
+                  "name": "_value",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 553,
+                  "src": "188:14:2",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint256",
+                    "typeString": "uint256"
+                  },
+                  "typeName": {
+                    "id": 549,
+                    "name": "uint256",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "188:7:2",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                }
+              ],
+              "src": "187:16:2"
+            },
+            "returnParameters": {
+              "id": 552,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "210:0:2"
+            },
+            "scope": 589,
+            "src": "156:55:2",
+            "stateMutability": "nonpayable",
+            "superFunction": null,
+            "visibility": "public"
+          },
+          {
+            "body": {
+              "id": 587,
+              "nodeType": "Block",
+              "src": "264:237:2",
+              "statements": [
+                {
+                  "assignments": [
+                    559
+                  ],
+                  "declarations": [
+                    {
+                      "constant": false,
+                      "id": 559,
+                      "name": "acria_main",
+                      "nodeType": "VariableDeclaration",
+                      "scope": 587,
+                      "src": "273:20:2",
+                      "stateVariable": false,
+                      "storageLocation": "default",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_contract$_AcriaMain_$140",
+                        "typeString": "contract AcriaMain"
+                      },
+                      "typeName": {
+                        "contractScope": null,
+                        "id": 558,
+                        "name": "AcriaMain",
+                        "nodeType": "UserDefinedTypeName",
+                        "referencedDeclaration": 140,
+                        "src": "273:9:2",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_contract$_AcriaMain_$140",
+                          "typeString": "contract AcriaMain"
+                        }
+                      },
+                      "value": null,
+                      "visibility": "internal"
+                    }
+                  ],
+                  "id": 563,
+                  "initialValue": {
+                    "argumentTypes": null,
+                    "arguments": [
+                      {
+                        "argumentTypes": null,
+                        "id": 561,
+                        "name": "acria_contract",
+                        "nodeType": "Identifier",
+                        "overloadedDeclarations": [],
+                        "referencedDeclaration": 548,
+                        "src": "306:14:2",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_address",
+                          "typeString": "address"
+                        }
+                      }
+                    ],
+                    "expression": {
+                      "argumentTypes": [
+                        {
+                          "typeIdentifier": "t_address",
+                          "typeString": "address"
+                        }
+                      ],
+                      "id": 560,
+                      "name": "AcriaMain",
+                      "nodeType": "Identifier",
+                      "overloadedDeclarations": [],
+                      "referencedDeclaration": 140,
+                      "src": "296:9:2",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_type$_t_contract$_AcriaMain_$140_$",
+                        "typeString": "type(contract AcriaMain)"
+                      }
+                    },
+                    "id": 562,
+                    "isConstant": false,
+                    "isLValue": false,
+                    "isPure": false,
+                    "kind": "typeConversion",
+                    "lValueRequested": false,
+                    "names": [],
+                    "nodeType": "FunctionCall",
+                    "src": "296:25:2",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_contract$_AcriaMain_$140",
+                      "typeString": "contract AcriaMain"
+                    }
+                  },
+                  "nodeType": "VariableDeclarationStatement",
+                  "src": "273:48:2"
+                },
+                {
+                  "assignments": [
+                    565
+                  ],
+                  "declarations": [
+                    {
+                      "constant": false,
+                      "id": 565,
+                      "name": "sender",
+                      "nodeType": "VariableDeclaration",
+                      "scope": 587,
+                      "src": "337:14:2",
+                      "stateVariable": false,
+                      "storageLocation": "default",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_address",
+                        "typeString": "address"
+                      },
+                      "typeName": {
+                        "id": 564,
+                        "name": "address",
+                        "nodeType": "ElementaryTypeName",
+                        "src": "337:7:2",
+                        "stateMutability": "nonpayable",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_address",
+                          "typeString": "address"
+                        }
+                      },
+                      "value": null,
+                      "visibility": "internal"
+                    }
+                  ],
+                  "id": 570,
+                  "initialValue": {
+                    "argumentTypes": null,
+                    "arguments": [
+                      {
+                        "argumentTypes": null,
+                        "expression": {
+                          "argumentTypes": null,
+                          "id": 567,
+                          "name": "msg",
+                          "nodeType": "Identifier",
+                          "overloadedDeclarations": [],
+                          "referencedDeclaration": 630,
+                          "src": "362:3:2",
+                          "typeDescriptions": {
+                            "typeIdentifier": "t_magic_message",
+                            "typeString": "msg"
+                          }
+                        },
+                        "id": 568,
+                        "isConstant": false,
+                        "isLValue": false,
+                        "isPure": false,
+                        "lValueRequested": false,
+                        "memberName": "sender",
+                        "nodeType": "MemberAccess",
+                        "referencedDeclaration": null,
+                        "src": "362:10:2",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_address_payable",
+                          "typeString": "address payable"
+                        }
+                      }
+                    ],
+                    "expression": {
+                      "argumentTypes": [
+                        {
+                          "typeIdentifier": "t_address_payable",
+                          "typeString": "address payable"
+                        }
+                      ],
+                      "id": 566,
+                      "isConstant": false,
+                      "isLValue": false,
+                      "isPure": true,
+                      "lValueRequested": false,
+                      "nodeType": "ElementaryTypeNameExpression",
+                      "src": "354:7:2",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_type$_t_address_$",
+                        "typeString": "type(address)"
+                      },
+                      "typeName": "address"
+                    },
+                    "id": 569,
+                    "isConstant": false,
+                    "isLValue": false,
+                    "isPure": false,
+                    "kind": "typeConversion",
+                    "lValueRequested": false,
+                    "names": [],
+                    "nodeType": "FunctionCall",
+                    "src": "354:19:2",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_address_payable",
+                      "typeString": "address payable"
+                    }
+                  },
+                  "nodeType": "VariableDeclarationStatement",
+                  "src": "337:36:2"
+                },
+                {
+                  "condition": {
+                    "argumentTypes": null,
+                    "arguments": [
+                      {
+                        "argumentTypes": null,
+                        "id": 573,
+                        "name": "sender",
+                        "nodeType": "Identifier",
+                        "overloadedDeclarations": [],
+                        "referencedDeclaration": 565,
+                        "src": "402:6:2",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_address",
+                          "typeString": "address"
+                        }
+                      }
+                    ],
+                    "expression": {
+                      "argumentTypes": [
+                        {
+                          "typeIdentifier": "t_address",
+                          "typeString": "address"
+                        }
+                      ],
+                      "expression": {
+                        "argumentTypes": null,
+                        "id": 571,
+                        "name": "acria_main",
+                        "nodeType": "Identifier",
+                        "overloadedDeclarations": [],
+                        "referencedDeclaration": 559,
+                        "src": "383:10:2",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_contract$_AcriaMain_$140",
+                          "typeString": "contract AcriaMain"
+                        }
+                      },
+                      "id": 572,
+                      "isConstant": false,
+                      "isLValue": false,
+                      "isPure": false,
+                      "lValueRequested": false,
+                      "memberName": "is_node",
+                      "nodeType": "MemberAccess",
+                      "referencedDeclaration": 130,
+                      "src": "383:18:2",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_function_external_view$_t_address_$returns$_t_bool_$",
+                        "typeString": "function (address) view external returns (bool)"
+                      }
+                    },
+                    "id": 574,
+                    "isConstant": false,
+                    "isLValue": false,
+                    "isPure": false,
+                    "kind": "functionCall",
+                    "lValueRequested": false,
+                    "names": [],
+                    "nodeType": "FunctionCall",
+                    "src": "383:26:2",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_bool",
+                      "typeString": "bool"
+                    }
+                  },
+                  "falseBody": null,
+                  "id": 586,
+                  "nodeType": "IfStatement",
+                  "src": "380:117:2",
+                  "trueBody": {
+                    "id": 585,
+                    "nodeType": "Block",
+                    "src": "410:87:2",
+                    "statements": [
+                      {
+                        "assignments": [
+                          576
+                        ],
+                        "declarations": [
+                          {
+                            "constant": false,
+                            "id": 576,
+                            "name": "value",
+                            "nodeType": "VariableDeclaration",
+                            "scope": 585,
+                            "src": "418:13:2",
+                            "stateVariable": false,
+                            "storageLocation": "default",
+                            "typeDescriptions": {
+                              "typeIdentifier": "t_uint256",
+                              "typeString": "uint256"
+                            },
+                            "typeName": {
+                              "id": 575,
+                              "name": "uint256",
+                              "nodeType": "ElementaryTypeName",
+                              "src": "418:7:2",
+                              "typeDescriptions": {
+                                "typeIdentifier": "t_uint256",
+                                "typeString": "uint256"
+                              }
+                            },
+                            "value": null,
+                            "visibility": "internal"
+                          }
+                        ],
+                        "id": 578,
+                        "initialValue": {
+                          "argumentTypes": null,
+                          "id": 577,
+                          "name": "_value",
+                          "nodeType": "Identifier",
+                          "overloadedDeclarations": [],
+                          "referencedDeclaration": 555,
+                          "src": "434:6:2",
+                          "typeDescriptions": {
+                            "typeIdentifier": "t_uint256",
+                            "typeString": "uint256"
+                          }
+                        },
+                        "nodeType": "VariableDeclarationStatement",
+                        "src": "418:22:2"
+                      },
+                      {
+                        "expression": {
+                          "argumentTypes": null,
+                          "arguments": [
+                            {
+                              "argumentTypes": null,
+                              "id": 582,
+                              "name": "value",
+                              "nodeType": "Identifier",
+                              "overloadedDeclarations": [],
+                              "referencedDeclaration": 576,
+                              "src": "483:5:2",
+                              "typeDescriptions": {
+                                "typeIdentifier": "t_uint256",
+                                "typeString": "uint256"
+                              }
+                            }
+                          ],
+                          "expression": {
+                            "argumentTypes": [
+                              {
+                                "typeIdentifier": "t_uint256",
+                                "typeString": "uint256"
+                              }
+                            ],
+                            "expression": {
+                              "argumentTypes": null,
+                              "id": 579,
+                              "name": "this",
+                              "nodeType": "Identifier",
+                              "overloadedDeclarations": [],
+                              "referencedDeclaration": 644,
+                              "src": "455:4:2",
+                              "typeDescriptions": {
+                                "typeIdentifier": "t_contract$_Client_$589",
+                                "typeString": "contract Client"
+                              }
+                            },
+                            "id": 581,
+                            "isConstant": false,
+                            "isLValue": false,
+                            "isPure": false,
+                            "lValueRequested": false,
+                            "memberName": "value_callback_process",
+                            "nodeType": "MemberAccess",
+                            "referencedDeclaration": 553,
+                            "src": "455:27:2",
+                            "typeDescriptions": {
+                              "typeIdentifier": "t_function_external_nonpayable$_t_uint256_$returns$__$",
+                              "typeString": "function (uint256) external"
+                            }
+                          },
+                          "id": 583,
+                          "isConstant": false,
+                          "isLValue": false,
+                          "isPure": false,
+                          "kind": "functionCall",
+                          "lValueRequested": false,
+                          "names": [],
+                          "nodeType": "FunctionCall",
+                          "src": "455:34:2",
+                          "typeDescriptions": {
+                            "typeIdentifier": "t_tuple$__$",
+                            "typeString": "tuple()"
+                          }
+                        },
+                        "id": 584,
+                        "nodeType": "ExpressionStatement",
+                        "src": "455:34:2"
+                      }
+                    ]
+                  }
+                }
+              ]
+            },
+            "documentation": null,
+            "id": 588,
+            "implemented": true,
+            "kind": "function",
+            "modifiers": [],
+            "name": "value_callback",
+            "nodeType": "FunctionDefinition",
+            "parameters": {
+              "id": 556,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 555,
+                  "name": "_value",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 588,
+                  "src": "241:14:2",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint256",
+                    "typeString": "uint256"
+                  },
+                  "typeName": {
+                    "id": 554,
+                    "name": "uint256",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "241:7:2",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                }
+              ],
+              "src": "240:16:2"
+            },
+            "returnParameters": {
+              "id": 557,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "264:0:2"
+            },
+            "scope": 589,
+            "src": "217:284:2",
+            "stateMutability": "nonpayable",
+            "superFunction": null,
+            "visibility": "public"
+          }
+        ],
+        "scope": 590,
+        "src": "62:441:2"
+      }
+    ],
+    "src": "0:504:2"
+  },
+  "legacyAST": {
+    "attributes": {
+      "absolutePath": "/home/a/Documents/acria_contracts/contracts/clientContract/client.sol",
+      "exportedSymbols": {
+        "Client": [
+          589
+        ]
+      }
+    },
+    "children": [
+      {
+        "attributes": {
+          "literals": [
+            "solidity",
+            ">=",
+            "0.4",
+            ".22",
+            "<",
+            "0.9",
+            ".0"
+          ]
+        },
+        "id": 544,
+        "name": "PragmaDirective",
+        "src": "0:32:2"
+      },
+      {
+        "attributes": {
+          "SourceUnit": 141,
+          "absolutePath": "/home/a/Documents/acria_contracts/contracts/AcriaMain.sol",
+          "file": "../AcriaMain.sol",
+          "scope": 590,
+          "symbolAliases": [
+            null
+          ],
+          "unitAlias": ""
+        },
+        "id": 545,
+        "name": "ImportDirective",
+        "src": "34:26:2"
+      },
+      {
+        "attributes": {
+          "baseContracts": [
+            null
+          ],
+          "contractDependencies": [
+            null
+          ],
+          "contractKind": "contract",
+          "documentation": null,
+          "fullyImplemented": false,
+          "linearizedBaseContracts": [
+            589
+          ],
+          "name": "Client",
+          "scope": 590
+        },
+        "children": [
+          {
+            "attributes": {
+              "constant": false,
+              "name": "acria_contract",
+              "scope": 589,
+              "stateVariable": true,
+              "storageLocation": "default",
+              "type": "address",
+              "visibility": "internal"
+            },
+            "children": [
+              {
+                "attributes": {
+                  "name": "address",
+                  "stateMutability": "nonpayable",
+                  "type": "address"
+                },
+                "id": 546,
+                "name": "ElementaryTypeName",
+                "src": "82:7:2"
+              },
+              {
+                "attributes": {
+                  "argumentTypes": null,
+                  "hexvalue": "307832353333393532324466336436313565643732394636633033383042393445393342346541453634",
+                  "isConstant": false,
+                  "isLValue": false,
+                  "isPure": true,
+                  "lValueRequested": false,
+                  "subdenomination": null,
+                  "token": "number",
+                  "type": "address payable",
+                  "value": "0x25339522Df3d615ed729F6c0380B94E93B4eAE64"
+                },
+                "id": 547,
+                "name": "Literal",
+                "src": "107:42:2"
+              }
+            ],
+            "id": 548,
+            "name": "VariableDeclaration",
+            "src": "82:67:2"
+          },
+          {
+            "attributes": {
+              "body": null,
+              "documentation": null,
+              "implemented": false,
+              "isConstructor": false,
+              "kind": "function",
+              "modifiers": [
+                null
+              ],
+              "name": "value_callback_process",
+              "scope": 589,
+              "stateMutability": "nonpayable",
+              "superFunction": null,
+              "visibility": "public"
+            },
+            "children": [
+              {
+                "children": [
+                  {
+                    "attributes": {
+                      "constant": false,
+                      "name": "_value",
+                      "scope": 553,
+                      "stateVariable": false,
+                      "storageLocation": "default",
+                      "type": "uint256",
+                      "value": null,
+                      "visibility": "internal"
+                    },
+                    "children": [
+                      {
+                        "attributes": {
+                          "name": "uint256",
+                          "type": "uint256"
+                        },
+                        "id": 549,
+                        "name": "ElementaryTypeName",
+                        "src": "188:7:2"
+                      }
+                    ],
+                    "id": 550,
+                    "name": "VariableDeclaration",
+                    "src": "188:14:2"
+                  }
+                ],
+                "id": 551,
+                "name": "ParameterList",
+                "src": "187:16:2"
+              },
+              {
+                "attributes": {
+                  "parameters": [
+                    null
+                  ]
+                },
+                "children": [],
+                "id": 552,
+                "name": "ParameterList",
+                "src": "210:0:2"
+              }
+            ],
+            "id": 553,
+            "name": "FunctionDefinition",
+            "src": "156:55:2"
+          },
+          {
+            "attributes": {
+              "documentation": null,
+              "implemented": true,
+              "isConstructor": false,
+              "kind": "function",
+              "modifiers": [
+                null
+              ],
+              "name": "value_callback",
+              "scope": 589,
+              "stateMutability": "nonpayable",
+              "superFunction": null,
+              "visibility": "public"
+            },
+            "children": [
+              {
+                "children": [
+                  {
+                    "attributes": {
+                      "constant": false,
+                      "name": "_value",
+                      "scope": 588,
+                      "stateVariable": false,
+                      "storageLocation": "default",
+                      "type": "uint256",
+                      "value": null,
+                      "visibility": "internal"
+                    },
+                    "children": [
+                      {
+                        "attributes": {
+                          "name": "uint256",
+                          "type": "uint256"
+                        },
+                        "id": 554,
+                        "name": "ElementaryTypeName",
+                        "src": "241:7:2"
+                      }
+                    ],
+                    "id": 555,
+                    "name": "VariableDeclaration",
+                    "src": "241:14:2"
+                  }
+                ],
+                "id": 556,
+                "name": "ParameterList",
+                "src": "240:16:2"
+              },
+              {
+                "attributes": {
+                  "parameters": [
+                    null
+                  ]
+                },
+                "children": [],
+                "id": 557,
+                "name": "ParameterList",
+                "src": "264:0:2"
+              },
+              {
+                "children": [
+                  {
+                    "attributes": {
+                      "assignments": [
+                        559
+                      ]
+                    },
+                    "children": [
+                      {
+                        "attributes": {
+                          "constant": false,
+                          "name": "acria_main",
+                          "scope": 587,
+                          "stateVariable": false,
+                          "storageLocation": "default",
+                          "type": "contract AcriaMain",
+                          "value": null,
+                          "visibility": "internal"
+                        },
+                        "children": [
+                          {
+                            "attributes": {
+                              "contractScope": null,
+                              "name": "AcriaMain",
+                              "referencedDeclaration": 140,
+                              "type": "contract AcriaMain"
+                            },
+                            "id": 558,
+                            "name": "UserDefinedTypeName",
+                            "src": "273:9:2"
+                          }
+                        ],
+                        "id": 559,
+                        "name": "VariableDeclaration",
+                        "src": "273:20:2"
+                      },
+                      {
+                        "attributes": {
+                          "argumentTypes": null,
+                          "isConstant": false,
+                          "isLValue": false,
+                          "isPure": false,
+                          "isStructConstructorCall": false,
+                          "lValueRequested": false,
+                          "names": [
+                            null
+                          ],
+                          "type": "contract AcriaMain",
+                          "type_conversion": true
+                        },
+                        "children": [
+                          {
+                            "attributes": {
+                              "argumentTypes": [
+                                {
+                                  "typeIdentifier": "t_address",
+                                  "typeString": "address"
+                                }
+                              ],
+                              "overloadedDeclarations": [
+                                null
+                              ],
+                              "referencedDeclaration": 140,
+                              "type": "type(contract AcriaMain)",
+                              "value": "AcriaMain"
+                            },
+                            "id": 560,
+                            "name": "Identifier",
+                            "src": "296:9:2"
+                          },
+                          {
+                            "attributes": {
+                              "argumentTypes": null,
+                              "overloadedDeclarations": [
+                                null
+                              ],
+                              "referencedDeclaration": 548,
+                              "type": "address",
+                              "value": "acria_contract"
+                            },
+                            "id": 561,
+                            "name": "Identifier",
+                            "src": "306:14:2"
+                          }
+                        ],
+                        "id": 562,
+                        "name": "FunctionCall",
+                        "src": "296:25:2"
+                      }
+                    ],
+                    "id": 563,
+                    "name": "VariableDeclarationStatement",
+                    "src": "273:48:2"
+                  },
+                  {
+                    "attributes": {
+                      "assignments": [
+                        565
+                      ]
+                    },
+                    "children": [
+                      {
+                        "attributes": {
+                          "constant": false,
+                          "name": "sender",
+                          "scope": 587,
+                          "stateVariable": false,
+                          "storageLocation": "default",
+                          "type": "address",
+                          "value": null,
+                          "visibility": "internal"
+                        },
+                        "children": [
+                          {
+                            "attributes": {
+                              "name": "address",
+                              "stateMutability": "nonpayable",
+                              "type": "address"
+                            },
+                            "id": 564,
+                            "name": "ElementaryTypeName",
+                            "src": "337:7:2"
+                          }
+                        ],
+                        "id": 565,
+                        "name": "VariableDeclaration",
+                        "src": "337:14:2"
+                      },
+                      {
+                        "attributes": {
+                          "argumentTypes": null,
+                          "isConstant": false,
+                          "isLValue": false,
+                          "isPure": false,
+                          "isStructConstructorCall": false,
+                          "lValueRequested": false,
+                          "names": [
+                            null
+                          ],
+                          "type": "address payable",
+                          "type_conversion": true
+                        },
+                        "children": [
+                          {
+                            "attributes": {
+                              "argumentTypes": [
+                                {
+                                  "typeIdentifier": "t_address_payable",
+                                  "typeString": "address payable"
+                                }
+                              ],
+                              "isConstant": false,
+                              "isLValue": false,
+                              "isPure": true,
+                              "lValueRequested": false,
+                              "type": "type(address)",
+                              "value": "address"
+                            },
+                            "id": 566,
+                            "name": "ElementaryTypeNameExpression",
+                            "src": "354:7:2"
+                          },
+                          {
+                            "attributes": {
+                              "argumentTypes": null,
+                              "isConstant": false,
+                              "isLValue": false,
+                              "isPure": false,
+                              "lValueRequested": false,
+                              "member_name": "sender",
+                              "referencedDeclaration": null,
+                              "type": "address payable"
+                            },
+                            "children": [
+                              {
+                                "attributes": {
+                                  "argumentTypes": null,
+                                  "overloadedDeclarations": [
+                                    null
+                                  ],
+                                  "referencedDeclaration": 630,
+                                  "type": "msg",
+                                  "value": "msg"
+                                },
+                                "id": 567,
+                                "name": "Identifier",
+                                "src": "362:3:2"
+                              }
+                            ],
+                            "id": 568,
+                            "name": "MemberAccess",
+                            "src": "362:10:2"
+                          }
+                        ],
+                        "id": 569,
+                        "name": "FunctionCall",
+                        "src": "354:19:2"
+                      }
+                    ],
+                    "id": 570,
+                    "name": "VariableDeclarationStatement",
+                    "src": "337:36:2"
+                  },
+                  {
+                    "attributes": {
+                      "falseBody": null
+                    },
+                    "children": [
+                      {
+                        "attributes": {
+                          "argumentTypes": null,
+                          "isConstant": false,
+                          "isLValue": false,
+                          "isPure": false,
+                          "isStructConstructorCall": false,
+                          "lValueRequested": false,
+                          "names": [
+                            null
+                          ],
+                          "type": "bool",
+                          "type_conversion": false
+                        },
+                        "children": [
+                          {
+                            "attributes": {
+                              "argumentTypes": [
+                                {
+                                  "typeIdentifier": "t_address",
+                                  "typeString": "address"
+                                }
+                              ],
+                              "isConstant": false,
+                              "isLValue": false,
+                              "isPure": false,
+                              "lValueRequested": false,
+                              "member_name": "is_node",
+                              "referencedDeclaration": 130,
+                              "type": "function (address) view external returns (bool)"
+                            },
+                            "children": [
+                              {
+                                "attributes": {
+                                  "argumentTypes": null,
+                                  "overloadedDeclarations": [
+                                    null
+                                  ],
+                                  "referencedDeclaration": 559,
+                                  "type": "contract AcriaMain",
+                                  "value": "acria_main"
+                                },
+                                "id": 571,
+                                "name": "Identifier",
+                                "src": "383:10:2"
+                              }
+                            ],
+                            "id": 572,
+                            "name": "MemberAccess",
+                            "src": "383:18:2"
+                          },
+                          {
+                            "attributes": {
+                              "argumentTypes": null,
+                              "overloadedDeclarations": [
+                                null
+                              ],
+                              "referencedDeclaration": 565,
+                              "type": "address",
+                              "value": "sender"
+                            },
+                            "id": 573,
+                            "name": "Identifier",
+                            "src": "402:6:2"
+                          }
+                        ],
+                        "id": 574,
+                        "name": "FunctionCall",
+                        "src": "383:26:2"
+                      },
+                      {
+                        "children": [
+                          {
+                            "attributes": {
+                              "assignments": [
+                                576
+                              ]
+                            },
+                            "children": [
+                              {
+                                "attributes": {
+                                  "constant": false,
+                                  "name": "value",
+                                  "scope": 585,
+                                  "stateVariable": false,
+                                  "storageLocation": "default",
+                                  "type": "uint256",
+                                  "value": null,
+                                  "visibility": "internal"
+                                },
+                                "children": [
+                                  {
+                                    "attributes": {
+                                      "name": "uint256",
+                                      "type": "uint256"
+                                    },
+                                    "id": 575,
+                                    "name": "ElementaryTypeName",
+                                    "src": "418:7:2"
+                                  }
+                                ],
+                                "id": 576,
+                                "name": "VariableDeclaration",
+                                "src": "418:13:2"
+                              },
+                              {
+                                "attributes": {
+                                  "argumentTypes": null,
+                                  "overloadedDeclarations": [
+                                    null
+                                  ],
+                                  "referencedDeclaration": 555,
+                                  "type": "uint256",
+                                  "value": "_value"
+                                },
+                                "id": 577,
+                                "name": "Identifier",
+                                "src": "434:6:2"
+                              }
+                            ],
+                            "id": 578,
+                            "name": "VariableDeclarationStatement",
+                            "src": "418:22:2"
+                          },
+                          {
+                            "children": [
+                              {
+                                "attributes": {
+                                  "argumentTypes": null,
+                                  "isConstant": false,
+                                  "isLValue": false,
+                                  "isPure": false,
+                                  "isStructConstructorCall": false,
+                                  "lValueRequested": false,
+                                  "names": [
+                                    null
+                                  ],
+                                  "type": "tuple()",
+                                  "type_conversion": false
+                                },
+                                "children": [
+                                  {
+                                    "attributes": {
+                                      "argumentTypes": [
+                                        {
+                                          "typeIdentifier": "t_uint256",
+                                          "typeString": "uint256"
+                                        }
+                                      ],
+                                      "isConstant": false,
+                                      "isLValue": false,
+                                      "isPure": false,
+                                      "lValueRequested": false,
+                                      "member_name": "value_callback_process",
+                                      "referencedDeclaration": 553,
+                                      "type": "function (uint256) external"
+                                    },
+                                    "children": [
+                                      {
+                                        "attributes": {
+                                          "argumentTypes": null,
+                                          "overloadedDeclarations": [
+                                            null
+                                          ],
+                                          "referencedDeclaration": 644,
+                                          "type": "contract Client",
+                                          "value": "this"
+                                        },
+                                        "id": 579,
+                                        "name": "Identifier",
+                                        "src": "455:4:2"
+                                      }
+                                    ],
+                                    "id": 581,
+                                    "name": "MemberAccess",
+                                    "src": "455:27:2"
+                                  },
+                                  {
+                                    "attributes": {
+                                      "argumentTypes": null,
+                                      "overloadedDeclarations": [
+                                        null
+                                      ],
+                                      "referencedDeclaration": 576,
+                                      "type": "uint256",
+                                      "value": "value"
+                                    },
+                                    "id": 582,
+                                    "name": "Identifier",
+                                    "src": "483:5:2"
+                                  }
+                                ],
+                                "id": 583,
+                                "name": "FunctionCall",
+                                "src": "455:34:2"
+                              }
+                            ],
+                            "id": 584,
+                            "name": "ExpressionStatement",
+                            "src": "455:34:2"
+                          }
+                        ],
+                        "id": 585,
+                        "name": "Block",
+                        "src": "410:87:2"
+                      }
+                    ],
+                    "id": 586,
+                    "name": "IfStatement",
+                    "src": "380:117:2"
+                  }
+                ],
+                "id": 587,
+                "name": "Block",
+                "src": "264:237:2"
+              }
+            ],
+            "id": 588,
+            "name": "FunctionDefinition",
+            "src": "217:284:2"
+          }
+        ],
+        "id": 589,
+        "name": "ContractDefinition",
+        "src": "62:441:2"
+      }
+    ],
+    "id": 590,
+    "name": "SourceUnit",
+    "src": "0:504:2"
+  },
+  "compiler": {
+    "name": "solc",
+    "version": "0.5.16+commit.9c3226ce.Emscripten.clang"
+  },
+  "networks": {},
+  "schemaVersion": "3.3.3",
+  "updatedAt": "2021-02-22T17:51:19.478Z",
+  "devdoc": {
+    "methods": {}
+  },
+  "userdoc": {
+    "methods": {}
+  }
+}
