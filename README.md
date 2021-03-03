@@ -4,7 +4,7 @@
 Contracts for the ETH branch of the Acria Network.
 
 ![GitHub](https://img.shields.io/github/license/Acria-Network/acria-substrate)
-![GitHub last commit](https://img.shields.io/github/last-commit/Acria-Network/acria-substrate)
+![GitHub last commit](https://img.shields.io/github/last-commit/Acria-Network/Acria-Contracts)
 ![GitHub](https://img.shields.io/badge/Solidity-0.5.16-brightgreen)
 ![GitHub](https://badgen.net/twitter/follow/acrianetwork)
 
