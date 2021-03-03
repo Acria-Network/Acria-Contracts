@@ -56,4 +56,4 @@ Distributed under the MIT license. See ``LICENSE`` for more information.
 
 Acria Network – [@acrianetwork](https://twitter.com/acrianetwork) – help@acria.network
 
-[https://github.com/Acria-Network/Acria-Oracle-Node-Qt](https://github.com/Acria-Network/Acria-Oracle-Node-Qt)
+[https://github.com/Acria-Network/Acria-Contracts](https://github.com/Acria-Network/Acria-Contracts)
