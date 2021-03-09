@@ -1,4 +1,4 @@
-![Header](img/header.png)
+![Header](https://github.com/Acria-Network/Acria-Staking-Interface/blob/main/img/github_header.svg?sanitize=1)
 
 # Acria-Contracts
 Contracts for the ETH branch of the Acria Network.
