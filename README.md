@@ -1,4 +1,4 @@
-![Header](https://github.com/Acria-Network/Acria-Oracle-Node-Qt/blob/main/img/github_header_color.svg?sanitize=1)
+![Header](https://github.com/Acria-Network/Acria-Oracle-Node-Qt/blob/main/img/github_header_color_2.svg?sanitize=1)
 
 # Acria-Contracts
 Contracts for the ETH branch of the Acria Network.
