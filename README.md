@@ -1,7 +1,7 @@
 ![Header](https://github.com/Acria-Network/Acria-Contracts/blob/main/img/github_header_color_2.svg?sanitize=1)
 
 # Acria-Contracts
-Contracts for the ETH branch of the Acria Network.
+Contracts for the ETH/BSC branch of the Acria Network.
 
 ![GitHub](https://img.shields.io/github/license/Acria-Network/acria-substrate)
 ![GitHub last commit](https://img.shields.io/github/last-commit/Acria-Network/Acria-Contracts)
