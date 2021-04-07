@@ -36,6 +36,7 @@ contract AcriaMain {
   	token_contract = _token_contract;
   }
   
+  
   function createNode(bytes32 _owner) public {
     require(name_exists[_owner] == address(0));
     
@@ -48,31 +49,23 @@ contract AcriaMain {
     name_exists[_owner] = address(acria_node);
   }
   
-  /*
-  function getField(address _node, bytes8 requestID, uint64 expire, address _callback, uint32 max_gas) public payable {
-    require(expire > 100);
-    require(msg.value < 10**18);
-    require(expire < 1000000);
-    require(max_gas < 500000);
-    
-    AcriaNode acria_node = AcriaNode(_node);
-    acria_node.create_request{value:msg.value}(requestID, _callback/*Client(_callback).value_callback*/  //, expire, max_gas);
-  //}
-  
   
   function is_node(address _node) public view returns(bool) {
     return node_active[_node];
     
   }
   
+  
   function get_contract(bytes32 name) public view returns(address) {
     return name_exists[name];
     
   }
   
+  
   function get_nodes() public view returns(node[] memory) {
     return nodes;
     
   }
+  
   
 }

@@ -5,6 +5,7 @@ pragma experimental ABIEncoderV2;
 
 import "./AcriaMain.sol";
 
+
 contract AcriaNode {
 
   struct request {
@@ -14,10 +15,10 @@ contract AcriaNode {
 	uint32 id;
 	uint32 max_gas;
 	address callback;
-	//function(uint256) external callback;
 	uint256 data;
 	uint256 data_passthrough;
   }
+  
   
   event RequestFilled(bytes32 requestID, address callback, uint256 fee, uint256 id);
   event RequestFilledError(bytes32 requestID, address callback, uint256 fee, uint256 id);
@@ -37,9 +38,8 @@ contract AcriaNode {
   mapping(address => uint256) public staker_stake;
   uint256 public last_staker_added = 0;
   uint256 public previous_last_staker_added = 0;
-  //uint256 staker_active = 0;
+  uint256 constant period_interval = 10;//10 for tests, otherwise 10000 (~16 days)
   
-  uint256 constant period_interval = 10;//10000 = ~16 days
   
   constructor(address payable _owner, address _token_contract) {
   	owner = _owner;
@@ -56,6 +56,7 @@ contract AcriaNode {
     _;
   }
   
+  
   function get_total_stake(uint256 period) public view returns (uint256){
   	if(period == 0){
   		return period_staker[last_staker_added];
@@ -64,6 +65,7 @@ contract AcriaNode {
   		return period_staker[period];
   	}
   }
+
 
   function pump_fee(uint256 id) public payable {
   	require(msg.value < 10**18);
@@ -74,15 +76,14 @@ contract AcriaNode {
   	requests[id].fee += uint64(msg.value);
   }
   
-  function create_request(bytes8 _requestID, address callback /*function(uint256) external callback*/, uint256 _expire, uint32 max_gas) public payable {
-    //require(msg.sender == master);
-    
+  
+  function create_request(bytes8 _requestID, address callback, uint256 _expire, uint32 max_gas) public payable {
     require(_expire > 100);
     require(msg.value < 10**18);
     require(_expire < 1000000);
     require(max_gas < 500000);
     
-    request memory new_request;// = request({requestID: _requestID, fee: uint64(msg.value), expiration: uint64(block.number + _expire), callback: callback, id: uint32(requests.length), max_gas: uint32(max_gas), data: 0});
+    request memory new_request;
     new_request.requestID = _requestID;
     new_request.fee = uint64(msg.value);
     new_request.expiration = uint64(block.number + _expire);
@@ -92,9 +93,8 @@ contract AcriaNode {
     requests.push(new_request);
   }
   
+  
   function create_request_with_data(bytes8 _requestID, address callback, uint256 _expire, uint32 max_gas, uint256 _data, uint256 _data_passthrough) public payable {
-    //require(msg.sender == master);
-    
     require(_expire > 100);
     require(msg.value < 10**18);
     require(_expire < 1000000);
@@ -114,12 +114,14 @@ contract AcriaNode {
     requests.push(new_request);
   }
   
+  
   function withdraw() public restricted{
   	uint256 w = withdrawable;
   	withdrawable = 0;
   	
   	owner.transfer(w);
   }
+  
   
   function start_stake(address initiator, uint256 balance) public {
   	require(msg.sender == token_contract, "Initiated by wrong contract");
@@ -143,14 +145,15 @@ contract AcriaNode {
 	  	previous_last_staker_added = last_staker_added;
 	  	last_staker_added = join_period;
   	}
-  	//staker_active+=1;
   }
+  
   
   function cancel_stake_withdraw(address initiator) public {
   	if(block.number/period_interval-1 >= staker[initiator])
   		payout_stakes(initiator);
   	cancel_stake(initiator);
   }
+  
   
   function cancel_stake(address initiator) public {
   	require(msg.sender == token_contract);
@@ -193,17 +196,15 @@ contract AcriaNode {
   	}
   	staker_stake[initiator] = 0;
   	
-  	
-  	//staker_active-=1;
   	staker[initiator] = 0;
   	
   }
+  
   
   function payout_stake(uint256 period, address initiator) private returns (uint256){
   	if(period_staker[period] == 0){
   		if(period_staker[period-1] != 0){
   			period_staker[period] = period_staker[period-1];
-  			//last_staker_added = period-1;
   		}
   	}
   	
@@ -211,10 +212,7 @@ contract AcriaNode {
 	  	uint256 user_stake = staker_stake[initiator];
 	  	
 	  	uint256 payout = withdrawable_stake[period]*user_stake/period_staker[period];
-	  	//staker[initiator] = period + 1;
-	  	
-	  	//payable(initiator).transfer(payout);
-	  	
+
 	  	emit StakePaidOut(initiator, payout, period, user_stake, period_staker[period]);
 	  	
 	  	return payout;
@@ -224,6 +222,7 @@ contract AcriaNode {
   	}
   }
   
+  
   function payout_stakes(address initiator) public {
   	require(staker[initiator] != 0, "Not a staker");
   	require(block.number/period_interval-1 >= staker[initiator], "No full cicle staked");
@@ -231,7 +230,6 @@ contract AcriaNode {
   	uint256 total_payout = 0;
   	
   	for(uint256 i = staker[initiator]; i<=block.number/period_interval-1;i++){
-  		//payout_stake(i, initiator);
   		total_payout += payout_stake(i, initiator);
   	}
   	
@@ -239,6 +237,7 @@ contract AcriaNode {
 	  	
 	payable(initiator).transfer(total_payout);
   }
+  
   
   function fillRequest(bytes8 _requestID, uint256 value, uint256 i) public restricted{    
     	require(requests[i].requestID == _requestID);
@@ -264,8 +263,6 @@ contract AcriaNode {
     	
 		if(requests[i].expiration >= block.number){
 		    address callback = requests[i].callback;
-		    //function(uint) external callback = requests[i].callback;
-		    
 		    uint256 fee = requests[i].fee/10*8;
 		    uint32 max_gas = requests[i].max_gas;
 		    uint256 data = requests[i].data;
@@ -280,9 +277,6 @@ contract AcriaNode {
 		    
 		    delete requests[i];
 		    completedRequests++;
-		    
-		    //callback{gas:max_gas}(value);
-		    //emit RequestFilledError(_requestID, address(0x0), fee, i);
 		    
 		    bool success;
 		    if(data == 0 && data_passthrough == 0)
@@ -309,20 +303,17 @@ contract AcriaNode {
 	
     }
   
+  
   function get_requests() public view returns(request[] memory) {
     return requests;
     
   }
   
-  /*
-  function get_requests_with_data(uint256 _from1, uint256 _from2) public view returns(request[] memory, request_with_data[] memory) {
-    return (requests[_from1:], data);
-    
-  }
-  */
+
   function get_withdrawable() public view returns(uint256) {
     return withdrawable;
     
   }
+  
   
 }
