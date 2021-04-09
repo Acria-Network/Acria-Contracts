@@ -56,4 +56,6 @@ Distributed under the MIT license. See ``LICENSE`` for more information.
 
 Acria Network – [@acrianetwork](https://twitter.com/acrianetwork) – help@acria.network
 
+[Telegram](https://t.me/acria_network) - [Twitter](https://twitter.com/acrianetwork) - [Facebook](https://www.facebook.com/Acria-102161605171826) - [Youtube](https://www.youtube.com/channel/UCCoP1eb6cGd7XTq0sAqP7cg)
+
 [https://github.com/Acria-Network/Acria-Contracts](https://github.com/Acria-Network/Acria-Contracts)
