@@ -3,7 +3,7 @@
 # Acria-Contracts
 Contracts for the ETH/BSC branch of the Acria Network.
 
-![GitHub](https://img.shields.io/github/license/Acria-Network/acria-substrate)
+![GitHub](https://img.shields.io/github/license/Acria-Network/Acria-Contracts)
 ![GitHub last commit](https://img.shields.io/github/last-commit/Acria-Network/Acria-Contracts)
 ![GitHub](https://img.shields.io/badge/Solidity-0.8.2-brightgreen)
 ![GitHub](https://badgen.net/twitter/follow/acrianetwork)
