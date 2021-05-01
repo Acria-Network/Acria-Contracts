@@ -48,7 +48,7 @@ The Acria Network only allows the owner of the data to operate an oracle node. T
 
 ## License
 
-![GitHub](https://img.shields.io/github/license/Acria-Network/acria-substrate)
+![GitHub](https://img.shields.io/github/license/Acria-Network/Acria-Contracts)
 
 Distributed under the MIT license. See ``LICENSE`` for more information.
 
