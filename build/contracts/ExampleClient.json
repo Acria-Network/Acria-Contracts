@@ -1,38 +1,17 @@
 {
-  "contractName": "ExampleClient",
   "abi": [
     {
-      "constant": false,
       "inputs": [
         {
-          "internalType": "uint256",
-          "name": "_value",
-          "type": "uint256"
+          "internalType": "address",
+          "name": "main",
+          "type": "address"
         }
       ],
-      "name": "value_callback",
-      "outputs": [],
-      "payable": false,
       "stateMutability": "nonpayable",
-      "type": "function"
+      "type": "constructor"
     },
     {
-      "constant": false,
-      "inputs": [
-        {
-          "internalType": "uint256",
-          "name": "_value",
-          "type": "uint256"
-        }
-      ],
-      "name": "value_callback_process",
-      "outputs": [],
-      "payable": false,
-      "stateMutability": "nonpayable",
-      "type": "function"
-    },
-    {
-      "constant": true,
       "inputs": [],
       "name": "get_lastValue",
       "outputs": [
@@ -42,30 +21,61 @@
           "type": "uint256"
         }
       ],
-      "payable": false,
       "stateMutability": "view",
+      "type": "function"
+    },
+    {
+      "inputs": [
+        {
+          "internalType": "uint256",
+          "name": "_value",
+          "type": "uint256"
+        }
+      ],
+      "name": "value_callback",
+      "outputs": [],
+      "stateMutability": "nonpayable",
+      "type": "function"
+    },
+    {
+      "inputs": [
+        {
+          "internalType": "uint256",
+          "name": "_value",
+          "type": "uint256"
+        }
+      ],
+      "name": "value_callback_process",
+      "outputs": [],
+      "stateMutability": "nonpayable",
       "type": "function"
     }
   ],
-  "metadata": "{\"compiler\":{\"version\":\"0.5.16+commit.9c3226ce\"},\"language\":\"Solidity\",\"output\":{\"abi\":[{\"constant\":true,\"inputs\":[],\"name\":\"get_lastValue\",\"outputs\":[{\"internalType\":\"uint256\",\"name\":\"\",\"type\":\"uint256\"}],\"payable\":false,\"stateMutability\":\"view\",\"type\":\"function\"},{\"constant\":false,\"inputs\":[{\"internalType\":\"uint256\",\"name\":\"_value\",\"type\":\"uint256\"}],\"name\":\"value_callback\",\"outputs\":[],\"payable\":false,\"stateMutability\":\"nonpayable\",\"type\":\"function\"},{\"constant\":false,\"inputs\":[{\"internalType\":\"uint256\",\"name\":\"_value\",\"type\":\"uint256\"}],\"name\":\"value_callback_process\",\"outputs\":[],\"payable\":false,\"stateMutability\":\"nonpayable\",\"type\":\"function\"}],\"devdoc\":{\"methods\":{}},\"userdoc\":{\"methods\":{}}},\"settings\":{\"compilationTarget\":{\"/home/a/Documents/acria_contracts/contracts/clientContract/clientExample.sol\":\"ExampleClient\"},\"evmVersion\":\"istanbul\",\"libraries\":{},\"optimizer\":{\"enabled\":false,\"runs\":200},\"remappings\":[]},\"sources\":{\"/home/a/Documents/acria_contracts/contracts/AcriaMain.sol\":{\"keccak256\":\"0x6fcf5073cffbc9643e5a36d42ba13a9bfc2c64057d9c73b713f0400bb5bc404e\",\"urls\":[\"bzz-raw://00de7f3a377f409faf2bb04c7fb5052301bf27e7276eecca432a067af38ef3d7\",\"dweb:/ipfs/QmQsj7oYry6DSp6JdHWF2TfFjCYr6MrQT8FoPBdhDTxmdL\"]},\"/home/a/Documents/acria_contracts/contracts/AcriaNode.sol\":{\"keccak256\":\"0x5173425538dd20591a7820ae9d21692066b892d7d44f4ef3e6ee6f62eaa7fc8f\",\"urls\":[\"bzz-raw://197e5ecfaf83e1fe827579d3147026b6514e7e6bbb1200b252d4742180dba0a7\",\"dweb:/ipfs/QmakYfHf83GzkdnX1iWJdzVGRPpswCJZjX5n2yAKNWh3D7\"]},\"/home/a/Documents/acria_contracts/contracts/clientContract/client.sol\":{\"keccak256\":\"0x0013428ec3ff188815e762612a04e9eb839ec654fcdbc62d22ae0c692e998216\",\"urls\":[\"bzz-raw://95f2599778580823a0798c77e3276f21e2e0bb18c679efee1541c049a3009b25\",\"dweb:/ipfs/QmUHTL4XDPtbbf69c36F3oeFGx3ousBnjA1bqQA8vbyjVv\"]},\"/home/a/Documents/acria_contracts/contracts/clientContract/clientExample.sol\":{\"keccak256\":\"0x95af28843d66abcf4bab735d2957ddccb15bcee6ae3a0f39902ef1e20c03849c\",\"urls\":[\"bzz-raw://0a300ed6a23149c5cd695403ba378a9a73f6ae78a60d8dfe5d132c5017566c7f\",\"dweb:/ipfs/QmduyQAHKdq87MgPWdPUiMFjpx7obsHf4TFJLqe4pAPEeW\"]}},\"version\":1}",
-  "bytecode": "0x60806040527325339522df3d615ed729f6c0380b94e93b4eae646000806101000a81548173ffffffffffffffffffffffffffffffffffffffff021916908373ffffffffffffffffffffffffffffffffffffffff16021790555034801561006457600080fd5b50610268806100746000396000f3fe608060405234801561001057600080fd5b50600436106100415760003560e01c806327c1642e146100465780632d4a34ea14610074578063521befb8146100a2575b600080fd5b6100726004803603602081101561005c57600080fd5b81019080803590602001909291905050506100c0565b005b6100a06004803603602081101561008a57600080fd5b810190808035906020019092919050505061021f565b005b6100aa610229565b6040518082815260200191505060405180910390f35b60008060009054906101000a900473ffffffffffffffffffffffffffffffffffffffff16905060003390508173ffffffffffffffffffffffffffffffffffffffff1663ce7e6847826040518263ffffffff1660e01b8152600401808273ffffffffffffffffffffffffffffffffffffffff1673ffffffffffffffffffffffffffffffffffffffff16815260200191505060206040518083038186803b15801561016857600080fd5b505afa15801561017c573d6000803e3d6000fd5b505050506040513d602081101561019257600080fd5b81019080805190602001909291905050501561021a5760008390503073ffffffffffffffffffffffffffffffffffffffff16632d4a34ea826040518263ffffffff1660e01b815260040180828152602001915050600060405180830381600087803b15801561020057600080fd5b505af1158015610214573d6000803e3d6000fd5b50505050505b505050565b8060018190555050565b600060015490509056fea265627a7a723158204c07d6ed870b2bc9182ae54f25f4bc15eabfe5e09ead5e6c6735b3f6c4db437f64736f6c63430005100032",
-  "deployedBytecode": "0x608060405234801561001057600080fd5b50600436106100415760003560e01c806327c1642e146100465780632d4a34ea14610074578063521befb8146100a2575b600080fd5b6100726004803603602081101561005c57600080fd5b81019080803590602001909291905050506100c0565b005b6100a06004803603602081101561008a57600080fd5b810190808035906020019092919050505061021f565b005b6100aa610229565b6040518082815260200191505060405180910390f35b60008060009054906101000a900473ffffffffffffffffffffffffffffffffffffffff16905060003390508173ffffffffffffffffffffffffffffffffffffffff1663ce7e6847826040518263ffffffff1660e01b8152600401808273ffffffffffffffffffffffffffffffffffffffff1673ffffffffffffffffffffffffffffffffffffffff16815260200191505060206040518083038186803b15801561016857600080fd5b505afa15801561017c573d6000803e3d6000fd5b505050506040513d602081101561019257600080fd5b81019080805190602001909291905050501561021a5760008390503073ffffffffffffffffffffffffffffffffffffffff16632d4a34ea826040518263ffffffff1660e01b815260040180828152602001915050600060405180830381600087803b15801561020057600080fd5b505af1158015610214573d6000803e3d6000fd5b50505050505b505050565b8060018190555050565b600060015490509056fea265627a7a723158204c07d6ed870b2bc9182ae54f25f4bc15eabfe5e09ead5e6c6735b3f6c4db437f64736f6c63430005100032",
-  "sourceMap": "74:243:3:-;;;107:42:2;82:67;;;;;;;;;;;;;;;;;;;;74:243:3;8:9:-1;5:2;;;30:1;27;20:12;5:2;74:243:3;;;;;;;",
-  "deployedSourceMap": "74:243:3:-;;;;8:9:-1;5:2;;;30:1;27;20:12;5:2;74:243:3;;;;;;;;;;;;;;;;;;;;;;;;;;;;;217:284:2;;;;;;13:2:-1;8:3;5:11;2:2;;;29:1;26;19:12;2:2;217:284:2;;;;;;;;;;;;;;;;;:::i;:::-;;135:85:3;;;;;;13:2:-1;8:3;5:11;2:2;;;29:1;26;19:12;2:2;135:85:3;;;;;;;;;;;;;;;;;:::i;:::-;;226:86;;;:::i;:::-;;;;;;;;;;;;;;;;;;;217:284:2;273:20;306:14;;;;;;;;;;;273:48;;337:14;362:10;337:36;;383:10;:18;;;402:6;383:26;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;8:9:-1;5:2;;;30:1;27;20:12;5:2;383:26:2;;;;8:9:-1;5:2;;;45:16;42:1;39;24:38;77:16;74:1;67:27;5:2;383:26:2;;;;;;;13:2:-1;8:3;5:11;2:2;;;29:1;26;19:12;2:2;383:26:2;;;;;;;;;;;;;;;;380:117;;;418:13;434:6;418:22;;455:4;:27;;;483:5;455:34;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;8:9:-1;5:2;;;30:1;27;20:12;5:2;455:34:2;;;;8:9:-1;5:2;;;45:16;42:1;39;24:38;77:16;74:1;67:27;5:2;455:34:2;;;;380:117;;217:284;;;:::o;135:85:3:-;209:6;197:9;:18;;;;135:85;:::o;226:86::-;271:7;293:9;;286:16;;226:86;:::o",
-  "source": "pragma solidity >=0.4.22 <0.9.0;\n\nimport \"../clientContract/client.sol\";\n\ncontract ExampleClient is Client {\n  uint256 lastValue;\n  \n  function value_callback_process(uint256 _value) public {\n     lastValue = _value;\n  }\n  \n  function get_lastValue() public view returns(uint256) {\n    return lastValue;\n    \n  }\n  \n}\n",
-  "sourcePath": "/home/a/Documents/acria_contracts/contracts/clientContract/clientExample.sol",
+  "allSourcePaths": {
+    "0": "contracts/contracts/AcriaMain.sol",
+    "1": "contracts/contracts/AcriaNode.sol",
+    "10": "contracts/contracts/clientContract/clientExample.sol",
+    "9": "contracts/contracts/clientContract/client.sol"
+  },
   "ast": {
-    "absolutePath": "/home/a/Documents/acria_contracts/contracts/clientContract/clientExample.sol",
+    "absolutePath": "contracts/contracts/clientContract/clientExample.sol",
     "exportedSymbols": {
+      "AcriaMain": [
+        150
+      ],
+      "Client": [
+        1463
+      ],
       "ExampleClient": [
-        615
+        1500
       ]
     },
-    "id": 616,
+    "id": 1501,
+    "license": "MIT",
     "nodeType": "SourceUnit",
     "nodes": [
       {
-        "id": 591,
+        "id": 1465,
         "literals": [
           "solidity",
           ">=",
@@ -76,61 +86,59 @@
           ".0"
         ],
         "nodeType": "PragmaDirective",
-        "src": "0:32:3"
+        "src": "33:32:10"
       },
       {
-        "absolutePath": "/home/a/Documents/acria_contracts/contracts/clientContract/client.sol",
+        "absolutePath": "contracts/contracts/clientContract/client.sol",
         "file": "../clientContract/client.sol",
-        "id": 592,
+        "id": 1466,
+        "nameLocation": "-1:-1:-1",
         "nodeType": "ImportDirective",
-        "scope": 616,
-        "sourceUnit": 590,
-        "src": "34:38:3",
+        "scope": 1501,
+        "sourceUnit": 1464,
+        "src": "67:38:10",
         "symbolAliases": [],
         "unitAlias": ""
       },
       {
+        "abstract": false,
         "baseContracts": [
           {
-            "arguments": null,
             "baseName": {
-              "contractScope": null,
-              "id": 593,
+              "id": 1467,
               "name": "Client",
-              "nodeType": "UserDefinedTypeName",
-              "referencedDeclaration": 589,
-              "src": "100:6:3",
-              "typeDescriptions": {
-                "typeIdentifier": "t_contract$_Client_$589",
-                "typeString": "contract Client"
-              }
+              "nodeType": "IdentifierPath",
+              "referencedDeclaration": 1463,
+              "src": "133:6:10"
             },
-            "id": 594,
+            "id": 1468,
             "nodeType": "InheritanceSpecifier",
-            "src": "100:6:3"
+            "src": "133:6:10"
           }
         ],
         "contractDependencies": [
-          589
+          1463
         ],
         "contractKind": "contract",
-        "documentation": null,
         "fullyImplemented": true,
-        "id": 615,
+        "id": 1500,
         "linearizedBaseContracts": [
-          615,
-          589
+          1500,
+          1463
         ],
         "name": "ExampleClient",
+        "nameLocation": "116:13:10",
         "nodeType": "ContractDefinition",
         "nodes": [
           {
             "constant": false,
-            "id": 596,
+            "id": 1470,
+            "mutability": "mutable",
             "name": "lastValue",
+            "nameLocation": "152:9:10",
             "nodeType": "VariableDeclaration",
-            "scope": 615,
-            "src": "111:17:3",
+            "scope": 1500,
+            "src": "144:17:10",
             "stateVariable": true,
             "storageLocation": "default",
             "typeDescriptions": {
@@ -138,40 +146,145 @@
               "typeString": "uint256"
             },
             "typeName": {
-              "id": 595,
+              "id": 1469,
               "name": "uint256",
               "nodeType": "ElementaryTypeName",
-              "src": "111:7:3",
+              "src": "144:7:10",
               "typeDescriptions": {
                 "typeIdentifier": "t_uint256",
                 "typeString": "uint256"
               }
             },
-            "value": null,
             "visibility": "internal"
           },
           {
             "body": {
-              "id": 605,
+              "id": 1479,
               "nodeType": "Block",
-              "src": "190:30:3",
+              "src": "194:31:10",
               "statements": [
                 {
                   "expression": {
-                    "argumentTypes": null,
-                    "id": 603,
+                    "id": 1477,
                     "isConstant": false,
                     "isLValue": false,
                     "isPure": false,
                     "lValueRequested": false,
                     "leftHandSide": {
-                      "argumentTypes": null,
-                      "id": 601,
+                      "id": 1475,
+                      "name": "acria_contract",
+                      "nodeType": "Identifier",
+                      "overloadedDeclarations": [],
+                      "referencedDeclaration": 1420,
+                      "src": "199:14:10",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_address",
+                        "typeString": "address"
+                      }
+                    },
+                    "nodeType": "Assignment",
+                    "operator": "=",
+                    "rightHandSide": {
+                      "id": 1476,
+                      "name": "main",
+                      "nodeType": "Identifier",
+                      "overloadedDeclarations": [],
+                      "referencedDeclaration": 1472,
+                      "src": "216:4:10",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_address",
+                        "typeString": "address"
+                      }
+                    },
+                    "src": "199:21:10",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_address",
+                      "typeString": "address"
+                    }
+                  },
+                  "id": 1478,
+                  "nodeType": "ExpressionStatement",
+                  "src": "199:21:10"
+                }
+              ]
+            },
+            "id": 1480,
+            "implemented": true,
+            "kind": "constructor",
+            "modifiers": [],
+            "name": "",
+            "nameLocation": "-1:-1:-1",
+            "nodeType": "FunctionDefinition",
+            "parameters": {
+              "id": 1473,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 1472,
+                  "mutability": "mutable",
+                  "name": "main",
+                  "nameLocation": "188:4:10",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 1480,
+                  "src": "180:12:10",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_address",
+                    "typeString": "address"
+                  },
+                  "typeName": {
+                    "id": 1471,
+                    "name": "address",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "180:7:10",
+                    "stateMutability": "nonpayable",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_address",
+                      "typeString": "address"
+                    }
+                  },
+                  "visibility": "internal"
+                }
+              ],
+              "src": "179:14:10"
+            },
+            "returnParameters": {
+              "id": 1474,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "194:0:10"
+            },
+            "scope": 1500,
+            "src": "168:57:10",
+            "stateMutability": "nonpayable",
+            "virtual": false,
+            "visibility": "public"
+          },
+          {
+            "baseFunctions": [
+              1425
+            ],
+            "body": {
+              "id": 1490,
+              "nodeType": "Block",
+              "src": "295:30:10",
+              "statements": [
+                {
+                  "expression": {
+                    "id": 1488,
+                    "isConstant": false,
+                    "isLValue": false,
+                    "isPure": false,
+                    "lValueRequested": false,
+                    "leftHandSide": {
+                      "id": 1486,
                       "name": "lastValue",
                       "nodeType": "Identifier",
                       "overloadedDeclarations": [],
-                      "referencedDeclaration": 596,
-                      "src": "197:9:3",
+                      "referencedDeclaration": 1470,
+                      "src": "302:9:10",
                       "typeDescriptions": {
                         "typeIdentifier": "t_uint256",
                         "typeString": "uint256"
@@ -180,48 +293,56 @@
                     "nodeType": "Assignment",
                     "operator": "=",
                     "rightHandSide": {
-                      "argumentTypes": null,
-                      "id": 602,
+                      "id": 1487,
                       "name": "_value",
                       "nodeType": "Identifier",
                       "overloadedDeclarations": [],
-                      "referencedDeclaration": 598,
-                      "src": "209:6:3",
+                      "referencedDeclaration": 1482,
+                      "src": "314:6:10",
                       "typeDescriptions": {
                         "typeIdentifier": "t_uint256",
                         "typeString": "uint256"
                       }
                     },
-                    "src": "197:18:3",
+                    "src": "302:18:10",
                     "typeDescriptions": {
                       "typeIdentifier": "t_uint256",
                       "typeString": "uint256"
                     }
                   },
-                  "id": 604,
+                  "id": 1489,
                   "nodeType": "ExpressionStatement",
-                  "src": "197:18:3"
+                  "src": "302:18:10"
                 }
               ]
             },
-            "documentation": null,
-            "id": 606,
+            "functionSelector": "2d4a34ea",
+            "id": 1491,
             "implemented": true,
             "kind": "function",
             "modifiers": [],
             "name": "value_callback_process",
+            "nameLocation": "240:22:10",
             "nodeType": "FunctionDefinition",
+            "overrides": {
+              "id": 1484,
+              "nodeType": "OverrideSpecifier",
+              "overrides": [],
+              "src": "286:8:10"
+            },
             "parameters": {
-              "id": 599,
+              "id": 1483,
               "nodeType": "ParameterList",
               "parameters": [
                 {
                   "constant": false,
-                  "id": 598,
+                  "id": 1482,
+                  "mutability": "mutable",
                   "name": "_value",
+                  "nameLocation": "271:6:10",
                   "nodeType": "VariableDeclaration",
-                  "scope": 606,
-                  "src": "167:14:3",
+                  "scope": 1491,
+                  "src": "263:14:10",
                   "stateVariable": false,
                   "storageLocation": "default",
                   "typeDescriptions": {
@@ -229,84 +350,85 @@
                     "typeString": "uint256"
                   },
                   "typeName": {
-                    "id": 597,
+                    "id": 1481,
                     "name": "uint256",
                     "nodeType": "ElementaryTypeName",
-                    "src": "167:7:3",
+                    "src": "263:7:10",
                     "typeDescriptions": {
                       "typeIdentifier": "t_uint256",
                       "typeString": "uint256"
                     }
                   },
-                  "value": null,
                   "visibility": "internal"
                 }
               ],
-              "src": "166:16:3"
+              "src": "262:16:10"
             },
             "returnParameters": {
-              "id": 600,
+              "id": 1485,
               "nodeType": "ParameterList",
               "parameters": [],
-              "src": "190:0:3"
+              "src": "295:0:10"
             },
-            "scope": 615,
-            "src": "135:85:3",
+            "scope": 1500,
+            "src": "231:94:10",
             "stateMutability": "nonpayable",
-            "superFunction": 553,
+            "virtual": false,
             "visibility": "public"
           },
           {
             "body": {
-              "id": 613,
+              "id": 1498,
               "nodeType": "Block",
-              "src": "280:32:3",
+              "src": "385:32:10",
               "statements": [
                 {
                   "expression": {
-                    "argumentTypes": null,
-                    "id": 611,
+                    "id": 1496,
                     "name": "lastValue",
                     "nodeType": "Identifier",
                     "overloadedDeclarations": [],
-                    "referencedDeclaration": 596,
-                    "src": "293:9:3",
+                    "referencedDeclaration": 1470,
+                    "src": "398:9:10",
                     "typeDescriptions": {
                       "typeIdentifier": "t_uint256",
                       "typeString": "uint256"
                     }
                   },
-                  "functionReturnParameters": 610,
-                  "id": 612,
+                  "functionReturnParameters": 1495,
+                  "id": 1497,
                   "nodeType": "Return",
-                  "src": "286:16:3"
+                  "src": "391:16:10"
                 }
               ]
             },
-            "documentation": null,
-            "id": 614,
+            "functionSelector": "521befb8",
+            "id": 1499,
             "implemented": true,
             "kind": "function",
             "modifiers": [],
             "name": "get_lastValue",
+            "nameLocation": "340:13:10",
             "nodeType": "FunctionDefinition",
             "parameters": {
-              "id": 607,
+              "id": 1492,
               "nodeType": "ParameterList",
               "parameters": [],
-              "src": "248:2:3"
+              "src": "353:2:10"
             },
             "returnParameters": {
-              "id": 610,
+              "id": 1495,
               "nodeType": "ParameterList",
               "parameters": [
                 {
                   "constant": false,
-                  "id": 609,
+                  "id": 1494,
+                  "mutability": "mutable",
                   "name": "",
+                  "nameLocation": "-1:-1:-1",
                   "nodeType": "VariableDeclaration",
-                  "scope": 614,
-                  "src": "271:7:3",
+                  "scope": 1499,
+                  "src": "376:7:10",
                   "stateVariable": false,
                   "storageLocation": "default",
                   "typeDescriptions": {
@@ -314,386 +436,2422 @@
                     "typeString": "uint256"
                   },
                   "typeName": {
-                    "id": 608,
+                    "id": 1493,
                     "name": "uint256",
                     "nodeType": "ElementaryTypeName",
-                    "src": "271:7:3",
+                    "src": "376:7:10",
                     "typeDescriptions": {
                       "typeIdentifier": "t_uint256",
                       "typeString": "uint256"
                     }
                   },
-                  "value": null,
                   "visibility": "internal"
                 }
               ],
-              "src": "270:9:3"
+              "src": "375:9:10"
             },
-            "scope": 615,
-            "src": "226:86:3",
+            "scope": 1500,
+            "src": "331:86:10",
             "stateMutability": "view",
-            "superFunction": null,
+            "virtual": false,
             "visibility": "public"
           }
         ],
-        "scope": 616,
-        "src": "74:243:3"
+        "scope": 1501,
+        "src": "107:315:10"
       }
     ],
-    "src": "0:318:3"
+    "src": "33:390:10"
   },
-  "legacyAST": {
-    "attributes": {
-      "absolutePath": "/home/a/Documents/acria_contracts/contracts/clientContract/clientExample.sol",
-      "exportedSymbols": {
-        "ExampleClient": [
-          615
-        ]
+  "bytecode": "608060405234801561001057600080fd5b5060405161026838038061026883398101604081905261002f91610054565b600080546001600160a01b0319166001600160a01b0392909216919091179055610082565b600060208284031215610065578081fd5b81516001600160a01b038116811461007b578182fd5b9392505050565b6101d7806100916000396000f3fe608060405234801561001057600080fd5b50600436106100415760003560e01c806327c1642e146100465780632d4a34ea1461005b578063521befb81461006e575b600080fd5b610059610054366004610189565b610083565b005b610059610069366004610189565b600155565b60015460405190815260200160405180910390f35b60005460405163ce7e684760e01b815233600482018190526001600160a01b039092169190829063ce7e68479060240160206040518083038186803b1580156100cb57600080fd5b505afa1580156100df573d6000803e3d6000fd5b505050506040513d601f19601f820116820180604052508101906101039190610162565b1561015d576040516316a51a7560e11b81526004810184905283903090632d4a34ea90602401600060405180830381600087803b15801561014357600080fd5b505af1158015610157573d6000803e3d6000fd5b50505050505b505050565b600060208284031215610173578081fd5b81518015158114610182578182fd5b9392505050565b60006020828403121561019a578081fd5b503591905056fea26469706673582212206656867a6eec8fcab6ca46dabf4a2ce7b54da6fc7a9333ac210e3db2353dbaa964736f6c63430008020033",
+  "bytecodeSha1": "f09c116d7328f7b8a0adb1db57860dc5b01587ba",
+  "compiler": {
+    "evm_version": "istanbul",
+    "optimizer": {
+      "enabled": true,
+      "runs": 200
+    },
+    "version": "0.8.2+commit.661d1103"
+  },
+  "contractName": "ExampleClient",
+  "coverageMap": {
+    "branches": {
+      "0": {},
+      "1": {},
+      "10": {},
+      "9": {
+        "Client.value_callback": {
+          "3": [
+            388,
+            414,
+            false
+          ]
+        }
       }
     },
-    "children": [
-      {
-        "attributes": {
-          "literals": [
-            "solidity",
-            ">=",
-            "0.4",
-            ".22",
-            "<",
-            "0.9",
-            ".0"
+    "statements": {
+      "0": {},
+      "1": {},
+      "10": {
+        "ExampleClient.get_lastValue": {
+          "1": [
+            391,
+            407
           ]
         },
-        "id": 591,
-        "name": "PragmaDirective",
-        "src": "0:32:3"
+        "ExampleClient.value_callback_process": {
+          "0": [
+            302,
+            320
+          ]
+        }
       },
-      {
-        "attributes": {
-          "SourceUnit": 590,
-          "absolutePath": "/home/a/Documents/acria_contracts/contracts/clientContract/client.sol",
-          "file": "../clientContract/client.sol",
-          "scope": 616,
-          "symbolAliases": [
-            null
-          ],
-          "unitAlias": ""
-        },
-        "id": 592,
-        "name": "ImportDirective",
-        "src": "34:38:3"
-      },
-      {
-        "attributes": {
-          "contractDependencies": [
-            589
-          ],
-          "contractKind": "contract",
-          "documentation": null,
-          "fullyImplemented": true,
-          "linearizedBaseContracts": [
-            615,
-            589
-          ],
-          "name": "ExampleClient",
-          "scope": 616
-        },
-        "children": [
-          {
-            "attributes": {
-              "arguments": null
-            },
-            "children": [
-              {
-                "attributes": {
-                  "contractScope": null,
-                  "name": "Client",
-                  "referencedDeclaration": 589,
-                  "type": "contract Client"
-                },
-                "id": 593,
-                "name": "UserDefinedTypeName",
-                "src": "100:6:3"
-              }
-            ],
-            "id": 594,
-            "name": "InheritanceSpecifier",
-            "src": "100:6:3"
-          },
-          {
-            "attributes": {
-              "constant": false,
-              "name": "lastValue",
-              "scope": 615,
-              "stateVariable": true,
-              "storageLocation": "default",
-              "type": "uint256",
-              "value": null,
-              "visibility": "internal"
-            },
-            "children": [
-              {
-                "attributes": {
-                  "name": "uint256",
-                  "type": "uint256"
-                },
-                "id": 595,
-                "name": "ElementaryTypeName",
-                "src": "111:7:3"
-              }
-            ],
-            "id": 596,
-            "name": "VariableDeclaration",
-            "src": "111:17:3"
-          },
-          {
-            "attributes": {
-              "documentation": null,
-              "implemented": true,
-              "isConstructor": false,
-              "kind": "function",
-              "modifiers": [
-                null
-              ],
-              "name": "value_callback_process",
-              "scope": 615,
-              "stateMutability": "nonpayable",
-              "superFunction": 553,
-              "visibility": "public"
-            },
-            "children": [
-              {
-                "children": [
-                  {
-                    "attributes": {
-                      "constant": false,
-                      "name": "_value",
-                      "scope": 606,
-                      "stateVariable": false,
-                      "storageLocation": "default",
-                      "type": "uint256",
-                      "value": null,
-                      "visibility": "internal"
-                    },
-                    "children": [
-                      {
-                        "attributes": {
-                          "name": "uint256",
-                          "type": "uint256"
-                        },
-                        "id": 597,
-                        "name": "ElementaryTypeName",
-                        "src": "167:7:3"
-                      }
-                    ],
-                    "id": 598,
-                    "name": "VariableDeclaration",
-                    "src": "167:14:3"
-                  }
-                ],
-                "id": 599,
-                "name": "ParameterList",
-                "src": "166:16:3"
-              },
-              {
-                "attributes": {
-                  "parameters": [
-                    null
-                  ]
-                },
-                "children": [],
-                "id": 600,
-                "name": "ParameterList",
-                "src": "190:0:3"
-              },
-              {
-                "children": [
-                  {
-                    "children": [
-                      {
-                        "attributes": {
-                          "argumentTypes": null,
-                          "isConstant": false,
-                          "isLValue": false,
-                          "isPure": false,
-                          "lValueRequested": false,
-                          "operator": "=",
-                          "type": "uint256"
-                        },
-                        "children": [
-                          {
-                            "attributes": {
-                              "argumentTypes": null,
-                              "overloadedDeclarations": [
-                                null
-                              ],
-                              "referencedDeclaration": 596,
-                              "type": "uint256",
-                              "value": "lastValue"
-                            },
-                            "id": 601,
-                            "name": "Identifier",
-                            "src": "197:9:3"
-                          },
-                          {
-                            "attributes": {
-                              "argumentTypes": null,
-                              "overloadedDeclarations": [
-                                null
-                              ],
-                              "referencedDeclaration": 598,
-                              "type": "uint256",
-                              "value": "_value"
-                            },
-                            "id": 602,
-                            "name": "Identifier",
-                            "src": "209:6:3"
-                          }
-                        ],
-                        "id": 603,
-                        "name": "Assignment",
-                        "src": "197:18:3"
-                      }
-                    ],
-                    "id": 604,
-                    "name": "ExpressionStatement",
-                    "src": "197:18:3"
-                  }
-                ],
-                "id": 605,
-                "name": "Block",
-                "src": "190:30:3"
-              }
-            ],
-            "id": 606,
-            "name": "FunctionDefinition",
-            "src": "135:85:3"
-          },
-          {
-            "attributes": {
-              "documentation": null,
-              "implemented": true,
-              "isConstructor": false,
-              "kind": "function",
-              "modifiers": [
-                null
-              ],
-              "name": "get_lastValue",
-              "scope": 615,
-              "stateMutability": "view",
-              "superFunction": null,
-              "visibility": "public"
-            },
-            "children": [
-              {
-                "attributes": {
-                  "parameters": [
-                    null
-                  ]
-                },
-                "children": [],
-                "id": 607,
-                "name": "ParameterList",
-                "src": "248:2:3"
-              },
-              {
-                "children": [
-                  {
-                    "attributes": {
-                      "constant": false,
-                      "name": "",
-                      "scope": 614,
-                      "stateVariable": false,
-                      "storageLocation": "default",
-                      "type": "uint256",
-                      "value": null,
-                      "visibility": "internal"
-                    },
-                    "children": [
-                      {
-                        "attributes": {
-                          "name": "uint256",
-                          "type": "uint256"
-                        },
-                        "id": 608,
-                        "name": "ElementaryTypeName",
-                        "src": "271:7:3"
-                      }
-                    ],
-                    "id": 609,
-                    "name": "VariableDeclaration",
-                    "src": "271:7:3"
-                  }
-                ],
-                "id": 610,
-                "name": "ParameterList",
-                "src": "270:9:3"
-              },
-              {
-                "children": [
-                  {
-                    "attributes": {
-                      "functionReturnParameters": 610
-                    },
-                    "children": [
-                      {
-                        "attributes": {
-                          "argumentTypes": null,
-                          "overloadedDeclarations": [
-                            null
-                          ],
-                          "referencedDeclaration": 596,
-                          "type": "uint256",
-                          "value": "lastValue"
-                        },
-                        "id": 611,
-                        "name": "Identifier",
-                        "src": "293:9:3"
-                      }
-                    ],
-                    "id": 612,
-                    "name": "Return",
-                    "src": "286:16:3"
-                  }
-                ],
-                "id": 613,
-                "name": "Block",
-                "src": "280:32:3"
-              }
-            ],
-            "id": 614,
-            "name": "FunctionDefinition",
-            "src": "226:86:3"
-          }
-        ],
-        "id": 615,
-        "name": "ContractDefinition",
-        "src": "74:243:3"
+      "9": {
+        "Client.value_callback": {
+          "2": [
+            460,
+            494
+          ]
+        }
       }
-    ],
-    "id": 616,
-    "name": "SourceUnit",
-    "src": "0:318:3"
-  },
-  "compiler": {
-    "name": "solc",
-    "version": "0.5.16+commit.9c3226ce.Emscripten.clang"
-  },
-  "networks": {
-    "5777": {
-      "events": {},
-      "links": {},
-      "address": "0xd251B35B29B50DC517515b05e496FAf46bbf0572",
-      "transactionHash": "0x4dc4937769f5a28b9c2283514022ac970420d55d470631bce3d6c2f6e47caa78"
     }
   },
-  "schemaVersion": "3.3.3",
-  "updatedAt": "2021-02-22T17:51:21.791Z",
-  "networkType": "ethereum",
-  "devdoc": {
-    "methods": {}
+  "dependencies": [
+    "AcriaMain",
+    "AcriaNode",
+    "Client"
+  ],
+  "deployedBytecode": "608060405234801561001057600080fd5b50600436106100415760003560e01c806327c1642e146100465780632d4a34ea1461005b578063521befb81461006e575b600080fd5b610059610054366004610189565b610083565b005b610059610069366004610189565b600155565b60015460405190815260200160405180910390f35b60005460405163ce7e684760e01b815233600482018190526001600160a01b039092169190829063ce7e68479060240160206040518083038186803b1580156100cb57600080fd5b505afa1580156100df573d6000803e3d6000fd5b505050506040513d601f19601f820116820180604052508101906101039190610162565b1561015d576040516316a51a7560e11b81526004810184905283903090632d4a34ea90602401600060405180830381600087803b15801561014357600080fd5b505af1158015610157573d6000803e3d6000fd5b50505050505b505050565b600060208284031215610173578081fd5b81518015158114610182578182fd5b9392505050565b60006020828403121561019a578081fd5b503591905056fea26469706673582212206656867a6eec8fcab6ca46dabf4a2ce7b54da6fc7a9333ac210e3db2353dbaa964736f6c63430008020033",
+  "deployedSourceMap": "107:315:10:-:0;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;222:284:9;;;;;;:::i;:::-;;:::i;:::-;;231:94:10;;;;;;:::i;:::-;302:9;:18;231:94;331:86;398:9;;331:86;;865:25:13;;;853:2;838:18;331:86:10;;;;;;;222:284:9;278:20;311:14;388:26;;-1:-1:-1;;;388:26:9;;367:10;388:26;;;657:51:13;;;-1:-1:-1;;;;;311:14:9;;;;367:10;311:14;;388:18;;630::13;;388:26:9;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;:::i;:::-;385:117;;;460:34;;-1:-1:-1;;;460:34:9;;;;;865:25:13;;;439:6:9;;460:4;;:27;;838:18:13;;460:34:9;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;385:117;;222:284;;;:::o;14:297:13:-;;134:2;122:9;113:7;109:23;105:32;102:2;;;155:6;147;140:22;102:2;192:9;186:16;245:5;238:13;231:21;224:5;221:32;211:2;;272:6;264;257:22;211:2;300:5;92:219;-1:-1:-1;;;92:219:13:o;316:190::-;;428:2;416:9;407:7;403:23;399:32;396:2;;;449:6;441;434:22;396:2;-1:-1:-1;477:23:13;;386:120;-1:-1:-1;386:120:13:o",
+  "language": "Solidity",
+  "natspec": {
+    "kind": "dev",
+    "methods": {},
+    "version": 1
   },
-  "userdoc": {
-    "methods": {}
-  }
+  "offset": [
+    107,
+    422
+  ],
+  "opcodes": "PUSH1 0x80 PUSH1 0x40 MSTORE CALLVALUE DUP1 ISZERO PUSH2 0x10 JUMPI PUSH1 0x0 DUP1 REVERT JUMPDEST POP PUSH1 0x4 CALLDATASIZE LT PUSH2 0x41 JUMPI PUSH1 0x0 CALLDATALOAD PUSH1 0xE0 SHR DUP1 PUSH4 0x27C1642E EQ PUSH2 0x46 JUMPI DUP1 PUSH4 0x2D4A34EA EQ PUSH2 0x5B JUMPI DUP1 PUSH4 0x521BEFB8 EQ PUSH2 0x6E JUMPI JUMPDEST PUSH1 0x0 DUP1 REVERT JUMPDEST PUSH2 0x59 PUSH2 0x54 CALLDATASIZE PUSH1 0x4 PUSH2 0x189 JUMP JUMPDEST PUSH2 0x83 JUMP JUMPDEST STOP JUMPDEST PUSH2 0x59 PUSH2 0x69 CALLDATASIZE PUSH1 0x4 PUSH2 0x189 JUMP JUMPDEST PUSH1 0x1 SSTORE JUMP JUMPDEST PUSH1 0x1 SLOAD PUSH1 0x40 MLOAD SWAP1 DUP2 MSTORE PUSH1 0x20 ADD PUSH1 0x40 MLOAD DUP1 SWAP2 SUB SWAP1 RETURN JUMPDEST PUSH1 0x0 SLOAD PUSH1 0x40 MLOAD PUSH4 0xCE7E6847 PUSH1 0xE0 SHL DUP2 MSTORE CALLER PUSH1 0x4 DUP3 ADD DUP2 SWAP1 MSTORE PUSH1 0x1 PUSH1 0x1 PUSH1 0xA0 SHL SUB SWAP1 SWAP3 AND SWAP2 SWAP1 DUP3 SWAP1 PUSH4 0xCE7E6847 SWAP1 PUSH1 0x24 ADD PUSH1 0x20 PUSH1 0x40 MLOAD DUP1 DUP4 SUB DUP2 DUP7 DUP1 EXTCODESIZE ISZERO DUP1 ISZERO PUSH2 0xCB JUMPI PUSH1 0x0 DUP1 REVERT JUMPDEST POP GAS STATICCALL ISZERO DUP1 ISZERO PUSH2 0xDF JUMPI RETURNDATASIZE PUSH1 0x0 DUP1 RETURNDATACOPY RETURNDATASIZE PUSH1 0x0 REVERT JUMPDEST POP POP POP POP PUSH1 0x40 MLOAD RETURNDATASIZE PUSH1 0x1F NOT PUSH1 0x1F DUP3 ADD AND DUP3 ADD DUP1 PUSH1 0x40 MSTORE POP DUP2 ADD SWAP1 PUSH2 0x103 SWAP2 SWAP1 PUSH2 0x162 JUMP JUMPDEST ISZERO PUSH2 0x15D JUMPI PUSH1 0x40 MLOAD PUSH4 0x16A51A75 PUSH1 0xE1 SHL DUP2 MSTORE PUSH1 0x4 DUP2 ADD DUP5 SWAP1 MSTORE DUP4 SWAP1 ADDRESS SWAP1 PUSH4 0x2D4A34EA SWAP1 PUSH1 0x24 ADD PUSH1 0x0 PUSH1 0x40 MLOAD DUP1 DUP4 SUB DUP2 PUSH1 0x0 DUP8 DUP1 EXTCODESIZE ISZERO DUP1 ISZERO PUSH2 0x143 JUMPI PUSH1 0x0 DUP1 REVERT JUMPDEST POP GAS CALL ISZERO DUP1 ISZERO PUSH2 0x157 JUMPI RETURNDATASIZE PUSH1 0x0 DUP1 RETURNDATACOPY RETURNDATASIZE PUSH1 0x0 REVERT JUMPDEST POP POP POP POP POP JUMPDEST POP POP POP JUMP JUMPDEST PUSH1 0x0 PUSH1 0x20 DUP3 DUP5 SUB SLT ISZERO PUSH2 0x173 JUMPI DUP1 DUP2 REVERT JUMPDEST DUP2 MLOAD DUP1 ISZERO ISZERO DUP2 EQ PUSH2 0x182 JUMPI DUP2 DUP3 REVERT JUMPDEST SWAP4 SWAP3 POP POP POP JUMP JUMPDEST PUSH1 0x0 PUSH1 0x20 DUP3 DUP5 SUB SLT ISZERO PUSH2 0x19A JUMPI DUP1 DUP2 REVERT JUMPDEST POP CALLDATALOAD SWAP2 SWAP1 POP JUMP INVALID LOG2 PUSH5 0x6970667358 0x22 SLT KECCAK256 PUSH7 0x56867A6EEC8FCA 0xB6 0xCA CHAINID 0xDA 0xBF 0x4A 0x2C 0xE7 0xB5 0x4D 0xA6 0xFC PUSH27 0x9333AC210E3DB2353DBAA964736F6C634300080200330000000000 ",
+  "pcMap": {
+    "0": {
+      "offset": [
+        107,
+        422
+      ],
+      "op": "PUSH1",
+      "path": "10",
+      "value": "0x80"
+    },
+    "2": {
+      "fn": null,
+      "offset": [
+        107,
+        422
+      ],
+      "op": "PUSH1",
+      "path": "10",
+      "value": "0x40"
+    },
+    "4": {
+      "fn": null,
+      "offset": [
+        107,
+        422
+      ],
+      "op": "MSTORE",
+      "path": "10"
+    },
+    "5": {
+      "fn": null,
+      "offset": [
+        107,
+        422
+      ],
+      "op": "CALLVALUE",
+      "path": "10"
+    },
+    "6": {
+      "fn": null,
+      "offset": [
+        107,
+        422
+      ],
+      "op": "DUP1",
+      "path": "10"
+    },
+    "7": {
+      "fn": null,
+      "offset": [
+        107,
+        422
+      ],
+      "op": "ISZERO",
+      "path": "10"
+    },
+    "8": {
+      "fn": null,
+      "offset": [
+        107,
+        422
+      ],
+      "op": "PUSH2",
+      "path": "10",
+      "value": "0x10"
+    },
+    "11": {
+      "fn": null,
+      "offset": [
+        107,
+        422
+      ],
+      "op": "JUMPI",
+      "path": "10"
+    },
+    "12": {
+      "fn": null,
+      "offset": [
+        107,
+        422
+      ],
+      "op": "PUSH1",
+      "path": "10",
+      "value": "0x0"
+    },
+    "14": {
+      "fn": null,
+      "offset": [
+        107,
+        422
+      ],
+      "op": "DUP1",
+      "path": "10"
+    },
+    "15": {
+      "dev": "Cannot send ether to nonpayable function",
+      "fn": null,
+      "offset": [
+        107,
+        422
+      ],
+      "op": "REVERT",
+      "path": "10"
+    },
+    "16": {
+      "fn": null,
+      "offset": [
+        107,
+        422
+      ],
+      "op": "JUMPDEST",
+      "path": "10"
+    },
+    "17": {
+      "fn": null,
+      "offset": [
+        107,
+        422
+      ],
+      "op": "POP",
+      "path": "10"
+    },
+    "18": {
+      "fn": null,
+      "offset": [
+        107,
+        422
+      ],
+      "op": "PUSH1",
+      "path": "10",
+      "value": "0x4"
+    },
+    "20": {
+      "fn": null,
+      "offset": [
+        107,
+        422
+      ],
+      "op": "CALLDATASIZE",
+      "path": "10"
+    },
+    "21": {
+      "fn": null,
+      "offset": [
+        107,
+        422
+      ],
+      "op": "LT",
+      "path": "10"
+    },
+    "22": {
+      "fn": null,
+      "offset": [
+        107,
+        422
+      ],
+      "op": "PUSH2",
+      "path": "10",
+      "value": "0x41"
+    },
+    "25": {
+      "fn": null,
+      "offset": [
+        107,
+        422
+      ],
+      "op": "JUMPI",
+      "path": "10"
+    },
+    "26": {
+      "fn": null,
+      "offset": [
+        107,
+        422
+      ],
+      "op": "PUSH1",
+      "path": "10",
+      "value": "0x0"
+    },
+    "28": {
+      "fn": null,
+      "offset": [
+        107,
+        422
+      ],
+      "op": "CALLDATALOAD",
+      "path": "10"
+    },
+    "29": {
+      "fn": null,
+      "offset": [
+        107,
+        422
+      ],
+      "op": "PUSH1",
+      "path": "10",
+      "value": "0xE0"
+    },
+    "31": {
+      "fn": null,
+      "offset": [
+        107,
+        422
+      ],
+      "op": "SHR",
+      "path": "10"
+    },
+    "32": {
+      "fn": null,
+      "offset": [
+        107,
+        422
+      ],
+      "op": "DUP1",
+      "path": "10"
+    },
+    "33": {
+      "fn": null,
+      "offset": [
+        107,
+        422
+      ],
+      "op": "PUSH4",
+      "path": "10",
+      "value": "0x27C1642E"
+    },
+    "38": {
+      "fn": null,
+      "offset": [
+        107,
+        422
+      ],
+      "op": "EQ",
+      "path": "10"
+    },
+    "39": {
+      "fn": null,
+      "offset": [
+        107,
+        422
+      ],
+      "op": "PUSH2",
+      "path": "10",
+      "value": "0x46"
+    },
+    "42": {
+      "fn": null,
+      "offset": [
+        107,
+        422
+      ],
+      "op": "JUMPI",
+      "path": "10"
+    },
+    "43": {
+      "fn": null,
+      "offset": [
+        107,
+        422
+      ],
+      "op": "DUP1",
+      "path": "10"
+    },
+    "44": {
+      "fn": null,
+      "offset": [
+        107,
+        422
+      ],
+      "op": "PUSH4",
+      "path": "10",
+      "value": "0x2D4A34EA"
+    },
+    "49": {
+      "fn": null,
+      "offset": [
+        107,
+        422
+      ],
+      "op": "EQ",
+      "path": "10"
+    },
+    "50": {
+      "fn": null,
+      "offset": [
+        107,
+        422
+      ],
+      "op": "PUSH2",
+      "path": "10",
+      "value": "0x5B"
+    },
+    "53": {
+      "fn": null,
+      "offset": [
+        107,
+        422
+      ],
+      "op": "JUMPI",
+      "path": "10"
+    },
+    "54": {
+      "fn": null,
+      "offset": [
+        107,
+        422
+      ],
+      "op": "DUP1",
+      "path": "10"
+    },
+    "55": {
+      "fn": null,
+      "offset": [
+        107,
+        422
+      ],
+      "op": "PUSH4",
+      "path": "10",
+      "value": "0x521BEFB8"
+    },
+    "60": {
+      "fn": null,
+      "offset": [
+        107,
+        422
+      ],
+      "op": "EQ",
+      "path": "10"
+    },
+    "61": {
+      "fn": null,
+      "offset": [
+        107,
+        422
+      ],
+      "op": "PUSH2",
+      "path": "10",
+      "value": "0x6E"
+    },
+    "64": {
+      "fn": null,
+      "offset": [
+        107,
+        422
+      ],
+      "op": "JUMPI",
+      "path": "10"
+    },
+    "65": {
+      "fn": null,
+      "offset": [
+        107,
+        422
+      ],
+      "op": "JUMPDEST",
+      "path": "10"
+    },
+    "66": {
+      "fn": null,
+      "offset": [
+        107,
+        422
+      ],
+      "op": "PUSH1",
+      "path": "10",
+      "value": "0x0"
+    },
+    "68": {
+      "fn": null,
+      "offset": [
+        107,
+        422
+      ],
+      "op": "DUP1",
+      "path": "10"
+    },
+    "69": {
+      "first_revert": true,
+      "fn": null,
+      "offset": [
+        107,
+        422
+      ],
+      "op": "REVERT",
+      "path": "10"
+    },
+    "70": {
+      "fn": "Client.value_callback",
+      "offset": [
+        222,
+        506
+      ],
+      "op": "JUMPDEST",
+      "path": "9"
+    },
+    "71": {
+      "fn": "Client.value_callback",
+      "offset": [
+        222,
+        506
+      ],
+      "op": "PUSH2",
+      "path": "9",
+      "value": "0x59"
+    },
+    "74": {
+      "fn": "Client.value_callback",
+      "offset": [
+        222,
+        506
+      ],
+      "op": "PUSH2",
+      "path": "9",
+      "value": "0x54"
+    },
+    "77": {
+      "fn": "Client.value_callback",
+      "offset": [
+        222,
+        506
+      ],
+      "op": "CALLDATASIZE",
+      "path": "9"
+    },
+    "78": {
+      "fn": "Client.value_callback",
+      "offset": [
+        222,
+        506
+      ],
+      "op": "PUSH1",
+      "path": "9",
+      "value": "0x4"
+    },
+    "80": {
+      "fn": "Client.value_callback",
+      "offset": [
+        222,
+        506
+      ],
+      "op": "PUSH2",
+      "path": "9",
+      "value": "0x189"
+    },
+    "83": {
+      "fn": "Client.value_callback",
+      "jump": "i",
+      "offset": [
+        222,
+        506
+      ],
+      "op": "JUMP",
+      "path": "9"
+    },
+    "84": {
+      "fn": "Client.value_callback",
+      "offset": [
+        222,
+        506
+      ],
+      "op": "JUMPDEST",
+      "path": "9"
+    },
+    "85": {
+      "fn": "Client.value_callback",
+      "offset": [
+        222,
+        506
+      ],
+      "op": "PUSH2",
+      "path": "9",
+      "value": "0x83"
+    },
+    "88": {
+      "fn": "Client.value_callback",
+      "jump": "i",
+      "offset": [
+        222,
+        506
+      ],
+      "op": "JUMP",
+      "path": "9"
+    },
+    "89": {
+      "fn": "Client.value_callback",
+      "offset": [
+        222,
+        506
+      ],
+      "op": "JUMPDEST",
+      "path": "9"
+    },
+    "90": {
+      "fn": "Client.value_callback",
+      "offset": [
+        222,
+        506
+      ],
+      "op": "STOP",
+      "path": "9"
+    },
+    "91": {
+      "fn": "ExampleClient.value_callback_process",
+      "offset": [
+        231,
+        325
+      ],
+      "op": "JUMPDEST",
+      "path": "10"
+    },
+    "92": {
+      "fn": "ExampleClient.value_callback_process",
+      "offset": [
+        231,
+        325
+      ],
+      "op": "PUSH2",
+      "path": "10",
+      "value": "0x59"
+    },
+    "95": {
+      "fn": "ExampleClient.value_callback_process",
+      "offset": [
+        231,
+        325
+      ],
+      "op": "PUSH2",
+      "path": "10",
+      "value": "0x69"
+    },
+    "98": {
+      "fn": "ExampleClient.value_callback_process",
+      "offset": [
+        231,
+        325
+      ],
+      "op": "CALLDATASIZE",
+      "path": "10"
+    },
+    "99": {
+      "fn": "ExampleClient.value_callback_process",
+      "offset": [
+        231,
+        325
+      ],
+      "op": "PUSH1",
+      "path": "10",
+      "value": "0x4"
+    },
+    "101": {
+      "fn": "ExampleClient.value_callback_process",
+      "offset": [
+        231,
+        325
+      ],
+      "op": "PUSH2",
+      "path": "10",
+      "value": "0x189"
+    },
+    "104": {
+      "fn": "ExampleClient.value_callback_process",
+      "jump": "i",
+      "offset": [
+        231,
+        325
+      ],
+      "op": "JUMP",
+      "path": "10"
+    },
+    "105": {
+      "fn": "ExampleClient.value_callback_process",
+      "offset": [
+        231,
+        325
+      ],
+      "op": "JUMPDEST",
+      "path": "10"
+    },
+    "106": {
+      "fn": "ExampleClient.value_callback_process",
+      "offset": [
+        302,
+        311
+      ],
+      "op": "PUSH1",
+      "path": "10",
+      "statement": 0,
+      "value": "0x1"
+    },
+    "108": {
+      "fn": "ExampleClient.value_callback_process",
+      "offset": [
+        302,
+        320
+      ],
+      "op": "SSTORE",
+      "path": "10"
+    },
+    "109": {
+      "fn": "ExampleClient.value_callback_process",
+      "offset": [
+        231,
+        325
+      ],
+      "op": "JUMP",
+      "path": "10"
+    },
+    "110": {
+      "fn": "ExampleClient.get_lastValue",
+      "offset": [
+        331,
+        417
+      ],
+      "op": "JUMPDEST",
+      "path": "10"
+    },
+    "111": {
+      "fn": "ExampleClient.get_lastValue",
+      "offset": [
+        398,
+        407
+      ],
+      "op": "PUSH1",
+      "path": "10",
+      "statement": 1,
+      "value": "0x1"
+    },
+    "113": {
+      "fn": "ExampleClient.get_lastValue",
+      "offset": [
+        398,
+        407
+      ],
+      "op": "SLOAD",
+      "path": "10"
+    },
+    "114": {
+      "fn": "ExampleClient.get_lastValue",
+      "offset": [
+        331,
+        417
+      ],
+      "op": "PUSH1",
+      "path": "10",
+      "value": "0x40"
+    },
+    "116": {
+      "fn": "ExampleClient.get_lastValue",
+      "offset": [
+        331,
+        417
+      ],
+      "op": "MLOAD",
+      "path": "10"
+    },
+    "117": {
+      "op": "SWAP1"
+    },
+    "118": {
+      "op": "DUP2"
+    },
+    "119": {
+      "op": "MSTORE"
+    },
+    "120": {
+      "op": "PUSH1",
+      "value": "0x20"
+    },
+    "122": {
+      "op": "ADD"
+    },
+    "123": {
+      "fn": "ExampleClient.get_lastValue",
+      "offset": [
+        331,
+        417
+      ],
+      "op": "PUSH1",
+      "path": "10",
+      "value": "0x40"
+    },
+    "125": {
+      "fn": "ExampleClient.get_lastValue",
+      "offset": [
+        331,
+        417
+      ],
+      "op": "MLOAD",
+      "path": "10"
+    },
+    "126": {
+      "fn": "ExampleClient.get_lastValue",
+      "offset": [
+        331,
+        417
+      ],
+      "op": "DUP1",
+      "path": "10"
+    },
+    "127": {
+      "fn": "ExampleClient.get_lastValue",
+      "offset": [
+        331,
+        417
+      ],
+      "op": "SWAP2",
+      "path": "10"
+    },
+    "128": {
+      "fn": "ExampleClient.get_lastValue",
+      "offset": [
+        331,
+        417
+      ],
+      "op": "SUB",
+      "path": "10"
+    },
+    "129": {
+      "fn": "ExampleClient.get_lastValue",
+      "offset": [
+        331,
+        417
+      ],
+      "op": "SWAP1",
+      "path": "10"
+    },
+    "130": {
+      "fn": "ExampleClient.get_lastValue",
+      "offset": [
+        331,
+        417
+      ],
+      "op": "RETURN",
+      "path": "10"
+    },
+    "131": {
+      "fn": "Client.value_callback",
+      "offset": [
+        222,
+        506
+      ],
+      "op": "JUMPDEST",
+      "path": "9"
+    },
+    "132": {
+      "fn": "Client.value_callback",
+      "offset": [
+        278,
+        298
+      ],
+      "op": "PUSH1",
+      "path": "9",
+      "value": "0x0"
+    },
+    "134": {
+      "fn": "Client.value_callback",
+      "offset": [
+        311,
+        325
+      ],
+      "op": "SLOAD",
+      "path": "9"
+    },
+    "135": {
+      "fn": "Client.value_callback",
+      "offset": [
+        388,
+        414
+      ],
+      "op": "PUSH1",
+      "path": "9",
+      "value": "0x40"
+    },
+    "137": {
+      "fn": "Client.value_callback",
+      "offset": [
+        388,
+        414
+      ],
+      "op": "MLOAD",
+      "path": "9"
+    },
+    "138": {
+      "op": "PUSH4",
+      "value": "0xCE7E6847"
+    },
+    "143": {
+      "op": "PUSH1",
+      "value": "0xE0"
+    },
+    "145": {
+      "op": "SHL"
+    },
+    "146": {
+      "fn": "Client.value_callback",
+      "offset": [
+        388,
+        414
+      ],
+      "op": "DUP2",
+      "path": "9"
+    },
+    "147": {
+      "fn": "Client.value_callback",
+      "offset": [
+        388,
+        414
+      ],
+      "op": "MSTORE",
+      "path": "9"
+    },
+    "148": {
+      "fn": "Client.value_callback",
+      "offset": [
+        367,
+        377
+      ],
+      "op": "CALLER",
+      "path": "9"
+    },
+    "149": {
+      "fn": "Client.value_callback",
+      "offset": [
+        388,
+        414
+      ],
+      "op": "PUSH1",
+      "path": "9",
+      "value": "0x4"
+    },
+    "151": {
+      "fn": "Client.value_callback",
+      "offset": [
+        388,
+        414
+      ],
+      "op": "DUP3",
+      "path": "9"
+    },
+    "152": {
+      "fn": "Client.value_callback",
+      "offset": [
+        388,
+        414
+      ],
+      "op": "ADD",
+      "path": "9"
+    },
+    "153": {
+      "op": "DUP2"
+    },
+    "154": {
+      "op": "SWAP1"
+    },
+    "155": {
+      "op": "MSTORE"
+    },
+    "156": {
+      "op": "PUSH1",
+      "value": "0x1"
+    },
+    "158": {
+      "op": "PUSH1",
+      "value": "0x1"
+    },
+    "160": {
+      "op": "PUSH1",
+      "value": "0xA0"
+    },
+    "162": {
+      "op": "SHL"
+    },
+    "163": {
+      "op": "SUB"
+    },
+    "164": {
+      "fn": "Client.value_callback",
+      "offset": [
+        311,
+        325
+      ],
+      "op": "SWAP1",
+      "path": "9"
+    },
+    "165": {
+      "fn": "Client.value_callback",
+      "offset": [
+        311,
+        325
+      ],
+      "op": "SWAP3",
+      "path": "9"
+    },
+    "166": {
+      "fn": "Client.value_callback",
+      "offset": [
+        311,
+        325
+      ],
+      "op": "AND",
+      "path": "9"
+    },
+    "167": {
+      "fn": "Client.value_callback",
+      "offset": [
+        311,
+        325
+      ],
+      "op": "SWAP2",
+      "path": "9"
+    },
+    "168": {
+      "fn": "Client.value_callback",
+      "offset": [
+        367,
+        377
+      ],
+      "op": "SWAP1",
+      "path": "9"
+    },
+    "169": {
+      "fn": "Client.value_callback",
+      "offset": [
+        311,
+        325
+      ],
+      "op": "DUP3",
+      "path": "9"
+    },
+    "170": {
+      "fn": "Client.value_callback",
+      "offset": [
+        311,
+        325
+      ],
+      "op": "SWAP1",
+      "path": "9"
+    },
+    "171": {
+      "fn": "Client.value_callback",
+      "offset": [
+        388,
+        406
+      ],
+      "op": "PUSH4",
+      "path": "9",
+      "value": "0xCE7E6847"
+    },
+    "176": {
+      "fn": "Client.value_callback",
+      "offset": [
+        388,
+        406
+      ],
+      "op": "SWAP1",
+      "path": "9"
+    },
+    "177": {
+      "op": "PUSH1",
+      "value": "0x24"
+    },
+    "179": {
+      "op": "ADD"
+    },
+    "180": {
+      "fn": "Client.value_callback",
+      "offset": [
+        388,
+        414
+      ],
+      "op": "PUSH1",
+      "path": "9",
+      "value": "0x20"
+    },
+    "182": {
+      "fn": "Client.value_callback",
+      "offset": [
+        388,
+        414
+      ],
+      "op": "PUSH1",
+      "path": "9",
+      "value": "0x40"
+    },
+    "184": {
+      "fn": "Client.value_callback",
+      "offset": [
+        388,
+        414
+      ],
+      "op": "MLOAD",
+      "path": "9"
+    },
+    "185": {
+      "fn": "Client.value_callback",
+      "offset": [
+        388,
+        414
+      ],
+      "op": "DUP1",
+      "path": "9"
+    },
+    "186": {
+      "fn": "Client.value_callback",
+      "offset": [
+        388,
+        414
+      ],
+      "op": "DUP4",
+      "path": "9"
+    },
+    "187": {
+      "fn": "Client.value_callback",
+      "offset": [
+        388,
+        414
+      ],
+      "op": "SUB",
+      "path": "9"
+    },
+    "188": {
+      "fn": "Client.value_callback",
+      "offset": [
+        388,
+        414
+      ],
+      "op": "DUP2",
+      "path": "9"
+    },
+    "189": {
+      "fn": "Client.value_callback",
+      "offset": [
+        388,
+        414
+      ],
+      "op": "DUP7",
+      "path": "9"
+    },
+    "190": {
+      "fn": "Client.value_callback",
+      "offset": [
+        388,
+        414
+      ],
+      "op": "DUP1",
+      "path": "9"
+    },
+    "191": {
+      "fn": "Client.value_callback",
+      "offset": [
+        388,
+        414
+      ],
+      "op": "EXTCODESIZE",
+      "path": "9"
+    },
+    "192": {
+      "fn": "Client.value_callback",
+      "offset": [
+        388,
+        414
+      ],
+      "op": "ISZERO",
+      "path": "9"
+    },
+    "193": {
+      "fn": "Client.value_callback",
+      "offset": [
+        388,
+        414
+      ],
+      "op": "DUP1",
+      "path": "9"
+    },
+    "194": {
+      "fn": "Client.value_callback",
+      "offset": [
+        388,
+        414
+      ],
+      "op": "ISZERO",
+      "path": "9"
+    },
+    "195": {
+      "fn": "Client.value_callback",
+      "offset": [
+        388,
+        414
+      ],
+      "op": "PUSH2",
+      "path": "9",
+      "value": "0xCB"
+    },
+    "198": {
+      "fn": "Client.value_callback",
+      "offset": [
+        388,
+        414
+      ],
+      "op": "JUMPI",
+      "path": "9"
+    },
+    "199": {
+      "fn": "Client.value_callback",
+      "offset": [
+        388,
+        414
+      ],
+      "op": "PUSH1",
+      "path": "9",
+      "value": "0x0"
+    },
+    "201": {
+      "fn": "Client.value_callback",
+      "offset": [
+        388,
+        414
+      ],
+      "op": "DUP1",
+      "path": "9"
+    },
+    "202": {
+      "fn": "Client.value_callback",
+      "offset": [
+        388,
+        414
+      ],
+      "op": "REVERT",
+      "path": "9"
+    },
+    "203": {
+      "fn": "Client.value_callback",
+      "offset": [
+        388,
+        414
+      ],
+      "op": "JUMPDEST",
+      "path": "9"
+    },
+    "204": {
+      "fn": "Client.value_callback",
+      "offset": [
+        388,
+        414
+      ],
+      "op": "POP",
+      "path": "9"
+    },
+    "205": {
+      "fn": "Client.value_callback",
+      "offset": [
+        388,
+        414
+      ],
+      "op": "GAS",
+      "path": "9"
+    },
+    "206": {
+      "fn": "Client.value_callback",
+      "offset": [
+        388,
+        414
+      ],
+      "op": "STATICCALL",
+      "path": "9"
+    },
+    "207": {
+      "fn": "Client.value_callback",
+      "offset": [
+        388,
+        414
+      ],
+      "op": "ISZERO",
+      "path": "9"
+    },
+    "208": {
+      "fn": "Client.value_callback",
+      "offset": [
+        388,
+        414
+      ],
+      "op": "DUP1",
+      "path": "9"
+    },
+    "209": {
+      "fn": "Client.value_callback",
+      "offset": [
+        388,
+        414
+      ],
+      "op": "ISZERO",
+      "path": "9"
+    },
+    "210": {
+      "fn": "Client.value_callback",
+      "offset": [
+        388,
+        414
+      ],
+      "op": "PUSH2",
+      "path": "9",
+      "value": "0xDF"
+    },
+    "213": {
+      "fn": "Client.value_callback",
+      "offset": [
+        388,
+        414
+      ],
+      "op": "JUMPI",
+      "path": "9"
+    },
+    "214": {
+      "fn": "Client.value_callback",
+      "offset": [
+        388,
+        414
+      ],
+      "op": "RETURNDATASIZE",
+      "path": "9"
+    },
+    "215": {
+      "fn": "Client.value_callback",
+      "offset": [
+        388,
+        414
+      ],
+      "op": "PUSH1",
+      "path": "9",
+      "value": "0x0"
+    },
+    "217": {
+      "fn": "Client.value_callback",
+      "offset": [
+        388,
+        414
+      ],
+      "op": "DUP1",
+      "path": "9"
+    },
+    "218": {
+      "fn": "Client.value_callback",
+      "offset": [
+        388,
+        414
+      ],
+      "op": "RETURNDATACOPY",
+      "path": "9"
+    },
+    "219": {
+      "fn": "Client.value_callback",
+      "offset": [
+        388,
+        414
+      ],
+      "op": "RETURNDATASIZE",
+      "path": "9"
+    },
+    "220": {
+      "fn": "Client.value_callback",
+      "offset": [
+        388,
+        414
+      ],
+      "op": "PUSH1",
+      "path": "9",
+      "value": "0x0"
+    },
+    "222": {
+      "fn": "Client.value_callback",
+      "offset": [
+        388,
+        414
+      ],
+      "op": "REVERT",
+      "path": "9"
+    },
+    "223": {
+      "fn": "Client.value_callback",
+      "offset": [
+        388,
+        414
+      ],
+      "op": "JUMPDEST",
+      "path": "9"
+    },
+    "224": {
+      "fn": "Client.value_callback",
+      "offset": [
+        388,
+        414
+      ],
+      "op": "POP",
+      "path": "9"
+    },
+    "225": {
+      "fn": "Client.value_callback",
+      "offset": [
+        388,
+        414
+      ],
+      "op": "POP",
+      "path": "9"
+    },
+    "226": {
+      "fn": "Client.value_callback",
+      "offset": [
+        388,
+        414
+      ],
+      "op": "POP",
+      "path": "9"
+    },
+    "227": {
+      "fn": "Client.value_callback",
+      "offset": [
+        388,
+        414
+      ],
+      "op": "POP",
+      "path": "9"
+    },
+    "228": {
+      "fn": "Client.value_callback",
+      "offset": [
+        388,
+        414
+      ],
+      "op": "PUSH1",
+      "path": "9",
+      "value": "0x40"
+    },
+    "230": {
+      "fn": "Client.value_callback",
+      "offset": [
+        388,
+        414
+      ],
+      "op": "MLOAD",
+      "path": "9"
+    },
+    "231": {
+      "fn": "Client.value_callback",
+      "offset": [
+        388,
+        414
+      ],
+      "op": "RETURNDATASIZE",
+      "path": "9"
+    },
+    "232": {
+      "fn": "Client.value_callback",
+      "offset": [
+        388,
+        414
+      ],
+      "op": "PUSH1",
+      "path": "9",
+      "value": "0x1F"
+    },
+    "234": {
+      "fn": "Client.value_callback",
+      "offset": [
+        388,
+        414
+      ],
+      "op": "NOT",
+      "path": "9"
+    },
+    "235": {
+      "fn": "Client.value_callback",
+      "offset": [
+        388,
+        414
+      ],
+      "op": "PUSH1",
+      "path": "9",
+      "value": "0x1F"
+    },
+    "237": {
+      "fn": "Client.value_callback",
+      "offset": [
+        388,
+        414
+      ],
+      "op": "DUP3",
+      "path": "9"
+    },
+    "238": {
+      "fn": "Client.value_callback",
+      "offset": [
+        388,
+        414
+      ],
+      "op": "ADD",
+      "path": "9"
+    },
+    "239": {
+      "fn": "Client.value_callback",
+      "offset": [
+        388,
+        414
+      ],
+      "op": "AND",
+      "path": "9"
+    },
+    "240": {
+      "fn": "Client.value_callback",
+      "offset": [
+        388,
+        414
+      ],
+      "op": "DUP3",
+      "path": "9"
+    },
+    "241": {
+      "fn": "Client.value_callback",
+      "offset": [
+        388,
+        414
+      ],
+      "op": "ADD",
+      "path": "9"
+    },
+    "242": {
+      "fn": "Client.value_callback",
+      "offset": [
+        388,
+        414
+      ],
+      "op": "DUP1",
+      "path": "9"
+    },
+    "243": {
+      "fn": "Client.value_callback",
+      "offset": [
+        388,
+        414
+      ],
+      "op": "PUSH1",
+      "path": "9",
+      "value": "0x40"
+    },
+    "245": {
+      "fn": "Client.value_callback",
+      "offset": [
+        388,
+        414
+      ],
+      "op": "MSTORE",
+      "path": "9"
+    },
+    "246": {
+      "fn": "Client.value_callback",
+      "offset": [
+        388,
+        414
+      ],
+      "op": "POP",
+      "path": "9"
+    },
+    "247": {
+      "fn": "Client.value_callback",
+      "offset": [
+        388,
+        414
+      ],
+      "op": "DUP2",
+      "path": "9"
+    },
+    "248": {
+      "fn": "Client.value_callback",
+      "offset": [
+        388,
+        414
+      ],
+      "op": "ADD",
+      "path": "9"
+    },
+    "249": {
+      "fn": "Client.value_callback",
+      "offset": [
+        388,
+        414
+      ],
+      "op": "SWAP1",
+      "path": "9"
+    },
+    "250": {
+      "fn": "Client.value_callback",
+      "offset": [
+        388,
+        414
+      ],
+      "op": "PUSH2",
+      "path": "9",
+      "value": "0x103"
+    },
+    "253": {
+      "fn": "Client.value_callback",
+      "offset": [
+        388,
+        414
+      ],
+      "op": "SWAP2",
+      "path": "9"
+    },
+    "254": {
+      "fn": "Client.value_callback",
+      "offset": [
+        388,
+        414
+      ],
+      "op": "SWAP1",
+      "path": "9"
+    },
+    "255": {
+      "fn": "Client.value_callback",
+      "offset": [
+        388,
+        414
+      ],
+      "op": "PUSH2",
+      "path": "9",
+      "value": "0x162"
+    },
+    "258": {
+      "fn": "Client.value_callback",
+      "jump": "i",
+      "offset": [
+        388,
+        414
+      ],
+      "op": "JUMP",
+      "path": "9"
+    },
+    "259": {
+      "branch": 3,
+      "fn": "Client.value_callback",
+      "offset": [
+        388,
+        414
+      ],
+      "op": "JUMPDEST",
+      "path": "9"
+    },
+    "260": {
+      "fn": "Client.value_callback",
+      "offset": [
+        385,
+        502
+      ],
+      "op": "ISZERO",
+      "path": "9"
+    },
+    "261": {
+      "fn": "Client.value_callback",
+      "offset": [
+        385,
+        502
+      ],
+      "op": "PUSH2",
+      "path": "9",
+      "value": "0x15D"
+    },
+    "264": {
+      "branch": 3,
+      "fn": "Client.value_callback",
+      "offset": [
+        385,
+        502
+      ],
+      "op": "JUMPI",
+      "path": "9"
+    },
+    "265": {
+      "fn": "Client.value_callback",
+      "offset": [
+        460,
+        494
+      ],
+      "op": "PUSH1",
+      "path": "9",
+      "statement": 2,
+      "value": "0x40"
+    },
+    "267": {
+      "fn": "Client.value_callback",
+      "offset": [
+        460,
+        494
+      ],
+      "op": "MLOAD",
+      "path": "9"
+    },
+    "268": {
+      "op": "PUSH4",
+      "value": "0x16A51A75"
+    },
+    "273": {
+      "op": "PUSH1",
+      "value": "0xE1"
+    },
+    "275": {
+      "op": "SHL"
+    },
+    "276": {
+      "fn": "Client.value_callback",
+      "offset": [
+        460,
+        494
+      ],
+      "op": "DUP2",
+      "path": "9"
+    },
+    "277": {
+      "fn": "Client.value_callback",
+      "offset": [
+        460,
+        494
+      ],
+      "op": "MSTORE",
+      "path": "9"
+    },
+    "278": {
+      "fn": "Client.value_callback",
+      "offset": [
+        460,
+        494
+      ],
+      "op": "PUSH1",
+      "path": "9",
+      "value": "0x4"
+    },
+    "280": {
+      "fn": "Client.value_callback",
+      "offset": [
+        460,
+        494
+      ],
+      "op": "DUP2",
+      "path": "9"
+    },
+    "281": {
+      "fn": "Client.value_callback",
+      "offset": [
+        460,
+        494
+      ],
+      "op": "ADD",
+      "path": "9"
+    },
+    "282": {
+      "op": "DUP5"
+    },
+    "283": {
+      "op": "SWAP1"
+    },
+    "284": {
+      "op": "MSTORE"
+    },
+    "285": {
+      "fn": "Client.value_callback",
+      "offset": [
+        439,
+        445
+      ],
+      "op": "DUP4",
+      "path": "9"
+    },
+    "286": {
+      "fn": "Client.value_callback",
+      "offset": [
+        439,
+        445
+      ],
+      "op": "SWAP1",
+      "path": "9"
+    },
+    "287": {
+      "fn": "Client.value_callback",
+      "offset": [
+        460,
+        464
+      ],
+      "op": "ADDRESS",
+      "path": "9"
+    },
+    "288": {
+      "fn": "Client.value_callback",
+      "offset": [
+        460,
+        464
+      ],
+      "op": "SWAP1",
+      "path": "9"
+    },
+    "289": {
+      "fn": "Client.value_callback",
+      "offset": [
+        460,
+        487
+      ],
+      "op": "PUSH4",
+      "path": "9",
+      "value": "0x2D4A34EA"
+    },
+    "294": {
+      "fn": "Client.value_callback",
+      "offset": [
+        460,
+        487
+      ],
+      "op": "SWAP1",
+      "path": "9"
+    },
+    "295": {
+      "op": "PUSH1",
+      "value": "0x24"
+    },
+    "297": {
+      "op": "ADD"
+    },
+    "298": {
+      "fn": "Client.value_callback",
+      "offset": [
+        460,
+        494
+      ],
+      "op": "PUSH1",
+      "path": "9",
+      "value": "0x0"
+    },
+    "300": {
+      "fn": "Client.value_callback",
+      "offset": [
+        460,
+        494
+      ],
+      "op": "PUSH1",
+      "path": "9",
+      "value": "0x40"
+    },
+    "302": {
+      "fn": "Client.value_callback",
+      "offset": [
+        460,
+        494
+      ],
+      "op": "MLOAD",
+      "path": "9"
+    },
+    "303": {
+      "fn": "Client.value_callback",
+      "offset": [
+        460,
+        494
+      ],
+      "op": "DUP1",
+      "path": "9"
+    },
+    "304": {
+      "fn": "Client.value_callback",
+      "offset": [
+        460,
+        494
+      ],
+      "op": "DUP4",
+      "path": "9"
+    },
+    "305": {
+      "fn": "Client.value_callback",
+      "offset": [
+        460,
+        494
+      ],
+      "op": "SUB",
+      "path": "9"
+    },
+    "306": {
+      "fn": "Client.value_callback",
+      "offset": [
+        460,
+        494
+      ],
+      "op": "DUP2",
+      "path": "9"
+    },
+    "307": {
+      "fn": "Client.value_callback",
+      "offset": [
+        460,
+        494
+      ],
+      "op": "PUSH1",
+      "path": "9",
+      "value": "0x0"
+    },
+    "309": {
+      "fn": "Client.value_callback",
+      "offset": [
+        460,
+        494
+      ],
+      "op": "DUP8",
+      "path": "9"
+    },
+    "310": {
+      "fn": "Client.value_callback",
+      "offset": [
+        460,
+        494
+      ],
+      "op": "DUP1",
+      "path": "9"
+    },
+    "311": {
+      "fn": "Client.value_callback",
+      "offset": [
+        460,
+        494
+      ],
+      "op": "EXTCODESIZE",
+      "path": "9"
+    },
+    "312": {
+      "fn": "Client.value_callback",
+      "offset": [
+        460,
+        494
+      ],
+      "op": "ISZERO",
+      "path": "9"
+    },
+    "313": {
+      "fn": "Client.value_callback",
+      "offset": [
+        460,
+        494
+      ],
+      "op": "DUP1",
+      "path": "9"
+    },
+    "314": {
+      "fn": "Client.value_callback",
+      "offset": [
+        460,
+        494
+      ],
+      "op": "ISZERO",
+      "path": "9"
+    },
+    "315": {
+      "fn": "Client.value_callback",
+      "offset": [
+        460,
+        494
+      ],
+      "op": "PUSH2",
+      "path": "9",
+      "value": "0x143"
+    },
+    "318": {
+      "fn": "Client.value_callback",
+      "offset": [
+        460,
+        494
+      ],
+      "op": "JUMPI",
+      "path": "9"
+    },
+    "319": {
+      "fn": "Client.value_callback",
+      "offset": [
+        460,
+        494
+      ],
+      "op": "PUSH1",
+      "path": "9",
+      "value": "0x0"
+    },
+    "321": {
+      "fn": "Client.value_callback",
+      "offset": [
+        460,
+        494
+      ],
+      "op": "DUP1",
+      "path": "9"
+    },
+    "322": {
+      "fn": "Client.value_callback",
+      "offset": [
+        460,
+        494
+      ],
+      "op": "REVERT",
+      "path": "9"
+    },
+    "323": {
+      "fn": "Client.value_callback",
+      "offset": [
+        460,
+        494
+      ],
+      "op": "JUMPDEST",
+      "path": "9"
+    },
+    "324": {
+      "fn": "Client.value_callback",
+      "offset": [
+        460,
+        494
+      ],
+      "op": "POP",
+      "path": "9"
+    },
+    "325": {
+      "fn": "Client.value_callback",
+      "offset": [
+        460,
+        494
+      ],
+      "op": "GAS",
+      "path": "9"
+    },
+    "326": {
+      "fn": "Client.value_callback",
+      "offset": [
+        460,
+        494
+      ],
+      "op": "CALL",
+      "path": "9"
+    },
+    "327": {
+      "fn": "Client.value_callback",
+      "offset": [
+        460,
+        494
+      ],
+      "op": "ISZERO",
+      "path": "9"
+    },
+    "328": {
+      "fn": "Client.value_callback",
+      "offset": [
+        460,
+        494
+      ],
+      "op": "DUP1",
+      "path": "9"
+    },
+    "329": {
+      "fn": "Client.value_callback",
+      "offset": [
+        460,
+        494
+      ],
+      "op": "ISZERO",
+      "path": "9"
+    },
+    "330": {
+      "fn": "Client.value_callback",
+      "offset": [
+        460,
+        494
+      ],
+      "op": "PUSH2",
+      "path": "9",
+      "value": "0x157"
+    },
+    "333": {
+      "fn": "Client.value_callback",
+      "offset": [
+        460,
+        494
+      ],
+      "op": "JUMPI",
+      "path": "9"
+    },
+    "334": {
+      "fn": "Client.value_callback",
+      "offset": [
+        460,
+        494
+      ],
+      "op": "RETURNDATASIZE",
+      "path": "9"
+    },
+    "335": {
+      "fn": "Client.value_callback",
+      "offset": [
+        460,
+        494
+      ],
+      "op": "PUSH1",
+      "path": "9",
+      "value": "0x0"
+    },
+    "337": {
+      "fn": "Client.value_callback",
+      "offset": [
+        460,
+        494
+      ],
+      "op": "DUP1",
+      "path": "9"
+    },
+    "338": {
+      "fn": "Client.value_callback",
+      "offset": [
+        460,
+        494
+      ],
+      "op": "RETURNDATACOPY",
+      "path": "9"
+    },
+    "339": {
+      "fn": "Client.value_callback",
+      "offset": [
+        460,
+        494
+      ],
+      "op": "RETURNDATASIZE",
+      "path": "9"
+    },
+    "340": {
+      "fn": "Client.value_callback",
+      "offset": [
+        460,
+        494
+      ],
+      "op": "PUSH1",
+      "path": "9",
+      "value": "0x0"
+    },
+    "342": {
+      "fn": "Client.value_callback",
+      "offset": [
+        460,
+        494
+      ],
+      "op": "REVERT",
+      "path": "9"
+    },
+    "343": {
+      "fn": "Client.value_callback",
+      "offset": [
+        460,
+        494
+      ],
+      "op": "JUMPDEST",
+      "path": "9"
+    },
+    "344": {
+      "fn": "Client.value_callback",
+      "offset": [
+        460,
+        494
+      ],
+      "op": "POP",
+      "path": "9"
+    },
+    "345": {
+      "fn": "Client.value_callback",
+      "offset": [
+        460,
+        494
+      ],
+      "op": "POP",
+      "path": "9"
+    },
+    "346": {
+      "fn": "Client.value_callback",
+      "offset": [
+        460,
+        494
+      ],
+      "op": "POP",
+      "path": "9"
+    },
+    "347": {
+      "fn": "Client.value_callback",
+      "offset": [
+        460,
+        494
+      ],
+      "op": "POP",
+      "path": "9"
+    },
+    "348": {
+      "fn": "Client.value_callback",
+      "offset": [
+        385,
+        502
+      ],
+      "op": "POP",
+      "path": "9"
+    },
+    "349": {
+      "fn": "Client.value_callback",
+      "offset": [
+        385,
+        502
+      ],
+      "op": "JUMPDEST",
+      "path": "9"
+    },
+    "350": {
+      "fn": "Client.value_callback",
+      "offset": [
+        222,
+        506
+      ],
+      "op": "POP",
+      "path": "9"
+    },
+    "351": {
+      "fn": "Client.value_callback",
+      "offset": [
+        222,
+        506
+      ],
+      "op": "POP",
+      "path": "9"
+    },
+    "352": {
+      "fn": "Client.value_callback",
+      "offset": [
+        222,
+        506
+      ],
+      "op": "POP",
+      "path": "9"
+    },
+    "353": {
+      "fn": "Client.value_callback",
+      "jump": "o",
+      "offset": [
+        222,
+        506
+      ],
+      "op": "JUMP",
+      "path": "9"
+    },
+    "354": {
+      "op": "JUMPDEST"
+    },
+    "355": {
+      "op": "PUSH1",
+      "value": "0x0"
+    },
+    "357": {
+      "op": "PUSH1",
+      "value": "0x20"
+    },
+    "359": {
+      "op": "DUP3"
+    },
+    "360": {
+      "op": "DUP5"
+    },
+    "361": {
+      "op": "SUB"
+    },
+    "362": {
+      "op": "SLT"
+    },
+    "363": {
+      "op": "ISZERO"
+    },
+    "364": {
+      "op": "PUSH2",
+      "value": "0x173"
+    },
+    "367": {
+      "op": "JUMPI"
+    },
+    "368": {
+      "op": "DUP1"
+    },
+    "369": {
+      "op": "DUP2"
+    },
+    "370": {
+      "op": "REVERT"
+    },
+    "371": {
+      "op": "JUMPDEST"
+    },
+    "372": {
+      "op": "DUP2"
+    },
+    "373": {
+      "op": "MLOAD"
+    },
+    "374": {
+      "op": "DUP1"
+    },
+    "375": {
+      "op": "ISZERO"
+    },
+    "376": {
+      "op": "ISZERO"
+    },
+    "377": {
+      "op": "DUP2"
+    },
+    "378": {
+      "op": "EQ"
+    },
+    "379": {
+      "op": "PUSH2",
+      "value": "0x182"
+    },
+    "382": {
+      "op": "JUMPI"
+    },
+    "383": {
+      "op": "DUP2"
+    },
+    "384": {
+      "op": "DUP3"
+    },
+    "385": {
+      "op": "REVERT"
+    },
+    "386": {
+      "op": "JUMPDEST"
+    },
+    "387": {
+      "op": "SWAP4"
+    },
+    "388": {
+      "op": "SWAP3"
+    },
+    "389": {
+      "op": "POP"
+    },
+    "390": {
+      "op": "POP"
+    },
+    "391": {
+      "op": "POP"
+    },
+    "392": {
+      "jump": "o",
+      "op": "JUMP"
+    },
+    "393": {
+      "op": "JUMPDEST"
+    },
+    "394": {
+      "op": "PUSH1",
+      "value": "0x0"
+    },
+    "396": {
+      "op": "PUSH1",
+      "value": "0x20"
+    },
+    "398": {
+      "op": "DUP3"
+    },
+    "399": {
+      "op": "DUP5"
+    },
+    "400": {
+      "op": "SUB"
+    },
+    "401": {
+      "op": "SLT"
+    },
+    "402": {
+      "op": "ISZERO"
+    },
+    "403": {
+      "op": "PUSH2",
+      "value": "0x19A"
+    },
+    "406": {
+      "op": "JUMPI"
+    },
+    "407": {
+      "op": "DUP1"
+    },
+    "408": {
+      "op": "DUP2"
+    },
+    "409": {
+      "op": "REVERT"
+    },
+    "410": {
+      "op": "JUMPDEST"
+    },
+    "411": {
+      "op": "POP"
+    },
+    "412": {
+      "op": "CALLDATALOAD"
+    },
+    "413": {
+      "op": "SWAP2"
+    },
+    "414": {
+      "op": "SWAP1"
+    },
+    "415": {
+      "op": "POP"
+    },
+    "416": {
+      "jump": "o",
+      "op": "JUMP"
+    }
+  },
+  "sha1": "88442cf5e13dcc005a3878da8cf822975e56c0b8",
+  "source": "// SPDX-License-Identifier: MIT\n\npragma solidity >=0.4.22 <0.9.0;\n\nimport \"../clientContract/client.sol\";\n\ncontract ExampleClient is Client {\n  uint256 lastValue;\n  \n  constructor(address main) {\n  \tacria_contract = main;\n  }\n  \n  function value_callback_process(uint256 _value) public override {\n     lastValue = _value;\n  }\n  \n  function get_lastValue() public view returns(uint256) {\n    return lastValue;\n    \n  }\n  \n}\n",
+  "sourceMap": "107:315:10:-:0;;;168:57;;;;;;;;;;;;;;;;;;;;;;;;;;;;:::i;:::-;199:14;:21;;-1:-1:-1;;;;;;199:21:10;-1:-1:-1;;;;;199:21:10;;;;;;;;;;107:315;;14:310:13;;137:2;125:9;116:7;112:23;108:32;105:2;;;158:6;150;143:22;105:2;189:16;;-1:-1:-1;;;;;234:31:13;;224:42;;214:2;;285:6;277;270:22;214:2;313:5;95:229;-1:-1:-1;;;95:229:13:o;:::-;107:315:10;;;;;;",
+  "sourcePath": "contracts/contracts/clientContract/clientExample.sol",
+  "type": "contract"
 }

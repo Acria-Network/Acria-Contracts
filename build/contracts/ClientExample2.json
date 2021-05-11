@@ -1,0 +1,2720 @@
+{
+  "abi": [
+    {
+      "inputs": [
+        {
+          "internalType": "address payable",
+          "name": "_node",
+          "type": "address"
+        }
+      ],
+      "stateMutability": "nonpayable",
+      "type": "constructor"
+    },
+    {
+      "inputs": [],
+      "name": "callOracle",
+      "outputs": [],
+      "stateMutability": "payable",
+      "type": "function"
+    },
+    {
+      "inputs": [],
+      "name": "lastValue",
+      "outputs": [
+        {
+          "internalType": "uint256",
+          "name": "",
+          "type": "uint256"
+        }
+      ],
+      "stateMutability": "view",
+      "type": "function"
+    },
+    {
+      "inputs": [
+        {
+          "internalType": "uint256",
+          "name": "_value",
+          "type": "uint256"
+        }
+      ],
+      "name": "value_callback",
+      "outputs": [],
+      "stateMutability": "nonpayable",
+      "type": "function"
+    }
+  ],
+  "allSourcePaths": {
+    "11": "contracts/contracts/clientContract/clientExample2.sol"
+  },
+  "ast": {
+    "absolutePath": "contracts/contracts/clientContract/clientExample2.sol",
+    "exportedSymbols": {
+      "AcriaNode": [
+        1514
+      ],
+      "ClientExample2": [
+        1567
+      ]
+    },
+    "id": 1568,
+    "license": "MIT",
+    "nodeType": "SourceUnit",
+    "nodes": [
+      {
+        "id": 1502,
+        "literals": [
+          "solidity",
+          ">=",
+          "0.4",
+          ".22",
+          "<",
+          "0.9",
+          ".0"
+        ],
+        "nodeType": "PragmaDirective",
+        "src": "33:32:11"
+      },
+      {
+        "abstract": false,
+        "baseContracts": [],
+        "contractDependencies": [],
+        "contractKind": "interface",
+        "fullyImplemented": false,
+        "id": 1514,
+        "linearizedBaseContracts": [
+          1514
+        ],
+        "name": "AcriaNode",
+        "nameLocation": "78:9:11",
+        "nodeType": "ContractDefinition",
+        "nodes": [
+          {
+            "functionSelector": "8d4b3223",
+            "id": 1513,
+            "implemented": false,
+            "kind": "function",
+            "modifiers": [],
+            "name": "create_request",
+            "nameLocation": "103:14:11",
+            "nodeType": "FunctionDefinition",
+            "parameters": {
+              "id": 1511,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 1504,
+                  "mutability": "mutable",
+                  "name": "_requestID",
+                  "nameLocation": "125:10:11",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 1513,
+                  "src": "118:17:11",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_bytes8",
+                    "typeString": "bytes8"
+                  },
+                  "typeName": {
+                    "id": 1503,
+                    "name": "bytes8",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "118:6:11",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_bytes8",
+                      "typeString": "bytes8"
+                    }
+                  },
+                  "visibility": "internal"
+                },
+                {
+                  "constant": false,
+                  "id": 1506,
+                  "mutability": "mutable",
+                  "name": "callback",
+                  "nameLocation": "145:8:11",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 1513,
+                  "src": "137:16:11",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_address",
+                    "typeString": "address"
+                  },
+                  "typeName": {
+                    "id": 1505,
+                    "name": "address",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "137:7:11",
+                    "stateMutability": "nonpayable",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_address",
+                      "typeString": "address"
+                    }
+                  },
+                  "visibility": "internal"
+                },
+                {
+                  "constant": false,
+                  "id": 1508,
+                  "mutability": "mutable",
+                  "name": "_expire",
+                  "nameLocation": "163:7:11",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 1513,
+                  "src": "155:15:11",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint256",
+                    "typeString": "uint256"
+                  },
+                  "typeName": {
+                    "id": 1507,
+                    "name": "uint256",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "155:7:11",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    }
+                  },
+                  "visibility": "internal"
+                },
+                {
+                  "constant": false,
+                  "id": 1510,
+                  "mutability": "mutable",
+                  "name": "max_gas",
+                  "nameLocation": "179:7:11",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 1513,
+                  "src": "172:14:11",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint32",
+                    "typeString": "uint32"
+                  },
+                  "typeName": {
+                    "id": 1509,
+                    "name": "uint32",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "172:6:11",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint32",
+                      "typeString": "uint32"
+                    }
+                  },
+                  "visibility": "internal"
+                }
+              ],
+              "src": "117:70:11"
+            },
+            "returnParameters": {
+              "id": 1512,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "204:0:11"
+            },
+            "scope": 1514,
+            "src": "94:111:11",
+            "stateMutability": "payable",
+            "virtual": false,
+            "visibility": "external"
+          }
+        ],
+        "scope": 1568,
+        "src": "68:139:11"
+      },
+      {
+        "abstract": false,
+        "baseContracts": [],
+        "contractDependencies": [],
+        "contractKind": "contract",
+        "fullyImplemented": true,
+        "id": 1567,
+        "linearizedBaseContracts": [
+          1567
+        ],
+        "name": "ClientExample2",
+        "nameLocation": "218:14:11",
+        "nodeType": "ContractDefinition",
+        "nodes": [
+          {
+            "constant": false,
+            "id": 1516,
+            "mutability": "mutable",
+            "name": "node",
+            "nameLocation": "301:4:11",
+            "nodeType": "VariableDeclaration",
+            "scope": 1567,
+            "src": "285:20:11",
+            "stateVariable": true,
+            "storageLocation": "default",
+            "typeDescriptions": {
+              "typeIdentifier": "t_address_payable",
+              "typeString": "address payable"
+            },
+            "typeName": {
+              "id": 1515,
+              "name": "address",
+              "nodeType": "ElementaryTypeName",
+              "src": "285:15:11",
+              "stateMutability": "payable",
+              "typeDescriptions": {
+                "typeIdentifier": "t_address_payable",
+                "typeString": "address payable"
+              }
+            },
+            "visibility": "internal"
+          },
+          {
+            "constant": false,
+            "functionSelector": "43183834",
+            "id": 1518,
+            "mutability": "mutable",
+            "name": "lastValue",
+            "nameLocation": "380:9:11",
+            "nodeType": "VariableDeclaration",
+            "scope": 1567,
+            "src": "365:24:11",
+            "stateVariable": true,
+            "storageLocation": "default",
+            "typeDescriptions": {
+              "typeIdentifier": "t_uint256",
+              "typeString": "uint256"
+            },
+            "typeName": {
+              "id": 1517,
+              "name": "uint256",
+              "nodeType": "ElementaryTypeName",
+              "src": "365:7:11",
+              "typeDescriptions": {
+                "typeIdentifier": "t_uint256",
+                "typeString": "uint256"
+              }
+            },
+            "visibility": "public"
+          },
+          {
+            "body": {
+              "id": 1527,
+              "nodeType": "Block",
+              "src": "431:29:11",
+              "statements": [
+                {
+                  "expression": {
+                    "id": 1525,
+                    "isConstant": false,
+                    "isLValue": false,
+                    "isPure": false,
+                    "lValueRequested": false,
+                    "leftHandSide": {
+                      "id": 1523,
+                      "name": "node",
+                      "nodeType": "Identifier",
+                      "overloadedDeclarations": [],
+                      "referencedDeclaration": 1516,
+                      "src": "441:4:11",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_address_payable",
+                        "typeString": "address payable"
+                      }
+                    },
+                    "nodeType": "Assignment",
+                    "operator": "=",
+                    "rightHandSide": {
+                      "id": 1524,
+                      "name": "_node",
+                      "nodeType": "Identifier",
+                      "overloadedDeclarations": [],
+                      "referencedDeclaration": 1520,
+                      "src": "448:5:11",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_address_payable",
+                        "typeString": "address payable"
+                      }
+                    },
+                    "src": "441:12:11",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_address_payable",
+                      "typeString": "address payable"
+                    }
+                  },
+                  "id": 1526,
+                  "nodeType": "ExpressionStatement",
+                  "src": "441:12:11"
+                }
+              ]
+            },
+            "id": 1528,
+            "implemented": true,
+            "kind": "constructor",
+            "modifiers": [],
+            "name": "",
+            "nameLocation": "-1:-1:-1",
+            "nodeType": "FunctionDefinition",
+            "parameters": {
+              "id": 1521,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 1520,
+                  "mutability": "mutable",
+                  "name": "_node",
+                  "nameLocation": "424:5:11",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 1528,
+                  "src": "408:21:11",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_address_payable",
+                    "typeString": "address payable"
+                  },
+                  "typeName": {
+                    "id": 1519,
+                    "name": "address",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "408:15:11",
+                    "stateMutability": "payable",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_address_payable",
+                      "typeString": "address payable"
+                    }
+                  },
+                  "visibility": "internal"
+                }
+              ],
+              "src": "407:23:11"
+            },
+            "returnParameters": {
+              "id": 1522,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "431:0:11"
+            },
+            "scope": 1567,
+            "src": "396:64:11",
+            "stateMutability": "nonpayable",
+            "virtual": false,
+            "visibility": "public"
+          },
+          {
+            "body": {
+              "id": 1548,
+              "nodeType": "Block",
+              "src": "502:626:11",
+              "statements": [
+                {
+                  "expression": {
+                    "arguments": [
+                      {
+                        "hexValue": "5553442f474250",
+                        "id": 1539,
+                        "isConstant": false,
+                        "isLValue": false,
+                        "isPure": true,
+                        "kind": "string",
+                        "lValueRequested": false,
+                        "nodeType": "Literal",
+                        "src": "1082:9:11",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_stringliteral_881ce35a123c3875df4e6b83b3efbdd694b3ae9c7523fe5d96ca517d56485a82",
+                          "typeString": "literal_string \"USD/GBP\""
+                        },
+                        "value": "USD/GBP"
+                      },
+                      {
+                        "arguments": [
+                          {
+                            "id": 1542,
+                            "name": "this",
+                            "nodeType": "Identifier",
+                            "overloadedDeclarations": [],
+                            "referencedDeclaration": -28,
+                            "src": "1101:4:11",
+                            "typeDescriptions": {
+                              "typeIdentifier": "t_contract$_ClientExample2_$1567",
+                              "typeString": "contract ClientExample2"
+                            }
+                          }
+                        ],
+                        "expression": {
+                          "argumentTypes": [
+                            {
+                              "typeIdentifier": "t_contract$_ClientExample2_$1567",
+                              "typeString": "contract ClientExample2"
+                            }
+                          ],
+                          "id": 1541,
+                          "isConstant": false,
+                          "isLValue": false,
+                          "isPure": true,
+                          "lValueRequested": false,
+                          "nodeType": "ElementaryTypeNameExpression",
+                          "src": "1093:7:11",
+                          "typeDescriptions": {
+                            "typeIdentifier": "t_type$_t_address_$",
+                            "typeString": "type(address)"
+                          },
+                          "typeName": {
+                            "id": 1540,
+                            "name": "address",
+                            "nodeType": "ElementaryTypeName",
+                            "src": "1093:7:11",
+                            "typeDescriptions": {}
+                          }
+                        },
+                        "id": 1543,
+                        "isConstant": false,
+                        "isLValue": false,
+                        "isPure": false,
+                        "kind": "typeConversion",
+                        "lValueRequested": false,
+                        "names": [],
+                        "nodeType": "FunctionCall",
+                        "src": "1093:13:11",
+                        "tryCall": false,
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_address",
+                          "typeString": "address"
+                        }
+                      },
+                      {
+                        "hexValue": "3130303030",
+                        "id": 1544,
+                        "isConstant": false,
+                        "isLValue": false,
+                        "isPure": true,
+                        "kind": "number",
+                        "lValueRequested": false,
+                        "nodeType": "Literal",
+                        "src": "1108:5:11",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_rational_10000_by_1",
+                          "typeString": "int_const 10000"
+                        },
+                        "value": "10000"
+                      },
+                      {
+                        "hexValue": "3530303030",
+                        "id": 1545,
+                        "isConstant": false,
+                        "isLValue": false,
+                        "isPure": true,
+                        "kind": "number",
+                        "lValueRequested": false,
+                        "nodeType": "Literal",
+                        "src": "1115:5:11",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_rational_50000_by_1",
+                          "typeString": "int_const 50000"
+                        },
+                        "value": "50000"
+                      }
+                    ],
+                    "expression": {
+                      "argumentTypes": [
+                        {
+                          "typeIdentifier": "t_stringliteral_881ce35a123c3875df4e6b83b3efbdd694b3ae9c7523fe5d96ca517d56485a82",
+                          "typeString": "literal_string \"USD/GBP\""
+                        },
+                        {
+                          "typeIdentifier": "t_address",
+                          "typeString": "address"
+                        },
+                        {
+                          "typeIdentifier": "t_rational_10000_by_1",
+                          "typeString": "int_const 10000"
+                        },
+                        {
+                          "typeIdentifier": "t_rational_50000_by_1",
+                          "typeString": "int_const 50000"
+                        }
+                      ],
+                      "expression": {
+                        "argumentTypes": [
+                          {
+                            "typeIdentifier": "t_stringliteral_881ce35a123c3875df4e6b83b3efbdd694b3ae9c7523fe5d96ca517d56485a82",
+                            "typeString": "literal_string \"USD/GBP\""
+                          },
+                          {
+                            "typeIdentifier": "t_address",
+                            "typeString": "address"
+                          },
+                          {
+                            "typeIdentifier": "t_rational_10000_by_1",
+                            "typeString": "int_const 10000"
+                          },
+                          {
+                            "typeIdentifier": "t_rational_50000_by_1",
+                            "typeString": "int_const 50000"
+                          }
+                        ],
+                        "expression": {
+                          "arguments": [
+                            {
+                              "id": 1532,
+                              "name": "node",
+                              "nodeType": "Identifier",
+                              "overloadedDeclarations": [],
+                              "referencedDeclaration": 1516,
+                              "src": "1030:4:11",
+                              "typeDescriptions": {
+                                "typeIdentifier": "t_address_payable",
+                                "typeString": "address payable"
+                              }
+                            }
+                          ],
+                          "expression": {
+                            "argumentTypes": [
+                              {
+                                "typeIdentifier": "t_address_payable",
+                                "typeString": "address payable"
+                              }
+                            ],
+                            "id": 1531,
+                            "name": "AcriaNode",
+                            "nodeType": "Identifier",
+                            "overloadedDeclarations": [],
+                            "referencedDeclaration": 1514,
+                            "src": "1020:9:11",
+                            "typeDescriptions": {
+                              "typeIdentifier": "t_type$_t_contract$_AcriaNode_$1514_$",
+                              "typeString": "type(contract AcriaNode)"
+                            }
+                          },
+                          "id": 1533,
+                          "isConstant": false,
+                          "isLValue": false,
+                          "isPure": false,
+                          "kind": "typeConversion",
+                          "lValueRequested": false,
+                          "names": [],
+                          "nodeType": "FunctionCall",
+                          "src": "1020:15:11",
+                          "tryCall": false,
+                          "typeDescriptions": {
+                            "typeIdentifier": "t_contract$_AcriaNode_$1514",
+                            "typeString": "contract AcriaNode"
+                          }
+                        },
+                        "id": 1534,
+                        "isConstant": false,
+                        "isLValue": false,
+                        "isPure": false,
+                        "lValueRequested": false,
+                        "memberName": "create_request",
+                        "nodeType": "MemberAccess",
+                        "referencedDeclaration": 1513,
+                        "src": "1020:30:11",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_function_external_payable$_t_bytes8_$_t_address_$_t_uint256_$_t_uint32_$returns$__$",
+                          "typeString": "function (bytes8,address,uint256,uint32) payable external"
+                        }
+                      },
+                      "id": 1538,
+                      "isConstant": false,
+                      "isLValue": false,
+                      "isPure": false,
+                      "lValueRequested": false,
+                      "names": [
+                        "value",
+                        "gas"
+                      ],
+                      "nodeType": "FunctionCallOptions",
+                      "options": [
+                        {
+                          "expression": {
+                            "id": 1535,
+                            "name": "msg",
+                            "nodeType": "Identifier",
+                            "overloadedDeclarations": [],
+                            "referencedDeclaration": -15,
+                            "src": "1058:3:11",
+                            "typeDescriptions": {
+                              "typeIdentifier": "t_magic_message",
+                              "typeString": "msg"
+                            }
+                          },
+                          "id": 1536,
+                          "isConstant": false,
+                          "isLValue": false,
+                          "isPure": false,
+                          "lValueRequested": false,
+                          "memberName": "value",
+                          "nodeType": "MemberAccess",
+                          "src": "1058:9:11",
+                          "typeDescriptions": {
+                            "typeIdentifier": "t_uint256",
+                            "typeString": "uint256"
+                          }
+                        },
+                        {
+                          "hexValue": "313030303030",
+                          "id": 1537,
+                          "isConstant": false,
+                          "isLValue": false,
+                          "isPure": true,
+                          "kind": "number",
+                          "lValueRequested": false,
+                          "nodeType": "Literal",
+                          "src": "1074:6:11",
+                          "typeDescriptions": {
+                            "typeIdentifier": "t_rational_100000_by_1",
+                            "typeString": "int_const 100000"
+                          },
+                          "value": "100000"
+                        }
+                      ],
+                      "src": "1020:61:11",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_function_external_payable$_t_bytes8_$_t_address_$_t_uint256_$_t_uint32_$returns$__$gasvalue",
+                        "typeString": "function (bytes8,address,uint256,uint32) payable external"
+                      }
+                    },
+                    "id": 1546,
+                    "isConstant": false,
+                    "isLValue": false,
+                    "isPure": false,
+                    "kind": "functionCall",
+                    "lValueRequested": false,
+                    "names": [],
+                    "nodeType": "FunctionCall",
+                    "src": "1020:101:11",
+                    "tryCall": false,
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_tuple$__$",
+                      "typeString": "tuple()"
+                    }
+                  },
+                  "id": 1547,
+                  "nodeType": "ExpressionStatement",
+                  "src": "1020:101:11"
+                }
+              ]
+            },
+            "functionSelector": "7b1b7166",
+            "id": 1549,
+            "implemented": true,
+            "kind": "function",
+            "modifiers": [],
+            "name": "callOracle",
+            "nameLocation": "475:10:11",
+            "nodeType": "FunctionDefinition",
+            "parameters": {
+              "id": 1529,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "485:2:11"
+            },
+            "returnParameters": {
+              "id": 1530,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "502:0:11"
+            },
+            "scope": 1567,
+            "src": "466:662:11",
+            "stateMutability": "payable",
+            "virtual": false,
+            "visibility": "public"
+          },
+          {
+            "body": {
+              "id": 1565,
+              "nodeType": "Block",
+              "src": "1312:164:11",
+              "statements": [
+                {
+                  "expression": {
+                    "arguments": [
+                      {
+                        "commonType": {
+                          "typeIdentifier": "t_address",
+                          "typeString": "address"
+                        },
+                        "id": 1558,
+                        "isConstant": false,
+                        "isLValue": false,
+                        "isPure": false,
+                        "lValueRequested": false,
+                        "leftExpression": {
+                          "expression": {
+                            "id": 1555,
+                            "name": "msg",
+                            "nodeType": "Identifier",
+                            "overloadedDeclarations": [],
+                            "referencedDeclaration": -15,
+                            "src": "1394:3:11",
+                            "typeDescriptions": {
+                              "typeIdentifier": "t_magic_message",
+                              "typeString": "msg"
+                            }
+                          },
+                          "id": 1556,
+                          "isConstant": false,
+                          "isLValue": false,
+                          "isPure": false,
+                          "lValueRequested": false,
+                          "memberName": "sender",
+                          "nodeType": "MemberAccess",
+                          "src": "1394:10:11",
+                          "typeDescriptions": {
+                            "typeIdentifier": "t_address",
+                            "typeString": "address"
+                          }
+                        },
+                        "nodeType": "BinaryOperation",
+                        "operator": "==",
+                        "rightExpression": {
+                          "id": 1557,
+                          "name": "node",
+                          "nodeType": "Identifier",
+                          "overloadedDeclarations": [],
+                          "referencedDeclaration": 1516,
+                          "src": "1408:4:11",
+                          "typeDescriptions": {
+                            "typeIdentifier": "t_address_payable",
+                            "typeString": "address payable"
+                          }
+                        },
+                        "src": "1394:18:11",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_bool",
+                          "typeString": "bool"
+                        }
+                      }
+                    ],
+                    "expression": {
+                      "argumentTypes": [
+                        {
+                          "typeIdentifier": "t_bool",
+                          "typeString": "bool"
+                        }
+                      ],
+                      "id": 1554,
+                      "name": "require",
+                      "nodeType": "Identifier",
+                      "overloadedDeclarations": [
+                        -18,
+                        -18
+                      ],
+                      "referencedDeclaration": -18,
+                      "src": "1386:7:11",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_function_require_pure$_t_bool_$returns$__$",
+                        "typeString": "function (bool) pure"
+                      }
+                    },
+                    "id": 1559,
+                    "isConstant": false,
+                    "isLValue": false,
+                    "isPure": false,
+                    "kind": "functionCall",
+                    "lValueRequested": false,
+                    "names": [],
+                    "nodeType": "FunctionCall",
+                    "src": "1386:27:11",
+                    "tryCall": false,
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_tuple$__$",
+                      "typeString": "tuple()"
+                    }
+                  },
+                  "id": 1560,
+                  "nodeType": "ExpressionStatement",
+                  "src": "1386:27:11"
+                },
+                {
+                  "expression": {
+                    "id": 1563,
+                    "isConstant": false,
+                    "isLValue": false,
+                    "isPure": false,
+                    "lValueRequested": false,
+                    "leftHandSide": {
+                      "id": 1561,
+                      "name": "lastValue",
+                      "nodeType": "Identifier",
+                      "overloadedDeclarations": [],
+                      "referencedDeclaration": 1518,
+                      "src": "1451:9:11",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_uint256",
+                        "typeString": "uint256"
+                      }
+                    },
+                    "nodeType": "Assignment",
+                    "operator": "=",
+                    "rightHandSide": {
+                      "id": 1562,
+                      "name": "_value",
+                      "nodeType": "Identifier",
+                      "overloadedDeclarations": [],
+                      "referencedDeclaration": 1551,
+                      "src": "1463:6:11",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_uint256",
+                        "typeString": "uint256"
+                      }
+                    },
+                    "src": "1451:18:11",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    }
+                  },
+                  "id": 1564,
+                  "nodeType": "ExpressionStatement",
+                  "src": "1451:18:11"
+                }
+              ]
+            },
+            "functionSelector": "27c1642e",
+            "id": 1566,
+            "implemented": true,
+            "kind": "function",
+            "modifiers": [],
+            "name": "value_callback",
+            "nameLocation": "1275:14:11",
+            "nodeType": "FunctionDefinition",
+            "parameters": {
+              "id": 1552,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 1551,
+                  "mutability": "mutable",
+                  "name": "_value",
+                  "nameLocation": "1298:6:11",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 1566,
+                  "src": "1290:14:11",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint256",
+                    "typeString": "uint256"
+                  },
+                  "typeName": {
+                    "id": 1550,
+                    "name": "uint256",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "1290:7:11",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    }
+                  },
+                  "visibility": "internal"
+                }
+              ],
+              "src": "1289:16:11"
+            },
+            "returnParameters": {
+              "id": 1553,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "1312:0:11"
+            },
+            "scope": 1567,
+            "src": "1266:210:11",
+            "stateMutability": "nonpayable",
+            "virtual": false,
+            "visibility": "public"
+          }
+        ],
+        "scope": 1568,
+        "src": "209:1269:11"
+      }
+    ],
+    "src": "33:1445:11"
+  },
+  "bytecode": "608060405234801561001057600080fd5b5060405161020d38038061020d83398101604081905261002f91610054565b600080546001600160a01b0319166001600160a01b0392909216919091179055610082565b600060208284031215610065578081fd5b81516001600160a01b038116811461007b578182fd5b9392505050565b61017c806100916000396000f3fe6080604052600436106100345760003560e01c806327c1642e14610039578063431838341461005b5780637b1b716614610083575b600080fd5b34801561004557600080fd5b5061005961005436600461012e565b61008b565b005b34801561006757600080fd5b5061007160015481565b60405190815260200160405180910390f35b6100596100a7565b6000546001600160a01b031633146100a257600080fd5b600155565b600054604051638d4b322360e01b81526605553442f4742560cc1b6004820152306024820152612710604482015261c35060648201526001600160a01b0390911690638d4b322390620186a09034906084016000604051808303818589803b15801561011257600080fd5b5088f1158015610126573d6000803e3d6000fd5b505050505050565b60006020828403121561013f578081fd5b503591905056fea2646970667358221220845cee992def0df88820c2d4496fc824df0ae85cb8804aa5a567052b71d92c5d64736f6c63430008020033",
+  "bytecodeSha1": "1028b305748d720a966e35fdf939bfbf7078ba54",
+  "compiler": {
+    "evm_version": "istanbul",
+    "optimizer": {
+      "enabled": true,
+      "runs": 200
+    },
+    "version": "0.8.2+commit.661d1103"
+  },
+  "contractName": "ClientExample2",
+  "coverageMap": {
+    "branches": {
+      "11": {
+        "ClientExample2.value_callback": {
+          "3": [
+            1394,
+            1412,
+            true
+          ]
+        }
+      }
+    },
+    "statements": {
+      "11": {
+        "ClientExample2.callOracle": {
+          "2": [
+            1020,
+            1121
+          ]
+        },
+        "ClientExample2.value_callback": {
+          "0": [
+            1386,
+            1413
+          ],
+          "1": [
+            1451,
+            1469
+          ]
+        }
+      }
+    }
+  },
+  "dependencies": [
+    "AcriaNode"
+  ],
+  "deployedBytecode": "6080604052600436106100345760003560e01c806327c1642e14610039578063431838341461005b5780637b1b716614610083575b600080fd5b34801561004557600080fd5b5061005961005436600461012e565b61008b565b005b34801561006757600080fd5b5061007160015481565b60405190815260200160405180910390f35b6100596100a7565b6000546001600160a01b031633146100a257600080fd5b600155565b600054604051638d4b322360e01b81526605553442f4742560cc1b6004820152306024820152612710604482015261c35060648201526001600160a01b0390911690638d4b322390620186a09034906084016000604051808303818589803b15801561011257600080fd5b5088f1158015610126573d6000803e3d6000fd5b505050505050565b60006020828403121561013f578081fd5b503591905056fea2646970667358221220845cee992def0df88820c2d4496fc824df0ae85cb8804aa5a567052b71d92c5d64736f6c63430008020033",
+  "deployedSourceMap": "209:1269:11:-:0;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;1266:210;;;;;;;;;;-1:-1:-1;1266:210:11;;;;;:::i;:::-;;:::i;:::-;;365:24;;;;;;;;;;;;;;;;;;;882:25:13;;;870:2;855:18;365:24:11;;;;;;;466:662;;;:::i;1266:210::-;1408:4;;-1:-1:-1;;;;;1408:4:11;1394:10;:18;1386:27;;;;;;1451:9;:18;1266:210::o;466:662::-;1030:4;;1020:101;;-1:-1:-1;;;1020:101:11;;-1:-1:-1;;;1020:101:11;;;525:28:13;1101:4:11;569:18:13;;;562:60;1108:5:11;638:18:13;;;631:34;1115:5:11;681:18:13;;;674:51;-1:-1:-1;;;;;1030:4:11;;;;1020:30;;1074:6;;1058:9;;497:19:13;;1020:101:11;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;466:662::o;14:190:13:-;;126:2;114:9;105:7;101:23;97:32;94:2;;;147:6;139;132:22;94:2;-1:-1:-1;175:23:13;;84:120;-1:-1:-1;84:120:13:o",
+  "language": "Solidity",
+  "natspec": {
+    "kind": "dev",
+    "methods": {},
+    "version": 1
+  },
+  "offset": [
+    209,
+    1478
+  ],
+  "opcodes": "PUSH1 0x80 PUSH1 0x40 MSTORE PUSH1 0x4 CALLDATASIZE LT PUSH2 0x34 JUMPI PUSH1 0x0 CALLDATALOAD PUSH1 0xE0 SHR DUP1 PUSH4 0x27C1642E EQ PUSH2 0x39 JUMPI DUP1 PUSH4 0x43183834 EQ PUSH2 0x5B JUMPI DUP1 PUSH4 0x7B1B7166 EQ PUSH2 0x83 JUMPI JUMPDEST PUSH1 0x0 DUP1 REVERT JUMPDEST CALLVALUE DUP1 ISZERO PUSH2 0x45 JUMPI PUSH1 0x0 DUP1 REVERT JUMPDEST POP PUSH2 0x59 PUSH2 0x54 CALLDATASIZE PUSH1 0x4 PUSH2 0x12E JUMP JUMPDEST PUSH2 0x8B JUMP JUMPDEST STOP JUMPDEST CALLVALUE DUP1 ISZERO PUSH2 0x67 JUMPI PUSH1 0x0 DUP1 REVERT JUMPDEST POP PUSH2 0x71 PUSH1 0x1 SLOAD DUP2 JUMP JUMPDEST PUSH1 0x40 MLOAD SWAP1 DUP2 MSTORE PUSH1 0x20 ADD PUSH1 0x40 MLOAD DUP1 SWAP2 SUB SWAP1 RETURN JUMPDEST PUSH2 0x59 PUSH2 0xA7 JUMP JUMPDEST PUSH1 0x0 SLOAD PUSH1 0x1 PUSH1 0x1 PUSH1 0xA0 SHL SUB AND CALLER EQ PUSH2 0xA2 JUMPI PUSH1 0x0 DUP1 REVERT JUMPDEST PUSH1 0x1 SSTORE JUMP JUMPDEST PUSH1 0x0 SLOAD PUSH1 0x40 MLOAD PUSH4 0x8D4B3223 PUSH1 0xE0 SHL DUP2 MSTORE PUSH7 0x5553442F47425 PUSH1 0xCC SHL PUSH1 0x4 DUP3 ADD MSTORE ADDRESS PUSH1 0x24 DUP3 ADD MSTORE PUSH2 0x2710 PUSH1 0x44 DUP3 ADD MSTORE PUSH2 0xC350 PUSH1 0x64 DUP3 ADD MSTORE PUSH1 0x1 PUSH1 0x1 PUSH1 0xA0 SHL SUB SWAP1 SWAP2 AND SWAP1 PUSH4 0x8D4B3223 SWAP1 PUSH3 0x186A0 SWAP1 CALLVALUE SWAP1 PUSH1 0x84 ADD PUSH1 0x0 PUSH1 0x40 MLOAD DUP1 DUP4 SUB DUP2 DUP6 DUP10 DUP1 EXTCODESIZE ISZERO DUP1 ISZERO PUSH2 0x112 JUMPI PUSH1 0x0 DUP1 REVERT JUMPDEST POP DUP9 CALL ISZERO DUP1 ISZERO PUSH2 0x126 JUMPI RETURNDATASIZE PUSH1 0x0 DUP1 RETURNDATACOPY RETURNDATASIZE PUSH1 0x0 REVERT JUMPDEST POP POP POP POP POP POP JUMP JUMPDEST PUSH1 0x0 PUSH1 0x20 DUP3 DUP5 SUB SLT ISZERO PUSH2 0x13F JUMPI DUP1 DUP2 REVERT JUMPDEST POP CALLDATALOAD SWAP2 SWAP1 POP JUMP INVALID LOG2 PUSH5 0x6970667358 0x22 SLT KECCAK256 DUP5 0x5C 0xEE SWAP10 0x2D 0xEF 0xD 0xF8 DUP9 KECCAK256 0xC2 0xD4 0x49 PUSH16 0xC824DF0AE85CB8804AA5A567052B71D9 0x2C 0x5D PUSH5 0x736F6C6343 STOP ADDMOD MUL STOP CALLER ",
+  "pcMap": {
+    "0": {
+      "offset": [
+        209,
+        1478
+      ],
+      "op": "PUSH1",
+      "path": "11",
+      "value": "0x80"
+    },
+    "2": {
+      "fn": null,
+      "offset": [
+        209,
+        1478
+      ],
+      "op": "PUSH1",
+      "path": "11",
+      "value": "0x40"
+    },
+    "4": {
+      "fn": null,
+      "offset": [
+        209,
+        1478
+      ],
+      "op": "MSTORE",
+      "path": "11"
+    },
+    "5": {
+      "fn": null,
+      "offset": [
+        209,
+        1478
+      ],
+      "op": "PUSH1",
+      "path": "11",
+      "value": "0x4"
+    },
+    "7": {
+      "fn": null,
+      "offset": [
+        209,
+        1478
+      ],
+      "op": "CALLDATASIZE",
+      "path": "11"
+    },
+    "8": {
+      "fn": null,
+      "offset": [
+        209,
+        1478
+      ],
+      "op": "LT",
+      "path": "11"
+    },
+    "9": {
+      "fn": null,
+      "offset": [
+        209,
+        1478
+      ],
+      "op": "PUSH2",
+      "path": "11",
+      "value": "0x34"
+    },
+    "12": {
+      "fn": null,
+      "offset": [
+        209,
+        1478
+      ],
+      "op": "JUMPI",
+      "path": "11"
+    },
+    "13": {
+      "fn": null,
+      "offset": [
+        209,
+        1478
+      ],
+      "op": "PUSH1",
+      "path": "11",
+      "value": "0x0"
+    },
+    "15": {
+      "fn": null,
+      "offset": [
+        209,
+        1478
+      ],
+      "op": "CALLDATALOAD",
+      "path": "11"
+    },
+    "16": {
+      "fn": null,
+      "offset": [
+        209,
+        1478
+      ],
+      "op": "PUSH1",
+      "path": "11",
+      "value": "0xE0"
+    },
+    "18": {
+      "fn": null,
+      "offset": [
+        209,
+        1478
+      ],
+      "op": "SHR",
+      "path": "11"
+    },
+    "19": {
+      "fn": null,
+      "offset": [
+        209,
+        1478
+      ],
+      "op": "DUP1",
+      "path": "11"
+    },
+    "20": {
+      "fn": null,
+      "offset": [
+        209,
+        1478
+      ],
+      "op": "PUSH4",
+      "path": "11",
+      "value": "0x27C1642E"
+    },
+    "25": {
+      "fn": null,
+      "offset": [
+        209,
+        1478
+      ],
+      "op": "EQ",
+      "path": "11"
+    },
+    "26": {
+      "fn": null,
+      "offset": [
+        209,
+        1478
+      ],
+      "op": "PUSH2",
+      "path": "11",
+      "value": "0x39"
+    },
+    "29": {
+      "fn": null,
+      "offset": [
+        209,
+        1478
+      ],
+      "op": "JUMPI",
+      "path": "11"
+    },
+    "30": {
+      "fn": null,
+      "offset": [
+        209,
+        1478
+      ],
+      "op": "DUP1",
+      "path": "11"
+    },
+    "31": {
+      "fn": null,
+      "offset": [
+        209,
+        1478
+      ],
+      "op": "PUSH4",
+      "path": "11",
+      "value": "0x43183834"
+    },
+    "36": {
+      "fn": null,
+      "offset": [
+        209,
+        1478
+      ],
+      "op": "EQ",
+      "path": "11"
+    },
+    "37": {
+      "fn": null,
+      "offset": [
+        209,
+        1478
+      ],
+      "op": "PUSH2",
+      "path": "11",
+      "value": "0x5B"
+    },
+    "40": {
+      "fn": null,
+      "offset": [
+        209,
+        1478
+      ],
+      "op": "JUMPI",
+      "path": "11"
+    },
+    "41": {
+      "fn": null,
+      "offset": [
+        209,
+        1478
+      ],
+      "op": "DUP1",
+      "path": "11"
+    },
+    "42": {
+      "fn": null,
+      "offset": [
+        209,
+        1478
+      ],
+      "op": "PUSH4",
+      "path": "11",
+      "value": "0x7B1B7166"
+    },
+    "47": {
+      "fn": null,
+      "offset": [
+        209,
+        1478
+      ],
+      "op": "EQ",
+      "path": "11"
+    },
+    "48": {
+      "fn": null,
+      "offset": [
+        209,
+        1478
+      ],
+      "op": "PUSH2",
+      "path": "11",
+      "value": "0x83"
+    },
+    "51": {
+      "fn": null,
+      "offset": [
+        209,
+        1478
+      ],
+      "op": "JUMPI",
+      "path": "11"
+    },
+    "52": {
+      "fn": null,
+      "offset": [
+        209,
+        1478
+      ],
+      "op": "JUMPDEST",
+      "path": "11"
+    },
+    "53": {
+      "fn": null,
+      "offset": [
+        209,
+        1478
+      ],
+      "op": "PUSH1",
+      "path": "11",
+      "value": "0x0"
+    },
+    "55": {
+      "fn": null,
+      "offset": [
+        209,
+        1478
+      ],
+      "op": "DUP1",
+      "path": "11"
+    },
+    "56": {
+      "first_revert": true,
+      "fn": null,
+      "offset": [
+        209,
+        1478
+      ],
+      "op": "REVERT",
+      "path": "11"
+    },
+    "57": {
+      "fn": "ClientExample2.value_callback",
+      "offset": [
+        1266,
+        1476
+      ],
+      "op": "JUMPDEST",
+      "path": "11"
+    },
+    "58": {
+      "fn": "ClientExample2.value_callback",
+      "offset": [
+        1266,
+        1476
+      ],
+      "op": "CALLVALUE",
+      "path": "11"
+    },
+    "59": {
+      "fn": "ClientExample2.value_callback",
+      "offset": [
+        1266,
+        1476
+      ],
+      "op": "DUP1",
+      "path": "11"
+    },
+    "60": {
+      "fn": "ClientExample2.value_callback",
+      "offset": [
+        1266,
+        1476
+      ],
+      "op": "ISZERO",
+      "path": "11"
+    },
+    "61": {
+      "fn": "ClientExample2.value_callback",
+      "offset": [
+        1266,
+        1476
+      ],
+      "op": "PUSH2",
+      "path": "11",
+      "value": "0x45"
+    },
+    "64": {
+      "fn": "ClientExample2.value_callback",
+      "offset": [
+        1266,
+        1476
+      ],
+      "op": "JUMPI",
+      "path": "11"
+    },
+    "65": {
+      "fn": "ClientExample2.value_callback",
+      "offset": [
+        1266,
+        1476
+      ],
+      "op": "PUSH1",
+      "path": "11",
+      "value": "0x0"
+    },
+    "67": {
+      "fn": "ClientExample2.value_callback",
+      "offset": [
+        1266,
+        1476
+      ],
+      "op": "DUP1",
+      "path": "11"
+    },
+    "68": {
+      "fn": "ClientExample2.value_callback",
+      "offset": [
+        1266,
+        1476
+      ],
+      "op": "REVERT",
+      "path": "11"
+    },
+    "69": {
+      "fn": "ClientExample2.value_callback",
+      "offset": [
+        1266,
+        1476
+      ],
+      "op": "JUMPDEST",
+      "path": "11"
+    },
+    "70": {
+      "op": "POP"
+    },
+    "71": {
+      "fn": "ClientExample2.value_callback",
+      "offset": [
+        1266,
+        1476
+      ],
+      "op": "PUSH2",
+      "path": "11",
+      "value": "0x59"
+    },
+    "74": {
+      "fn": "ClientExample2.value_callback",
+      "offset": [
+        1266,
+        1476
+      ],
+      "op": "PUSH2",
+      "path": "11",
+      "value": "0x54"
+    },
+    "77": {
+      "fn": "ClientExample2.value_callback",
+      "offset": [
+        1266,
+        1476
+      ],
+      "op": "CALLDATASIZE",
+      "path": "11"
+    },
+    "78": {
+      "fn": "ClientExample2.value_callback",
+      "offset": [
+        1266,
+        1476
+      ],
+      "op": "PUSH1",
+      "path": "11",
+      "value": "0x4"
+    },
+    "80": {
+      "fn": "ClientExample2.value_callback",
+      "offset": [
+        1266,
+        1476
+      ],
+      "op": "PUSH2",
+      "path": "11",
+      "value": "0x12E"
+    },
+    "83": {
+      "fn": "ClientExample2.value_callback",
+      "jump": "i",
+      "offset": [
+        1266,
+        1476
+      ],
+      "op": "JUMP",
+      "path": "11"
+    },
+    "84": {
+      "fn": "ClientExample2.value_callback",
+      "offset": [
+        1266,
+        1476
+      ],
+      "op": "JUMPDEST",
+      "path": "11"
+    },
+    "85": {
+      "fn": "ClientExample2.value_callback",
+      "offset": [
+        1266,
+        1476
+      ],
+      "op": "PUSH2",
+      "path": "11",
+      "value": "0x8B"
+    },
+    "88": {
+      "fn": "ClientExample2.value_callback",
+      "jump": "i",
+      "offset": [
+        1266,
+        1476
+      ],
+      "op": "JUMP",
+      "path": "11"
+    },
+    "89": {
+      "fn": "ClientExample2.value_callback",
+      "offset": [
+        1266,
+        1476
+      ],
+      "op": "JUMPDEST",
+      "path": "11"
+    },
+    "90": {
+      "fn": "ClientExample2.value_callback",
+      "offset": [
+        1266,
+        1476
+      ],
+      "op": "STOP",
+      "path": "11"
+    },
+    "91": {
+      "offset": [
+        365,
+        389
+      ],
+      "op": "JUMPDEST",
+      "path": "11"
+    },
+    "92": {
+      "fn": "ClientExample2.value_callback",
+      "offset": [
+        365,
+        389
+      ],
+      "op": "CALLVALUE",
+      "path": "11"
+    },
+    "93": {
+      "fn": "ClientExample2.value_callback",
+      "offset": [
+        365,
+        389
+      ],
+      "op": "DUP1",
+      "path": "11"
+    },
+    "94": {
+      "fn": "ClientExample2.value_callback",
+      "offset": [
+        365,
+        389
+      ],
+      "op": "ISZERO",
+      "path": "11"
+    },
+    "95": {
+      "fn": "ClientExample2.value_callback",
+      "offset": [
+        365,
+        389
+      ],
+      "op": "PUSH2",
+      "path": "11",
+      "value": "0x67"
+    },
+    "98": {
+      "fn": "ClientExample2.value_callback",
+      "offset": [
+        365,
+        389
+      ],
+      "op": "JUMPI",
+      "path": "11"
+    },
+    "99": {
+      "fn": "ClientExample2.value_callback",
+      "offset": [
+        365,
+        389
+      ],
+      "op": "PUSH1",
+      "path": "11",
+      "value": "0x0"
+    },
+    "101": {
+      "fn": "ClientExample2.value_callback",
+      "offset": [
+        365,
+        389
+      ],
+      "op": "DUP1",
+      "path": "11"
+    },
+    "102": {
+      "fn": "ClientExample2.value_callback",
+      "offset": [
+        365,
+        389
+      ],
+      "op": "REVERT",
+      "path": "11"
+    },
+    "103": {
+      "fn": "ClientExample2.value_callback",
+      "offset": [
+        365,
+        389
+      ],
+      "op": "JUMPDEST",
+      "path": "11"
+    },
+    "104": {
+      "fn": "ClientExample2.value_callback",
+      "offset": [
+        365,
+        389
+      ],
+      "op": "POP",
+      "path": "11"
+    },
+    "105": {
+      "fn": "ClientExample2.value_callback",
+      "offset": [
+        365,
+        389
+      ],
+      "op": "PUSH2",
+      "path": "11",
+      "value": "0x71"
+    },
+    "108": {
+      "fn": "ClientExample2.value_callback",
+      "offset": [
+        365,
+        389
+      ],
+      "op": "PUSH1",
+      "path": "11",
+      "value": "0x1"
+    },
+    "110": {
+      "fn": "ClientExample2.value_callback",
+      "offset": [
+        365,
+        389
+      ],
+      "op": "SLOAD",
+      "path": "11"
+    },
+    "111": {
+      "fn": "ClientExample2.value_callback",
+      "offset": [
+        365,
+        389
+      ],
+      "op": "DUP2",
+      "path": "11"
+    },
+    "112": {
+      "fn": "ClientExample2.value_callback",
+      "offset": [
+        365,
+        389
+      ],
+      "op": "JUMP",
+      "path": "11"
+    },
+    "113": {
+      "fn": "ClientExample2.value_callback",
+      "offset": [
+        365,
+        389
+      ],
+      "op": "JUMPDEST",
+      "path": "11"
+    },
+    "114": {
+      "fn": "ClientExample2.value_callback",
+      "offset": [
+        365,
+        389
+      ],
+      "op": "PUSH1",
+      "path": "11",
+      "value": "0x40"
+    },
+    "116": {
+      "fn": "ClientExample2.value_callback",
+      "offset": [
+        365,
+        389
+      ],
+      "op": "MLOAD",
+      "path": "11"
+    },
+    "117": {
+      "op": "SWAP1"
+    },
+    "118": {
+      "op": "DUP2"
+    },
+    "119": {
+      "op": "MSTORE"
+    },
+    "120": {
+      "op": "PUSH1",
+      "value": "0x20"
+    },
+    "122": {
+      "op": "ADD"
+    },
+    "123": {
+      "offset": [
+        365,
+        389
+      ],
+      "op": "PUSH1",
+      "path": "11",
+      "value": "0x40"
+    },
+    "125": {
+      "fn": "ClientExample2.value_callback",
+      "offset": [
+        365,
+        389
+      ],
+      "op": "MLOAD",
+      "path": "11"
+    },
+    "126": {
+      "fn": "ClientExample2.value_callback",
+      "offset": [
+        365,
+        389
+      ],
+      "op": "DUP1",
+      "path": "11"
+    },
+    "127": {
+      "fn": "ClientExample2.value_callback",
+      "offset": [
+        365,
+        389
+      ],
+      "op": "SWAP2",
+      "path": "11"
+    },
+    "128": {
+      "fn": "ClientExample2.value_callback",
+      "offset": [
+        365,
+        389
+      ],
+      "op": "SUB",
+      "path": "11"
+    },
+    "129": {
+      "fn": "ClientExample2.value_callback",
+      "offset": [
+        365,
+        389
+      ],
+      "op": "SWAP1",
+      "path": "11"
+    },
+    "130": {
+      "fn": "ClientExample2.value_callback",
+      "offset": [
+        365,
+        389
+      ],
+      "op": "RETURN",
+      "path": "11"
+    },
+    "131": {
+      "fn": "ClientExample2.callOracle",
+      "offset": [
+        466,
+        1128
+      ],
+      "op": "JUMPDEST",
+      "path": "11"
+    },
+    "132": {
+      "fn": "ClientExample2.callOracle",
+      "offset": [
+        466,
+        1128
+      ],
+      "op": "PUSH2",
+      "path": "11",
+      "value": "0x59"
+    },
+    "135": {
+      "fn": "ClientExample2.callOracle",
+      "offset": [
+        466,
+        1128
+      ],
+      "op": "PUSH2",
+      "path": "11",
+      "value": "0xA7"
+    },
+    "138": {
+      "fn": "ClientExample2.callOracle",
+      "jump": "i",
+      "offset": [
+        466,
+        1128
+      ],
+      "op": "JUMP",
+      "path": "11"
+    },
+    "139": {
+      "fn": "ClientExample2.value_callback",
+      "offset": [
+        1266,
+        1476
+      ],
+      "op": "JUMPDEST",
+      "path": "11"
+    },
+    "140": {
+      "fn": "ClientExample2.value_callback",
+      "offset": [
+        1408,
+        1412
+      ],
+      "op": "PUSH1",
+      "path": "11",
+      "statement": 0,
+      "value": "0x0"
+    },
+    "142": {
+      "fn": "ClientExample2.value_callback",
+      "offset": [
+        1408,
+        1412
+      ],
+      "op": "SLOAD",
+      "path": "11"
+    },
+    "143": {
+      "op": "PUSH1",
+      "value": "0x1"
+    },
+    "145": {
+      "op": "PUSH1",
+      "value": "0x1"
+    },
+    "147": {
+      "op": "PUSH1",
+      "value": "0xA0"
+    },
+    "149": {
+      "op": "SHL"
+    },
+    "150": {
+      "op": "SUB"
+    },
+    "151": {
+      "fn": "ClientExample2.value_callback",
+      "offset": [
+        1408,
+        1412
+      ],
+      "op": "AND",
+      "path": "11"
+    },
+    "152": {
+      "fn": "ClientExample2.value_callback",
+      "offset": [
+        1394,
+        1404
+      ],
+      "op": "CALLER",
+      "path": "11"
+    },
+    "153": {
+      "branch": 3,
+      "fn": "ClientExample2.value_callback",
+      "offset": [
+        1394,
+        1412
+      ],
+      "op": "EQ",
+      "path": "11"
+    },
+    "154": {
+      "fn": "ClientExample2.value_callback",
+      "offset": [
+        1386,
+        1413
+      ],
+      "op": "PUSH2",
+      "path": "11",
+      "value": "0xA2"
+    },
+    "157": {
+      "branch": 3,
+      "fn": "ClientExample2.value_callback",
+      "offset": [
+        1386,
+        1413
+      ],
+      "op": "JUMPI",
+      "path": "11"
+    },
+    "158": {
+      "fn": "ClientExample2.value_callback",
+      "offset": [
+        1386,
+        1413
+      ],
+      "op": "PUSH1",
+      "path": "11",
+      "value": "0x0"
+    },
+    "160": {
+      "fn": "ClientExample2.value_callback",
+      "offset": [
+        1386,
+        1413
+      ],
+      "op": "DUP1",
+      "path": "11"
+    },
+    "161": {
+      "fn": "ClientExample2.value_callback",
+      "offset": [
+        1386,
+        1413
+      ],
+      "op": "REVERT",
+      "path": "11"
+    },
+    "162": {
+      "fn": "ClientExample2.value_callback",
+      "offset": [
+        1386,
+        1413
+      ],
+      "op": "JUMPDEST",
+      "path": "11"
+    },
+    "163": {
+      "fn": "ClientExample2.value_callback",
+      "offset": [
+        1451,
+        1460
+      ],
+      "op": "PUSH1",
+      "path": "11",
+      "statement": 1,
+      "value": "0x1"
+    },
+    "165": {
+      "fn": "ClientExample2.value_callback",
+      "offset": [
+        1451,
+        1469
+      ],
+      "op": "SSTORE",
+      "path": "11"
+    },
+    "166": {
+      "fn": "ClientExample2.value_callback",
+      "jump": "o",
+      "offset": [
+        1266,
+        1476
+      ],
+      "op": "JUMP",
+      "path": "11"
+    },
+    "167": {
+      "fn": "ClientExample2.callOracle",
+      "offset": [
+        466,
+        1128
+      ],
+      "op": "JUMPDEST",
+      "path": "11"
+    },
+    "168": {
+      "fn": "ClientExample2.callOracle",
+      "offset": [
+        1030,
+        1034
+      ],
+      "op": "PUSH1",
+      "path": "11",
+      "statement": 2,
+      "value": "0x0"
+    },
+    "170": {
+      "fn": "ClientExample2.callOracle",
+      "offset": [
+        1030,
+        1034
+      ],
+      "op": "SLOAD",
+      "path": "11"
+    },
+    "171": {
+      "fn": "ClientExample2.callOracle",
+      "offset": [
+        1020,
+        1121
+      ],
+      "op": "PUSH1",
+      "path": "11",
+      "value": "0x40"
+    },
+    "173": {
+      "fn": "ClientExample2.callOracle",
+      "offset": [
+        1020,
+        1121
+      ],
+      "op": "MLOAD",
+      "path": "11"
+    },
+    "174": {
+      "op": "PUSH4",
+      "value": "0x8D4B3223"
+    },
+    "179": {
+      "op": "PUSH1",
+      "value": "0xE0"
+    },
+    "181": {
+      "op": "SHL"
+    },
+    "182": {
+      "fn": "ClientExample2.callOracle",
+      "offset": [
+        1020,
+        1121
+      ],
+      "op": "DUP2",
+      "path": "11"
+    },
+    "183": {
+      "fn": "ClientExample2.callOracle",
+      "offset": [
+        1020,
+        1121
+      ],
+      "op": "MSTORE",
+      "path": "11"
+    },
+    "184": {
+      "op": "PUSH7",
+      "value": "0x5553442F47425"
+    },
+    "192": {
+      "op": "PUSH1",
+      "value": "0xCC"
+    },
+    "194": {
+      "op": "SHL"
+    },
+    "195": {
+      "fn": "ClientExample2.callOracle",
+      "offset": [
+        1020,
+        1121
+      ],
+      "op": "PUSH1",
+      "path": "11",
+      "value": "0x4"
+    },
+    "197": {
+      "fn": "ClientExample2.callOracle",
+      "offset": [
+        1020,
+        1121
+      ],
+      "op": "DUP3",
+      "path": "11"
+    },
+    "198": {
+      "fn": "ClientExample2.callOracle",
+      "offset": [
+        1020,
+        1121
+      ],
+      "op": "ADD",
+      "path": "11"
+    },
+    "199": {
+      "op": "MSTORE"
+    },
+    "200": {
+      "fn": "ClientExample2.callOracle",
+      "offset": [
+        1101,
+        1105
+      ],
+      "op": "ADDRESS",
+      "path": "11"
+    },
+    "201": {
+      "op": "PUSH1",
+      "value": "0x24"
+    },
+    "203": {
+      "op": "DUP3"
+    },
+    "204": {
+      "op": "ADD"
+    },
+    "205": {
+      "op": "MSTORE"
+    },
+    "206": {
+      "fn": "ClientExample2.callOracle",
+      "offset": [
+        1108,
+        1113
+      ],
+      "op": "PUSH2",
+      "path": "11",
+      "value": "0x2710"
+    },
+    "209": {
+      "op": "PUSH1",
+      "value": "0x44"
+    },
+    "211": {
+      "op": "DUP3"
+    },
+    "212": {
+      "op": "ADD"
+    },
+    "213": {
+      "op": "MSTORE"
+    },
+    "214": {
+      "fn": "ClientExample2.callOracle",
+      "offset": [
+        1115,
+        1120
+      ],
+      "op": "PUSH2",
+      "path": "11",
+      "value": "0xC350"
+    },
+    "217": {
+      "op": "PUSH1",
+      "value": "0x64"
+    },
+    "219": {
+      "op": "DUP3"
+    },
+    "220": {
+      "op": "ADD"
+    },
+    "221": {
+      "op": "MSTORE"
+    },
+    "222": {
+      "op": "PUSH1",
+      "value": "0x1"
+    },
+    "224": {
+      "op": "PUSH1",
+      "value": "0x1"
+    },
+    "226": {
+      "op": "PUSH1",
+      "value": "0xA0"
+    },
+    "228": {
+      "op": "SHL"
+    },
+    "229": {
+      "op": "SUB"
+    },
+    "230": {
+      "fn": "ClientExample2.callOracle",
+      "offset": [
+        1030,
+        1034
+      ],
+      "op": "SWAP1",
+      "path": "11"
+    },
+    "231": {
+      "fn": "ClientExample2.callOracle",
+      "offset": [
+        1030,
+        1034
+      ],
+      "op": "SWAP2",
+      "path": "11"
+    },
+    "232": {
+      "fn": "ClientExample2.callOracle",
+      "offset": [
+        1030,
+        1034
+      ],
+      "op": "AND",
+      "path": "11"
+    },
+    "233": {
+      "fn": "ClientExample2.callOracle",
+      "offset": [
+        1030,
+        1034
+      ],
+      "op": "SWAP1",
+      "path": "11"
+    },
+    "234": {
+      "fn": "ClientExample2.callOracle",
+      "offset": [
+        1020,
+        1050
+      ],
+      "op": "PUSH4",
+      "path": "11",
+      "value": "0x8D4B3223"
+    },
+    "239": {
+      "fn": "ClientExample2.callOracle",
+      "offset": [
+        1020,
+        1050
+      ],
+      "op": "SWAP1",
+      "path": "11"
+    },
+    "240": {
+      "fn": "ClientExample2.callOracle",
+      "offset": [
+        1074,
+        1080
+      ],
+      "op": "PUSH3",
+      "path": "11",
+      "value": "0x186A0"
+    },
+    "244": {
+      "fn": "ClientExample2.callOracle",
+      "offset": [
+        1074,
+        1080
+      ],
+      "op": "SWAP1",
+      "path": "11"
+    },
+    "245": {
+      "fn": "ClientExample2.callOracle",
+      "offset": [
+        1058,
+        1067
+      ],
+      "op": "CALLVALUE",
+      "path": "11"
+    },
+    "246": {
+      "fn": "ClientExample2.callOracle",
+      "offset": [
+        1058,
+        1067
+      ],
+      "op": "SWAP1",
+      "path": "11"
+    },
+    "247": {
+      "op": "PUSH1",
+      "value": "0x84"
+    },
+    "249": {
+      "op": "ADD"
+    },
+    "250": {
+      "fn": "ClientExample2.callOracle",
+      "offset": [
+        1020,
+        1121
+      ],
+      "op": "PUSH1",
+      "path": "11",
+      "value": "0x0"
+    },
+    "252": {
+      "fn": "ClientExample2.callOracle",
+      "offset": [
+        1020,
+        1121
+      ],
+      "op": "PUSH1",
+      "path": "11",
+      "value": "0x40"
+    },
+    "254": {
+      "fn": "ClientExample2.callOracle",
+      "offset": [
+        1020,
+        1121
+      ],
+      "op": "MLOAD",
+      "path": "11"
+    },
+    "255": {
+      "fn": "ClientExample2.callOracle",
+      "offset": [
+        1020,
+        1121
+      ],
+      "op": "DUP1",
+      "path": "11"
+    },
+    "256": {
+      "fn": "ClientExample2.callOracle",
+      "offset": [
+        1020,
+        1121
+      ],
+      "op": "DUP4",
+      "path": "11"
+    },
+    "257": {
+      "fn": "ClientExample2.callOracle",
+      "offset": [
+        1020,
+        1121
+      ],
+      "op": "SUB",
+      "path": "11"
+    },
+    "258": {
+      "fn": "ClientExample2.callOracle",
+      "offset": [
+        1020,
+        1121
+      ],
+      "op": "DUP2",
+      "path": "11"
+    },
+    "259": {
+      "fn": "ClientExample2.callOracle",
+      "offset": [
+        1020,
+        1121
+      ],
+      "op": "DUP6",
+      "path": "11"
+    },
+    "260": {
+      "fn": "ClientExample2.callOracle",
+      "offset": [
+        1020,
+        1121
+      ],
+      "op": "DUP10",
+      "path": "11"
+    },
+    "261": {
+      "fn": "ClientExample2.callOracle",
+      "offset": [
+        1020,
+        1121
+      ],
+      "op": "DUP1",
+      "path": "11"
+    },
+    "262": {
+      "fn": "ClientExample2.callOracle",
+      "offset": [
+        1020,
+        1121
+      ],
+      "op": "EXTCODESIZE",
+      "path": "11"
+    },
+    "263": {
+      "fn": "ClientExample2.callOracle",
+      "offset": [
+        1020,
+        1121
+      ],
+      "op": "ISZERO",
+      "path": "11"
+    },
+    "264": {
+      "fn": "ClientExample2.callOracle",
+      "offset": [
+        1020,
+        1121
+      ],
+      "op": "DUP1",
+      "path": "11"
+    },
+    "265": {
+      "fn": "ClientExample2.callOracle",
+      "offset": [
+        1020,
+        1121
+      ],
+      "op": "ISZERO",
+      "path": "11"
+    },
+    "266": {
+      "fn": "ClientExample2.callOracle",
+      "offset": [
+        1020,
+        1121
+      ],
+      "op": "PUSH2",
+      "path": "11",
+      "value": "0x112"
+    },
+    "269": {
+      "fn": "ClientExample2.callOracle",
+      "offset": [
+        1020,
+        1121
+      ],
+      "op": "JUMPI",
+      "path": "11"
+    },
+    "270": {
+      "fn": "ClientExample2.callOracle",
+      "offset": [
+        1020,
+        1121
+      ],
+      "op": "PUSH1",
+      "path": "11",
+      "value": "0x0"
+    },
+    "272": {
+      "fn": "ClientExample2.callOracle",
+      "offset": [
+        1020,
+        1121
+      ],
+      "op": "DUP1",
+      "path": "11"
+    },
+    "273": {
+      "fn": "ClientExample2.callOracle",
+      "offset": [
+        1020,
+        1121
+      ],
+      "op": "REVERT",
+      "path": "11"
+    },
+    "274": {
+      "fn": "ClientExample2.callOracle",
+      "offset": [
+        1020,
+        1121
+      ],
+      "op": "JUMPDEST",
+      "path": "11"
+    },
+    "275": {
+      "fn": "ClientExample2.callOracle",
+      "offset": [
+        1020,
+        1121
+      ],
+      "op": "POP",
+      "path": "11"
+    },
+    "276": {
+      "fn": "ClientExample2.callOracle",
+      "offset": [
+        1020,
+        1121
+      ],
+      "op": "DUP9",
+      "path": "11"
+    },
+    "277": {
+      "fn": "ClientExample2.callOracle",
+      "offset": [
+        1020,
+        1121
+      ],
+      "op": "CALL",
+      "path": "11"
+    },
+    "278": {
+      "fn": "ClientExample2.callOracle",
+      "offset": [
+        1020,
+        1121
+      ],
+      "op": "ISZERO",
+      "path": "11"
+    },
+    "279": {
+      "fn": "ClientExample2.callOracle",
+      "offset": [
+        1020,
+        1121
+      ],
+      "op": "DUP1",
+      "path": "11"
+    },
+    "280": {
+      "fn": "ClientExample2.callOracle",
+      "offset": [
+        1020,
+        1121
+      ],
+      "op": "ISZERO",
+      "path": "11"
+    },
+    "281": {
+      "fn": "ClientExample2.callOracle",
+      "offset": [
+        1020,
+        1121
+      ],
+      "op": "PUSH2",
+      "path": "11",
+      "value": "0x126"
+    },
+    "284": {
+      "fn": "ClientExample2.callOracle",
+      "offset": [
+        1020,
+        1121
+      ],
+      "op": "JUMPI",
+      "path": "11"
+    },
+    "285": {
+      "fn": "ClientExample2.callOracle",
+      "offset": [
+        1020,
+        1121
+      ],
+      "op": "RETURNDATASIZE",
+      "path": "11"
+    },
+    "286": {
+      "fn": "ClientExample2.callOracle",
+      "offset": [
+        1020,
+        1121
+      ],
+      "op": "PUSH1",
+      "path": "11",
+      "value": "0x0"
+    },
+    "288": {
+      "fn": "ClientExample2.callOracle",
+      "offset": [
+        1020,
+        1121
+      ],
+      "op": "DUP1",
+      "path": "11"
+    },
+    "289": {
+      "fn": "ClientExample2.callOracle",
+      "offset": [
+        1020,
+        1121
+      ],
+      "op": "RETURNDATACOPY",
+      "path": "11"
+    },
+    "290": {
+      "fn": "ClientExample2.callOracle",
+      "offset": [
+        1020,
+        1121
+      ],
+      "op": "RETURNDATASIZE",
+      "path": "11"
+    },
+    "291": {
+      "fn": "ClientExample2.callOracle",
+      "offset": [
+        1020,
+        1121
+      ],
+      "op": "PUSH1",
+      "path": "11",
+      "value": "0x0"
+    },
+    "293": {
+      "fn": "ClientExample2.callOracle",
+      "offset": [
+        1020,
+        1121
+      ],
+      "op": "REVERT",
+      "path": "11"
+    },
+    "294": {
+      "fn": "ClientExample2.callOracle",
+      "offset": [
+        1020,
+        1121
+      ],
+      "op": "JUMPDEST",
+      "path": "11"
+    },
+    "295": {
+      "fn": "ClientExample2.callOracle",
+      "offset": [
+        1020,
+        1121
+      ],
+      "op": "POP",
+      "path": "11"
+    },
+    "296": {
+      "fn": "ClientExample2.callOracle",
+      "offset": [
+        1020,
+        1121
+      ],
+      "op": "POP",
+      "path": "11"
+    },
+    "297": {
+      "fn": "ClientExample2.callOracle",
+      "offset": [
+        1020,
+        1121
+      ],
+      "op": "POP",
+      "path": "11"
+    },
+    "298": {
+      "fn": "ClientExample2.callOracle",
+      "offset": [
+        1020,
+        1121
+      ],
+      "op": "POP",
+      "path": "11"
+    },
+    "299": {
+      "fn": "ClientExample2.callOracle",
+      "offset": [
+        1020,
+        1121
+      ],
+      "op": "POP",
+      "path": "11"
+    },
+    "300": {
+      "fn": "ClientExample2.callOracle",
+      "offset": [
+        1020,
+        1121
+      ],
+      "op": "POP",
+      "path": "11"
+    },
+    "301": {
+      "fn": "ClientExample2.callOracle",
+      "jump": "o",
+      "offset": [
+        466,
+        1128
+      ],
+      "op": "JUMP",
+      "path": "11"
+    },
+    "302": {
+      "op": "JUMPDEST"
+    },
+    "303": {
+      "op": "PUSH1",
+      "value": "0x0"
+    },
+    "305": {
+      "op": "PUSH1",
+      "value": "0x20"
+    },
+    "307": {
+      "op": "DUP3"
+    },
+    "308": {
+      "op": "DUP5"
+    },
+    "309": {
+      "op": "SUB"
+    },
+    "310": {
+      "op": "SLT"
+    },
+    "311": {
+      "op": "ISZERO"
+    },
+    "312": {
+      "op": "PUSH2",
+      "value": "0x13F"
+    },
+    "315": {
+      "op": "JUMPI"
+    },
+    "316": {
+      "op": "DUP1"
+    },
+    "317": {
+      "op": "DUP2"
+    },
+    "318": {
+      "op": "REVERT"
+    },
+    "319": {
+      "op": "JUMPDEST"
+    },
+    "320": {
+      "op": "POP"
+    },
+    "321": {
+      "op": "CALLDATALOAD"
+    },
+    "322": {
+      "op": "SWAP2"
+    },
+    "323": {
+      "op": "SWAP1"
+    },
+    "324": {
+      "op": "POP"
+    },
+    "325": {
+      "jump": "o",
+      "op": "JUMP"
+    }
+  },
+  "sha1": "c6b920426c78aa4539de564986d219cd703e4297",
+  "source": "// SPDX-License-Identifier: MIT\n\npragma solidity >=0.4.22 <0.9.0;\n\n\ninterface AcriaNode {\n    function create_request(bytes8 _requestID, address callback, uint256 _expire, uint32 max_gas) external payable;\n}\n\ncontract ClientExample2 {\n    //The address of the targeted Oracle Node\n    address payable node;\n\n    //last most recent value received via a callback\n    uint256 public lastValue;\n\n    constructor(address payable _node) {\n        node = _node;\n    }\n\n    function callOracle() public payable{\n        //make a call to the Oracle Node and include the fee (all ETH provided)\n        //first parameter is the item requested in this case the USD/GBP exchange rate\n        //the second parameter is the callback address (this contract)\n        //the third is the request expire date. It is expressed in blocks until the request should be dropped.\n        //the fourth is the amount of gas the oracle node should provide for the callback. The higher the requested gas the higher should be the fee provided.\n        AcriaNode(node).create_request{value: msg.value, gas: 100000}(\"USD/GBP\", address(this), 10000, 50000);\n    }\n\n    //the function which gets called by the Oracle Node\n    //it must be named value_callback with exactly one uint256 as parameter\n    function value_callback(uint256 _value) public{\n        //only the Oracle Node is allowed to call this function\n        require(msg.sender == node);\n\n        //update the value\n        lastValue = _value;\n    }\n}",
+  "sourceMap": "209:1269:11:-:0;;;396:64;;;;;;;;;;;;;;;;;;;;;;;;;;;;:::i;:::-;441:4;:12;;-1:-1:-1;;;;;;441:12:11;-1:-1:-1;;;;;441:12:11;;;;;;;;;;209:1269;;14:318:13;;145:2;133:9;124:7;120:23;116:32;113:2;;;166:6;158;151:22;113:2;197:16;;-1:-1:-1;;;;;242:31:13;;232:42;;222:2;;293:6;285;278:22;222:2;321:5;103:229;-1:-1:-1;;;103:229:13:o;:::-;209:1269:11;;;;;;",
+  "sourcePath": "contracts/contracts/clientContract/clientExample2.sol",
+  "type": "contract"
+}
