@@ -22,21 +22,6 @@ with open('../build/contracts/AcriaNode.json') as file:
     contract_abi = contract_json['abi']
 
 AcriaNode = web3.eth.contract(address=os.environ.get("ACRIA_NODE_ADDRESS"), abi=contract_abi)
-
-zBytes = "BTC/USD"
-len1 = len(zBytes)
-
-if len1 > 32:
-    print('input string length: '+ str(len1)+ ' is too long')
-    zBytes32 = zBytes[:32]
-else:
-    print('input string length: '+ str(len1)+ ' is too short')
-    print('More characters needed: '+ str(32-len1))
-    zBytes32 = zBytes.ljust(32, ' ')
-
-print('zBytes32 = '+ str(zBytes32)+ ' and its length: '+ str(len(zBytes32)))
-xBytes32 = bytes(zBytes32, 'utf-8')
-print('xBytes32 = '+ str(xBytes32))
-
-transaction = AcriaNode.functions.fillRequest(xBytes32, 400).transact()
-contract_data = AcriaNode.functions.fillRequest(xBytes32, 400).buildTransaction(transaction)
+event_filter = AcriaNode.events.RequestFilled.createFilter(fromBlock=1)
+events0 = event_filter.get_all_entries()
+print(events0)
