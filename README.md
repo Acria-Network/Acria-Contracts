@@ -1,4 +1,4 @@
-![Header](https://github.com/Acria-Network/Acria-Contracts/blob/main/img/github_header_color_2.svg?sanitize=1)
+![Header](https://github.com/Acria-Network/Acria-Contracts/blob/main/img/github_header_color_2.svg)
 
 # Acria-Contracts
 Contracts for the ETH/BSC branch of the Acria Network.
