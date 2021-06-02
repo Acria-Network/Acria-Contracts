@@ -38,7 +38,7 @@ contract AcriaNode {
   mapping(address => uint256) public staker_stake;
   uint256 public last_staker_added = 0;
   uint256 public previous_last_staker_added = 0;
-  uint256 constant period_interval = 10;//10 for tests, otherwise 10000 (~16 days)
+  uint256 constant period_interval = 10000;//10 for local tests, 10000 for testnet (~2 days), 100000 for mainnet (~18 days)
   
   
   constructor(address payable _owner, address _token_contract) {
